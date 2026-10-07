@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 
 namespace MuseumBrowser.App
 {
-    /// On-screen wall label for the work the visitor is standing at: the museum
-    /// tombstone at a size you can read, plus credit and source.
+    /// On-screen wall label for the work the visitor is looking at: the museum
+    /// tombstone at a size you can read, fading in and out with the gaze.
     [RequireComponent(typeof(UIDocument))]
     public sealed class LabelPanel : MonoBehaviour
     {
@@ -30,12 +30,11 @@ namespace MuseumBrowser.App
             card.Add(subject = Text("subject"));
             card.Add(details = Text("details"));
             card.Add(credit = Text("credit"));
-            card.style.display = DisplayStyle.None;
             root.Add(card);
-            walk.Focused += Show;
+            walk.Viewing += Show;
         }
 
-        void OnDisable() => walk.Focused -= Show;
+        void OnDisable() => walk.Viewing -= Show;
 
         static Label Text(string cls)
         {
@@ -46,7 +45,8 @@ namespace MuseumBrowser.App
 
         void Show(int index)
         {
-            if (index < 0) { card.style.display = DisplayStyle.None; return; }
+            card.EnableInClassList("visible", index >= 0);
+            if (index < 0) return;
             var c = exhibition.Cards[index];
             var l = c.Label ?? new WallLabel();
             counter.text = $"{index + 1} / {exhibition.Cards.Count}";
@@ -57,7 +57,6 @@ namespace MuseumBrowser.App
             credit.text = string.Join("\n", new[] { l.Credit, l.Accession, c.License }.Where(s => !string.IsNullOrEmpty(s)));
             foreach (var e in new VisualElement[] { creator, title, subject, details, credit })
                 e.style.display = string.IsNullOrEmpty(((Label)e).text) ? DisplayStyle.None : DisplayStyle.Flex;
-            card.style.display = DisplayStyle.Flex;
         }
     }
 }

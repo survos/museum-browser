@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 namespace MuseumBrowser.App
 {
     /// The visitor. Non-gamer conventions first (Street View style): up/down arrows walk,
-    /// left/right arrows turn; W/S walk, A/D step sideways, Q/E turn; drag to look,
+    /// left/right arrows turn (with Shift they step sideways); W/S walk, A/D step
+    /// sideways, Q/E turn; drag to look,
     /// scroll to zoom, click a work to walk to it, Space/Backspace for the
     /// next/previous work in tour order.
     /// Discrete actions are InputAction callbacks; move/look/zoom values are read
@@ -19,9 +20,14 @@ namespace MuseumBrowser.App
         [SerializeField] float turnSpeed = 90f; // degrees per second for keys
         [SerializeField] float viewingDistance = 2.2f;
         [SerializeField] float minFov = 12f, maxFov = 60f;
+        [Tooltip("A work counts as 'being looked at' within this distance.")]
+        [SerializeField] float viewingRange = 5f;
 
         /// Index of the work the visitor has arrived at, or -1 when walking freely.
         public event System.Action<int> Focused;
+        /// Index of the work centred in view and close enough to read, or -1.
+        public event System.Action<int> Viewing;
+        int viewing = -1;
 
         InputAction move, turn, look, drag, zoom, click, next, previous;
         CharacterController body;
@@ -82,8 +88,10 @@ namespace MuseumBrowser.App
                 autoWalking = false;
             }
 
+            // Shift turns the left/right arrows into a sidestep, for scanning along a wall.
             float turning = turn.ReadValue<float>();
-            if (Mathf.Abs(turning) > 0.01f)
+            bool sidestep = Keyboard.current != null && Keyboard.current.shiftKey.isPressed;
+            if (Mathf.Abs(turning) > 0.01f && !sidestep)
             {
                 yaw += turning * turnSpeed * Time.deltaTime;
                 autoWalking = false;
@@ -95,6 +103,7 @@ namespace MuseumBrowser.App
                 eye.fieldOfView = Mathf.Clamp(eye.fieldOfView - Mathf.Sign(scroll) * 3f, minFov, maxFov);
 
             var input = move.ReadValue<Vector2>();
+            if (sidestep) input.x += turning;
             Vector3 velocity;
             if (input.sqrMagnitude > 0.01f)
             {
@@ -116,6 +125,19 @@ namespace MuseumBrowser.App
             body.Move((velocity + Physics.gravity) * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, yaw, 0);
             eye.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
+            UpdateViewing();
+        }
+
+        void UpdateViewing()
+        {
+            int seen = -1;
+            var ray = eye.ViewportPointToRay(new Vector3(0.5f, 0.5f));
+            if (Physics.SphereCast(ray, 0.25f, out var hit, viewingRange)
+                && hit.collider.GetComponentInParent<HungWork>() is { } work)
+                seen = work.Index;
+            if (seen == viewing) return;
+            viewing = seen;
+            Viewing?.Invoke(seen);
         }
 
         /// Place the visitor without walking (start of the visit).

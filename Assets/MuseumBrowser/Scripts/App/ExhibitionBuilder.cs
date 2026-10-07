@@ -30,6 +30,8 @@ namespace MuseumBrowser.App
         [Header("Works")]
         [SerializeField] Material frameMaterial;
         [SerializeField] float spotIntensity = 12f;
+        [Tooltip("Physical wall plaques. The on-screen label replaces them, so they are off by default.")]
+        [SerializeField] bool wallPlaques;
 
         public IReadOnlyList<Transform> Works => works;
         public IReadOnlyList<WallCard> Cards => cards;
@@ -90,7 +92,7 @@ namespace MuseumBrowser.App
                     if (p.Card == null) continue;
                     var local = a + right * (p.XMm / 1000f) + Vector3.up * (p.CenterMm / 1000f);
                     var work = WorkHanger.Hang(root, p.Card, root.TransformPoint(local), rotation,
-                        frameMaterial, spotIntensity);
+                        frameMaterial, spotIntensity, wallPlaques);
                     work.gameObject.AddComponent<HungWork>().Index = works.Count;
                     works.Add(work);
                     cards.Add(p.Card);

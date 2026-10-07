@@ -13,7 +13,7 @@ namespace MuseumBrowser.App
         const float FrameDepth = 0.05f;
 
         public static Transform Hang(Transform parent, WallCard card, Vector3 position, Quaternion rotation,
-            Material frameMaterial, float spotIntensity)
+            Material frameMaterial, float spotIntensity, bool plaque)
         {
             float w = (card.Size?.WidthMm ?? 600) / 1000f;
             float h = (card.Size?.HeightMm ?? 800) / 1000f;
@@ -40,7 +40,7 @@ namespace MuseumBrowser.App
             canvas.GetComponent<Renderer>().material = material;
             if (card.Image?.Best is { } url) LoadImage(url, material);
 
-            AddLabel(root, card.Label, w);
+            if (plaque) AddLabel(root, card.Label, w);
             if (spotIntensity > 0) AddSpot(root, h, spotIntensity);
             return root;
         }
