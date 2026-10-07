@@ -22,3 +22,8 @@
 .idea/
 .DS_Store
 /[Aa]ssets/[Ss]treamingAssets/**/*.folio
+
+# Purchased Asset Store content (re-import from Package Manager; see README)
+/[Aa]ssets/Creepy_Cat/
+/[Aa]ssets/Creepy_Cat.meta
+/[Cc]aptures/
