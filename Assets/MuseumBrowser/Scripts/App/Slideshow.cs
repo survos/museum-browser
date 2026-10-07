@@ -139,13 +139,19 @@ namespace MuseumBrowser.App
         void JumpToTimeline(float x)
         {
             float t = Mathf.Clamp01(x / Mathf.Max(1f, timeline.resolvedStyle.width));
+            // The ends are exact: the far right is the last work, the far left the first.
+            if (t >= 0.985f) { Go(cards.Count - 1); return; }
+            if (t <= 0.015f) { Go(0); return; }
             int year = Mathf.RoundToInt(Mathf.Lerp(minYear, maxYear, t));
-            int best = 0, bestGap = int.MaxValue;
+            // Among works tied for nearest, moving forward in time lands on the last of them,
+            // moving back on the first.
+            bool forward = !cards[index].Year.HasValue || year >= cards[index].Year.Value;
+            int best = index, bestGap = int.MaxValue;
             for (int i = 0; i < cards.Count; i++)
             {
                 if (!cards[i].Year.HasValue) continue;
                 int gap = Mathf.Abs(cards[i].Year.Value - year);
-                if (gap < bestGap) { bestGap = gap; best = i; }
+                if (gap < bestGap || (gap == bestGap && forward)) { bestGap = gap; best = i; }
             }
             Go(best);
         }

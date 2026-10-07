@@ -21,7 +21,7 @@ namespace MuseumBrowser.App
         const string Keys =
             "↑ ↓  walk\n← →  turn\nShift + ← →  step sideways\nW A S D  walk and step\nQ E  turn\n" +
             "Drag  look around\nScroll  zoom\nClick a work  walk to it\nSpace / Backspace  next / previous work\n" +
-            "[ ]  previous / next gallery\nH or ?  this help\nEsc  close\n\n" +
+            "[ ]  previous / next gallery\nF  full screen\nH or ?  this help\nEsc  close\n\n" +
             "Controller: D-pad walk / turn · shoulders step sideways · A / B next / previous work · " +
             "Start floor plan (or enter) · Select help";
 
@@ -34,7 +34,7 @@ namespace MuseumBrowser.App
         Label folioTitle, folioMeta, status;
         VisualElement fill;
         Button enter;
-        InputAction escape, toggleHelp, planButton;
+        InputAction escape, toggleHelp, planButton, fullScreenKey;
         float hintsUntil;
 
         void OnEnable()
@@ -68,6 +68,9 @@ namespace MuseumBrowser.App
             var slides = IconButton("Slides", "Slideshow, in time order", OpenSlideshow);
             slides.AddToClassList("text-button");
             tools.Add(slides);
+            var full = IconButton("Full screen", "Full screen (F)", ToggleFullScreen);
+            full.AddToClassList("text-button");
+            tools.Add(full);
             tools.Add(IconButton("?", "Keyboard help", () => Toggle(help)));
             tools.Add(IconButton("i", "About", () => Toggle(about)));
 
@@ -90,6 +93,10 @@ namespace MuseumBrowser.App
             planButton.performed += _ => { if (IsOpen(start)) Enter(); else Toggle(rooms); };
             planButton.Enable();
 
+            fullScreenKey = new InputAction("Full screen", InputActionType.Button, "<Keyboard>/f");
+            fullScreenKey.performed += _ => ToggleFullScreen();
+            fullScreenKey.Enable();
+
             escape = new InputAction("Close", InputActionType.Button, "<Keyboard>/escape");
             toggleHelp = new InputAction("Help", InputActionType.Button, "<Keyboard>/h");
             toggleHelp.AddBinding("<Keyboard>/slash");
@@ -110,6 +117,7 @@ namespace MuseumBrowser.App
             exhibition.Failed -= OnFailed;
             escape?.Dispose();
             planButton?.Dispose();
+            fullScreenKey?.Dispose();
             toggleDebug?.Dispose();
             toggleHelp?.Dispose();
         }
@@ -221,6 +229,10 @@ namespace MuseumBrowser.App
             hints.RemoveFromClassList("hidden");
             hintsUntil = Time.time + hintSeconds;
         }
+
+        /// Browsers only allow full screen from a user gesture; a click or key press is one, and
+        /// Unity's Web player applies the change on that same input.
+        static void ToggleFullScreen() => Screen.fullScreen = !Screen.fullScreen;
 
         void OpenSlideshow()
         {
