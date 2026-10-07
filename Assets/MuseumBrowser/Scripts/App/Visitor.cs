@@ -49,9 +49,15 @@ namespace MuseumBrowser.App
                 .With("Left", "<Keyboard>/a").With("Right", "<Keyboard>/d");
             move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/upArrow").With("Down", "<Keyboard>/downArrow");
             move.AddBinding("<Gamepad>/leftStick");
+            // D-pad, like the arrow keys: up/down walk (left/right turn, below). Game Boy-style pads
+            // (8BitDo etc.) have no sticks, only the D-pad.
+            move.AddCompositeBinding("2DVector").With("Up", "<Gamepad>/dpad/up").With("Down", "<Gamepad>/dpad/down");
+            // Shoulder buttons step sideways, like Shift + left/right.
+            move.AddCompositeBinding("2DVector").With("Left", "<Gamepad>/leftShoulder").With("Right", "<Gamepad>/rightShoulder");
             turn = new InputAction("Turn", InputActionType.Value);
             turn.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/leftArrow").With("Positive", "<Keyboard>/rightArrow");
             turn.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/q").With("Positive", "<Keyboard>/e");
+            turn.AddCompositeBinding("1DAxis").With("Negative", "<Gamepad>/dpad/left").With("Positive", "<Gamepad>/dpad/right");
             look = new InputAction("Look", InputActionType.Value, "<Pointer>/delta");
             look.AddBinding("<Gamepad>/rightStick").WithProcessor("scaleVector2(x=8,y=8)");
             drag = new InputAction("Drag", InputActionType.Button, "<Mouse>/leftButton");

@@ -21,7 +21,9 @@ namespace MuseumBrowser.App
         const string Keys =
             "↑ ↓  walk\n← →  turn\nShift + ← →  step sideways\nW A S D  walk and step\nQ E  turn\n" +
             "Drag  look around\nScroll  zoom\nClick a work  walk to it\nSpace / Backspace  next / previous work\n" +
-            "[ ]  previous / next gallery\nH or ?  this help\nEsc  close";
+            "[ ]  previous / next gallery\nH or ?  this help\nEsc  close\n\n" +
+            "Controller: D-pad walk / turn · shoulders step sideways · A / B next / previous work · " +
+            "Start floor plan (or enter) · Select help";
 
         VisualElement start, help, about, hints, debug, rooms, plan, here;
         readonly System.Collections.Generic.List<VisualElement> planBoxes = new();
@@ -32,7 +34,7 @@ namespace MuseumBrowser.App
         Label folioTitle, folioMeta, status;
         VisualElement fill;
         Button enter;
-        InputAction escape, toggleHelp;
+        InputAction escape, toggleHelp, planButton;
         float hintsUntil;
 
         void OnEnable()
@@ -83,9 +85,15 @@ namespace MuseumBrowser.App
             toggleDebug.performed += _ => debug.EnableInClassList("hidden", !debug.ClassListContains("hidden"));
             toggleDebug.Enable();
 
+            // Controller: Start opens the floor plan, Select toggles help, B closes.
+            planButton = new InputAction("Floor plan", InputActionType.Button, "<Gamepad>/start");
+            planButton.performed += _ => { if (IsOpen(start)) Enter(); else Toggle(rooms); };
+            planButton.Enable();
+
             escape = new InputAction("Close", InputActionType.Button, "<Keyboard>/escape");
             toggleHelp = new InputAction("Help", InputActionType.Button, "<Keyboard>/h");
             toggleHelp.AddBinding("<Keyboard>/slash");
+            toggleHelp.AddBinding("<Gamepad>/select");
             escape.performed += _ => { if (slideshow == null || !slideshow.IsOpen) CloseAll(); };
             toggleHelp.performed += _ => { if (!IsOpen(start)) Toggle(help); };
             escape.Enable();
@@ -101,6 +109,7 @@ namespace MuseumBrowser.App
             exhibition.Built -= OnBuilt;
             exhibition.Failed -= OnFailed;
             escape?.Dispose();
+            planButton?.Dispose();
             toggleDebug?.Dispose();
             toggleHelp?.Dispose();
         }
