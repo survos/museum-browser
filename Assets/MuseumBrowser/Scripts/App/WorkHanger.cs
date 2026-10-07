@@ -12,10 +12,10 @@ namespace MuseumBrowser.App
         const float FrameBorder = 0.04f;
         const float FrameDepth = 0.05f;
 
-        public static Transform Hang(Transform parent, WallCard card, Vector3 position, Quaternion rotation,
-            Material frameMaterial, float spotIntensity, bool plaque, System.Action imageDone = null)
+        public static Transform Hang(Transform parent, WallCard card, (int w, int h) sizeMm, Vector3 position,
+            Quaternion rotation, Material frameMaterial, float spotIntensity, bool plaque, System.Action imageDone = null)
         {
-            var (wMm, hMm) = card.HangMm();
+            var (wMm, hMm) = sizeMm;
             float w = wMm / 1000f, h = hMm / 1000f;
 
             var root = new GameObject(card.Title ?? card.Id).transform;

@@ -37,6 +37,15 @@ namespace MuseumBrowser.Core
         public int HeightMm;
         public List<Opening> Openings = new();
         public List<Placement> Placements = new();
+        /// Text on the wall: a group's title above its works ("Cedar Falls · 1951–58").
+        public List<WallText> Texts = new();
+    }
+
+    public sealed class WallText
+    {
+        public int XMm;
+        public int CenterMm;
+        public string Text;
     }
 
     /// A doorway in a wall, measured along the wall from its left end.
@@ -55,7 +64,14 @@ namespace MuseumBrowser.Core
         /// Height of the work's centre above the floor (hanging line, usually 1520).
         public int CenterMm = 1520;
         public int Order;
+        /// Size to hang at, chosen by the layout (e.g. a group's feature print is larger).
+        /// Null: the card's own size.
+        public int? WidthMm;
+        public int? HeightMm;
         public WallCard Card;
+
+        public (int w, int h) HangMm() =>
+            WidthMm is > 0 && HeightMm is > 0 ? (WidthMm.Value, HeightMm.Value) : Card?.HangMm() ?? (600, 800);
     }
 
     /// One object as served by harvest's /api/{folioCode}/rows (WallCard).
@@ -65,6 +81,8 @@ namespace MuseumBrowser.Core
         public string Title;
         public WallLabel Label;
         public int? Year;
+        public List<string> Tags = new();
+        public List<string> Subjects = new();
         public CardSize Size;
         public CardImage Image;
         public List<AudioStop> Audio = new();
@@ -101,7 +119,10 @@ namespace MuseumBrowser.Core
 
         /// Physical size to hang at. Photographs known only in pixels are hung as
         /// exhibition prints with the given long side, keeping their proportions.
-        public (int w, int h) HangMm(int printLongSideMm = 600)
+        /// True when only a pixel size is known (photographs), i.e. hung as prints.
+        public bool IsPrint => !(WidthMm is > 0 && HeightMm is > 0) && WPx is > 0 && HPx is > 0;
+
+        public (int w, int h) HangMm(int printLongSideMm = 1000)
         {
             if (WidthMm is > 0 && HeightMm is > 0) return (WidthMm.Value, HeightMm.Value);
             if (WPx is > 0 && HPx is > 0)

@@ -207,12 +207,15 @@ namespace MuseumBrowser.App
                     AddRoomTitle(root, a, b, facing, room.Title);
 
                 var rotation = root.rotation * Quaternion.LookRotation(facing);
+                foreach (var t in wall.Texts)
+                    AddWallText(root, a + right * (t.XMm / 1000f) + Vector3.up * (t.CenterMm / 1000f) - facing * 0.01f,
+                        Quaternion.LookRotation(facing), t.Text);
                 foreach (var p in wall.Placements.OrderBy(p => p.Order))
                 {
                     if (p.Card == null) continue;
                     var local = a + right * (p.XMm / 1000f) + Vector3.up * (p.CenterMm / 1000f);
                     imagesTotal++;
-                    var work = WorkHanger.Hang(root, p.Card, root.TransformPoint(local), rotation,
+                    var work = WorkHanger.Hang(root, p.Card, p.HangMm(), root.TransformPoint(local), rotation,
                         frameMaterial, spotIntensity, wallPlaques, ImageDone);
                     work.gameObject.AddComponent<HungWork>().Index = works.Count;
                     works.Add(work);
@@ -254,6 +257,23 @@ namespace MuseumBrowser.App
                 block.transform.localScale = new Vector3(wallThickness / wallBlockThickness,
                     height / wallBlockHeight, segment / wallBlockLength);
             }
+        }
+
+        /// A group's title, painted on the wall above it.
+        static void AddWallText(Transform room, Vector3 localPosition, Quaternion localRotation, string text)
+        {
+            var go = new GameObject("Wall text");
+            go.transform.SetParent(room, false);
+            go.transform.localPosition = localPosition;
+            go.transform.localRotation = localRotation;
+            var tmp = go.AddComponent<TMPro.TextMeshPro>();
+            tmp.rectTransform.sizeDelta = new Vector2(5f, 0.5f);
+            tmp.alignment = TMPro.TextAlignmentOptions.Center;
+            tmp.fontSize = 2.4f;
+            tmp.characterSpacing = 4f;
+            tmp.color = new Color(0.07f, 0.06f, 0.05f);
+            tmp.fontStyle = TMPro.FontStyles.SmallCaps;
+            tmp.text = text;
         }
 
         void AddRoomTitle(Transform room, Vector3 a, Vector3 b, Vector3 facing, string title)

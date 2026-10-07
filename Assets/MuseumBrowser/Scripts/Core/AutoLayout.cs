@@ -4,94 +4,248 @@ using System.Linq;
 namespace MuseumBrowser.Core
 {
     /// Stand-in for harvest's layout pass (harvest task #5): a suite of rooms in a
-    /// row, connected by doorways, works hung on each room's side walls along a
-    /// shared centre line. Delete once /api/exhibitions/{code}/layout exists.
+    /// row, connected by doorways. Rooms are sized to what hangs in them. Works
+    /// with physical sizes hang in one row on the 1520 mm centre line; photographs
+    /// (prints) hang salon-style in two rows. Delete once
+    /// /api/exhibitions/{code}/layout exists.
     public static class AutoLayout
     {
-        const int CenterMm = 1520, GapMm = 900, MarginMm = 1200;
+        const int CenterMm = 1520;
+        const int RowLowMm = 1200, RowHighMm = 2150;   // salon rows for prints
+        const int GapMm = 800, PrintGapMm = 350, MarginMm = 900;
         const int WallGapMm = 600;   // between neighbouring rooms (two thin walls)
-        const int DoorMm = 2400;
+        const int DoorMm = 2000;
+        const int MinDepthMm = 8000, MaxDepthMm = 18000;
 
         /// One list of works, split across as many rooms as it fills.
-        public static Exhibition Suite(string title, IEnumerable<WallCard> cards,
-            int widthMm = 10000, int depthMm = 16000, int heightMm = 5000)
+        public static Exhibition Suite(string title, IEnumerable<WallCard> cards)
         {
             var queue = new Queue<WallCard>(cards);
             var groups = new List<(string, List<WallCard>)>();
-            while (queue.Count > 0 && groups.Count < 8)
-                groups.Add(($"{title} · Room {Roman(groups.Count + 1)}", Take(queue, depthMm)));
-            return Rooms(title, groups, widthMm, depthMm, heightMm);
+            while (queue.Count > 0 && groups.Count < 10)
+            {
+                var room = new List<WallCard>();
+                // Fill two long walls (two rows each for prints) up to the maximum depth.
+                int capacity = 2 * Capacity(queue.Peek());
+                int used = 0;
+                while (queue.Count > 0 && used + Width(queue.Peek()) <= capacity)
+                {
+                    used += Width(queue.Peek());
+                    room.Add(queue.Dequeue());
+                }
+                if (room.Count == 0) room.Add(queue.Dequeue());
+                groups.Add(($"{title} · Room {Roman(groups.Count + 1)}", room));
+            }
+            return Rooms(title, groups);
         }
 
         /// One room per group (a "hall" filter: a decade, a theme, a town...).
-        public static Exhibition Rooms(string title, IEnumerable<(string title, List<WallCard> cards)> groups,
-            int widthMm = 10000, int depthMm = 16000, int heightMm = 5000)
+        public static Exhibition Rooms(string title, IEnumerable<(string title, List<WallCard> cards)> groups)
         {
             var rooms = new List<Room>();
-            int order = 0;
+            int order = 0, y = 0;
             foreach (var (roomTitle, cards) in groups)
             {
-                int y = rooms.Count * (depthMm + WallGapMm);
+                bool prints = cards.Count > 0 && cards.Count(c => c.Size?.IsPrint == true) * 2 > cards.Count;
+                int rows = prints ? 2 : 1;
+                int gap = prints ? PrintGapMm : GapMm;
+                int tallest = cards.Count == 0 ? 1000 : cards.Max(c => c.HangMm().h);
+                int widthMm = prints ? 7000 : 9000;
+                int heightMm = System.Math.Max(3600, (prints ? RowHighMm : CenterMm) + tallest / 2 + 900);
+
+                // Depth: just enough wall for the works (split over two walls and the rows).
+                int wallRun = cards.Sum(c => c.HangMm().w + gap) / (2 * rows) + 2 * MarginMm;
+                // Prints are grouped below, which sizes the room itself; start from the minimum.
+                int depthMm = prints ? MinDepthMm : System.Math.Clamp(wallRun + 600, MinDepthMm, MaxDepthMm);
+
                 var room = new Room
                 {
                     Code = $"R{rooms.Count + 1}", Title = roomTitle, TitleWall = "N",
                     WidthMm = widthMm, DepthMm = depthMm, HeightMm = heightMm, OriginXMm = 0, OriginYMm = y,
                 };
+
                 var west = new Wall { Code = "W", Side = "w", X0Mm = 0, Y0Mm = 0, X1Mm = 0, Y1Mm = depthMm, HeightMm = heightMm };
                 var north = new Wall { Code = "N", Side = "n", X0Mm = 0, Y0Mm = depthMm, X1Mm = widthMm, Y1Mm = depthMm, HeightMm = heightMm };
                 var east = new Wall { Code = "E", Side = "e", X0Mm = widthMm, Y0Mm = depthMm, X1Mm = widthMm, Y1Mm = 0, HeightMm = heightMm };
                 var south = new Wall { Code = "S", Side = "s", X0Mm = widthMm, Y0Mm = 0, X1Mm = 0, Y1Mm = 0, HeightMm = heightMm };
-                // Doorways on the centre line: in from the south, on to the north.
                 if (rooms.Count > 0) south.Openings.Add(Door(widthMm));
                 north.Openings.Add(Door(widthMm));
 
-                var queue = new Queue<WallCard>(cards);
-                foreach (var wall in new[] { west, east })
-                    foreach (var card in Take(queue, depthMm))
-                        wall.Placements.Add(new Placement { ItemId = card.Id, Order = order++, Card = card, CenterMm = CenterMm });
-                foreach (var wall in new[] { west, east }) Space(wall, depthMm);
-
+                if (prints)
+                    HangGroups(cards, new[] { west, east }, ref depthMm, ref order);
+                else
+                {
+                    // Works with physical sizes: one row at true size on the centre line.
+                    var queue = new Queue<WallCard>(cards);
+                    foreach (var wall in new[] { west, east })
+                    {
+                        var row = new List<WallCard>();
+                        int used = 2 * MarginMm - gap;
+                        while (queue.Count > 0 && used + queue.Peek().HangMm().w + gap <= depthMm)
+                        {
+                            used += queue.Peek().HangMm().w + gap;
+                            row.Add(queue.Dequeue());
+                        }
+                        Spread(wall, row, depthMm, CenterMm, ref order);
+                    }
+                }
+                room.DepthMm = depthMm;
+                west.Y1Mm = depthMm; east.Y0Mm = depthMm;
+                north.Y0Mm = north.Y1Mm = depthMm;
                 room.Walls.AddRange(new[] { west, north, east, south });
                 rooms.Add(room);
+                y += room.DepthMm + WallGapMm;
             }
-            // The last room is a dead end.
             if (rooms.Count > 0) rooms.Last().Walls.First(w => w.Code == "N").Openings.Clear();
             return new Exhibition { Code = title, Title = title, Rooms = rooms };
         }
 
-        static Opening Door(int widthMm) => new() { FromMm = (widthMm - DoorMm) / 2, ToMm = (widthMm + DoorMm) / 2 };
+        // ---- Museum-style groups for photographs (prints) -------------------------------------
 
-        /// As many works as fit along one wall.
-        static List<WallCard> Take(Queue<WallCard> queue, int wallMm)
+        const int FeatureLongMm = 1300, SupportLongMm = 700, InGroupGapMm = 140, GroupGapMm = 1300;
+        const int GroupCenterMm = 1550;
+
+        /// How strongly a work deserves to be featured. Placeholder: more text = more to say.
+        /// Later: likes, curation score, ...
+        public static System.Func<WallCard, float> Score = c => (c.Label?.Title ?? c.Title ?? "").Length;
+
+        sealed class Group
         {
-            var taken = new List<WallCard>();
-            int used = MarginMm * 2 - GapMm;
-            while (queue.Count > 0 && used + queue.Peek().HangMm().w + GapMm <= wallMm)
-            {
-                var card = queue.Dequeue();
-                used += card.HangMm().w + GapMm;
-                taken.Add(card);
-            }
-            return taken;
+            public readonly List<(WallCard card, int dx, int dy, int w, int h)> Items = new();
+            public int Width, Top;
+            public string Title;
         }
 
-        /// Spread a wall's works evenly between its end margins.
-        static void Space(Wall wall, int wallMm)
+        /// How works are grouped on a wall, and what the group is called. Tags first (a
+        /// subject like "Sports"), else place; plus the years. Tags arrive once WallCards
+        /// carry them (harvest task #3 follow-up).
+        static string GroupKey(WallCard c) =>
+            c.Tags?.FirstOrDefault() ?? c.Subjects?.FirstOrDefault() ?? City(c.Label?.Place) ?? "";
+
+        static string City(string place) => string.IsNullOrWhiteSpace(place) ? null : place.Split(',')[0].Trim();
+
+        static string Title(List<WallCard> members)
         {
-            var ps = wall.Placements;
-            if (ps.Count == 0) return;
-            int widths = ps.Sum(p => p.Card.HangMm().w);
-            float gap = (wallMm - 2f * MarginMm - widths) / System.Math.Max(1, ps.Count - 1);
-            if (ps.Count == 1) { ps[0].XMm = wallMm / 2; return; }
-            float x = MarginMm;
-            foreach (var p in ps)
+            var key = members.GroupBy(GroupKey).OrderByDescending(g => g.Count()).First().Key;
+            var years = members.Where(c => c.Year.HasValue).Select(c => c.Year.Value).ToList();
+            string span = years.Count == 0 ? null
+                : years.Min() == years.Max() ? years.Min().ToString()
+                : $"{years.Min()}–{years.Max() % 100:00}";
+            return string.Join(" · ", new[] { key, span }.Where(s => !string.IsNullOrEmpty(s)));
+        }
+
+        /// Photographs are hung as groups: related prints (same year, then place) together,
+        /// the highest-scoring one larger as the group's feature, the others in a two-row grid
+        /// beside it; groups are spaced well apart. Sizes are the layout's choice.
+        static void HangGroups(List<WallCard> cards, Wall[] walls, ref int depthMm, ref int order)
+        {
+            // Related works together: by group key (tag/place), in time order; big sets are split
+            // into groups of up to six, and leftovers of one or two join a neighbouring group.
+            var buckets = cards.GroupBy(GroupKey)
+                .Select(b => b.OrderBy(c => c.Year ?? int.MaxValue).ToList())
+                .OrderBy(b => b.Min(c => c.Year ?? int.MaxValue))
+                .ToList();
+            var sets = new List<List<WallCard>>();
+            var small = new List<WallCard>();
+            foreach (var b in buckets)
             {
-                int w = p.Card.HangMm().w;
-                p.XMm = (int)(x + w / 2f);
+                if (b.Count <= 2) { small.AddRange(b); continue; }
+                for (int i = 0; i < b.Count; i += 6) sets.Add(b.Skip(i).Take(6).ToList());
+            }
+            for (int i = 0; i < small.Count; i += 5) sets.Add(small.Skip(i).Take(5).ToList());
+            var groups = sets.Select(BuildGroup).ToList();
+
+            // Balance groups across the walls, then size the room to the longer wall.
+            var perWall = walls.Select(_ => new List<Group>()).ToArray();
+            var lengths = new int[walls.Length];
+            foreach (var g in groups)
+            {
+                int k = System.Array.IndexOf(lengths, lengths.Min());
+                perWall[k].Add(g);
+                lengths[k] += g.Width + GroupGapMm;
+            }
+            depthMm = System.Math.Max(depthMm, lengths.Max() - GroupGapMm + 2 * MarginMm);
+
+            for (int k = 0; k < walls.Length; k++)
+            {
+                var list = perWall[k];
+                if (list.Count == 0) continue;
+                int total = list.Sum(g => g.Width);
+                float gap = list.Count > 1 ? (depthMm - 2f * MarginMm - total) / (list.Count - 1) : 0;
+                float x = list.Count == 1 ? (depthMm - total) / 2f : MarginMm;
+                foreach (var g in list)
+                {
+                    walls[k].Texts.Add(new WallText { XMm = (int)(x + g.Width / 2f), CenterMm = GroupCenterMm + g.Top + 260, Text = g.Title });
+                    foreach (var (card, dx, dy, w, h) in g.Items)
+                        walls[k].Placements.Add(new Placement
+                        {
+                            ItemId = card.Id, Card = card, Order = order++,
+                            XMm = (int)(x + dx), CenterMm = GroupCenterMm + dy, WidthMm = w, HeightMm = h,
+                        });
+                    x += g.Width + gap;
+                }
+            }
+        }
+
+        static Group BuildGroup(List<WallCard> members)
+        {
+            var g = new Group();
+            var feature = members.OrderByDescending(Score).First();
+            var (fw, fh) = feature.Size?.HangMm(FeatureLongMm) ?? (FeatureLongMm, FeatureLongMm);
+            g.Items.Add((feature, fw / 2, 0, fw, fh));
+            int x = fw + InGroupGapMm;
+
+            // The rest: a two-row grid to the right of the feature, centred on it vertically.
+            var rest = members.Where(c => c != feature).ToList();
+            for (int i = 0; i < rest.Count; i += 2)
+            {
+                var top = rest[i];
+                var (tw, th) = top.Size?.HangMm(SupportLongMm) ?? (SupportLongMm, SupportLongMm);
+                if (i + 1 < rest.Count)
+                {
+                    var bottom = rest[i + 1];
+                    var (bw, bh) = bottom.Size?.HangMm(SupportLongMm) ?? (SupportLongMm, SupportLongMm);
+                    int col = System.Math.Max(tw, bw);
+                    int half = (th + InGroupGapMm + bh) / 2;
+                    g.Items.Add((top, x + col / 2, half - th / 2, tw, th));
+                    g.Items.Add((bottom, x + col / 2, -(half - bh / 2), bw, bh));
+                    x += col + InGroupGapMm;
+                }
+                else
+                {
+                    g.Items.Add((top, x + tw / 2, 0, tw, th));
+                    x += tw + InGroupGapMm;
+                }
+            }
+            g.Width = x - InGroupGapMm;
+            g.Top = g.Items.Max(it => it.dy + it.h / 2);
+            g.Title = Title(members);
+            return g;
+        }
+
+        static int Width(WallCard c) => c.HangMm().w + (c.Size?.IsPrint == true ? PrintGapMm : GapMm);
+
+        /// Usable length of one long wall (all rows) at the maximum room depth.
+        static int Capacity(WallCard sample) =>
+            (MaxDepthMm - 2 * MarginMm) * (sample.Size?.IsPrint == true ? 2 : 1);
+
+        static Opening Door(int widthMm) => new() { FromMm = (widthMm - DoorMm) / 2, ToMm = (widthMm + DoorMm) / 2 };
+
+        /// Spread one row evenly between the wall's end margins.
+        static void Spread(Wall wall, List<WallCard> row, int wallMm, int centerMm, ref int order)
+        {
+            if (row.Count == 0) return;
+            int widths = row.Sum(c => c.HangMm().w);
+            float gap = row.Count > 1 ? (wallMm - 2f * MarginMm - widths) / (row.Count - 1) : 0;
+            float x = row.Count == 1 ? (wallMm - widths) / 2f : MarginMm;
+            foreach (var c in row)
+            {
+                int w = c.HangMm().w;
+                wall.Placements.Add(new Placement { ItemId = c.Id, XMm = (int)(x + w / 2f), CenterMm = centerMm, Order = order++, Card = c });
                 x += w + gap;
             }
         }
 
-        static string Roman(int n) => n switch { 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "V", 6 => "VI", 7 => "VII", _ => "VIII" };
+        static string Roman(int n) => n switch { 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "V", 6 => "VI", 7 => "VII", 8 => "VIII", 9 => "IX", _ => "X" };
     }
 }
