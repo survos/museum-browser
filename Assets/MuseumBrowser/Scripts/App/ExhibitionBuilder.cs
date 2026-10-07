@@ -98,13 +98,15 @@ namespace MuseumBrowser.App
         readonly List<Transform> works = new();
         readonly List<WallCard> cards = new();
 
-        /// In the Editor: the local zm. On the Web: the site that serves the page (zm embeds the
-        /// build, so the API is same-origin). Desktop builds use playerApiBase.
+        /// In the Editor: the local zm. On the Web: ?api= when the embedding page passes it (the
+        /// player is hosted on object storage, not on the site), else the page's own origin.
+        /// Desktop builds use playerApiBase.
         public string ApiBase
         {
             get
             {
                 if (Application.isEditor) return editorApiBase;
+                if (QueryParam("api") is { Length: > 0 } api) return api.TrimEnd('/');
                 if (Application.platform == RuntimePlatform.WebGLPlayer && Origin(Application.absoluteURL) is { } origin)
                     return origin;
                 return playerApiBase;
