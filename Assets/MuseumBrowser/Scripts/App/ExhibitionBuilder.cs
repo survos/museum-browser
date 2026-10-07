@@ -53,6 +53,14 @@ namespace MuseumBrowser.App
         [SerializeField] bool wallPlaques;
 
         public IReadOnlyList<Transform> Works => works;
+        public string Title { get; private set; }
+        /// 0..1 while loading: the layout/records first, then the images.
+        public float Progress { get; private set; }
+        public string Stage { get; private set; } = "Opening the galleries…";
+        int imagesTotal, imagesDone;
+        public int RoomCount { get; private set; }
+        /// Raised with a human-readable message when loading fails (shown on screen).
+        public event System.Action<string> Failed;
         public IReadOnlyList<WallCard> Cards => cards;
         /// Where a visit starts: just inside the first room, looking into it.
         public Vector3 Entrance { get; private set; }
@@ -101,6 +109,18 @@ namespace MuseumBrowser.App
 
         async void Start()
         {
+            try { await Load(); }
+            catch (System.Exception e)
+            {
+                Debug.LogException(e);
+                Failed?.Invoke(e.Message);
+            }
+        }
+
+        async Awaitable Load()
+        {
+            Progress = 0.05f;
+            Stage = "Fetching the collection…";
             Exhibition exhibition;
             if (RequestedFolio() is { } folio)
             {
@@ -126,6 +146,12 @@ namespace MuseumBrowser.App
             }
             else exhibition = await JsonLoader.LoadAsync<Exhibition>(Resolve(layoutSource));
             Debug.Log($"Exhibition {exhibition.Code}: {exhibition.Rooms.Count} room(s)");
+            Progress = 0.3f;
+            Stage = "Hanging the works…";
+            Title = exhibition.Title;
+            RoomCount = exhibition.Rooms.Count;
+            if (exhibition.Rooms.Sum(r => r.Walls.Sum(w => w.Placements.Count)) == 0)
+                throw new System.InvalidOperationException("This folio has no works with images to hang.");
             foreach (var room in exhibition.Rooms) BuildRoom(room);
             if (exhibition.Rooms.Count > 0)
             {
@@ -135,6 +161,13 @@ namespace MuseumBrowser.App
                 EntranceYaw = transform.eulerAngles.y;
             }
             Built?.Invoke(this);
+        }
+
+        void ImageDone()
+        {
+            imagesDone++;
+            Progress = 0.3f + 0.7f * imagesDone / Mathf.Max(1, imagesTotal);
+            Stage = imagesDone < imagesTotal ? $"Loading images… {imagesDone} of {imagesTotal}" : "";
         }
 
         void BuildRoom(Room room)
@@ -164,8 +197,9 @@ namespace MuseumBrowser.App
                 {
                     if (p.Card == null) continue;
                     var local = a + right * (p.XMm / 1000f) + Vector3.up * (p.CenterMm / 1000f);
+                    imagesTotal++;
                     var work = WorkHanger.Hang(root, p.Card, root.TransformPoint(local), rotation,
-                        frameMaterial, spotIntensity, wallPlaques);
+                        frameMaterial, spotIntensity, wallPlaques, ImageDone);
                     work.gameObject.AddComponent<HungWork>().Index = works.Count;
                     works.Add(work);
                     cards.Add(p.Card);

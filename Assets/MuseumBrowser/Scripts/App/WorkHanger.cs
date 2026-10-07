@@ -13,7 +13,7 @@ namespace MuseumBrowser.App
         const float FrameDepth = 0.05f;
 
         public static Transform Hang(Transform parent, WallCard card, Vector3 position, Quaternion rotation,
-            Material frameMaterial, float spotIntensity, bool plaque)
+            Material frameMaterial, float spotIntensity, bool plaque, System.Action imageDone = null)
         {
             var (wMm, hMm) = card.HangMm();
             float w = wMm / 1000f, h = hMm / 1000f;
@@ -38,17 +38,19 @@ namespace MuseumBrowser.App
             Object.Destroy(canvas.GetComponent<Collider>());
             var material = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
             canvas.GetComponent<Renderer>().material = material;
-            if (card.Image?.Best is { } url) LoadImage(url, material);
+            if (card.Image?.Best is { } url) LoadImage(url, material, imageDone);
+            else imageDone?.Invoke();
 
             if (plaque) AddLabel(root, card.Label, w);
             if (spotIntensity > 0) AddSpot(root, h, spotIntensity);
             return root;
         }
 
-        static async void LoadImage(string url, Material material)
+        static async void LoadImage(string url, Material material, System.Action done)
         {
             try { material.SetTexture("_BaseMap", await ImageLoader.LoadAsync(url)); }
             catch (System.Exception e) { Debug.LogWarning(e.Message); }
+            finally { done?.Invoke(); }
         }
 
         /// A white wall plaque beside the work, its centre at museum label height.

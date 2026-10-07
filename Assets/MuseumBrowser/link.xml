@@ -1,0 +1,6 @@
+<!-- IL2CPP (Web builds) strips members it can't see used. Newtonsoft creates these
+     models by reflection, so keep them whole, or JSON loading fails silently. -->
+<linker>
+  <assembly fullname="MuseumBrowser.Core" preserve="all"/>
+  <assembly fullname="MuseumBrowser.App" preserve="all"/>
+</linker>

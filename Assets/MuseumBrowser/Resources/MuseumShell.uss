@@ -1,0 +1,45 @@
+.shell { flex-grow: 1; }
+.hidden { display: none; }
+
+.start {
+    position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgb(27, 26, 24);
+    align-items: center; justify-content: center;
+}
+.brand { font-size: 64px; color: rgb(239, 233, 221); letter-spacing: 8px; -unity-text-align: middle-center; }
+.tagline { font-size: 16px; color: rgb(185, 174, 153); letter-spacing: 6px; margin-bottom: 48px; -unity-text-align: middle-center; }
+.folio-title { font-size: 30px; color: rgb(239, 233, 221); -unity-font-style: italic; white-space: normal; -unity-text-align: middle-center; max-width: 900px; }
+.folio-meta { font-size: 15px; color: rgb(185, 174, 153); margin-top: 6px; margin-bottom: 28px; }
+.progress { width: 320px; height: 2px; background-color: rgb(59, 56, 50); margin-bottom: 12px; }
+.progress-fill { height: 100%; width: 0; background-color: rgb(200, 169, 106); }
+.status { font-size: 15px; color: rgb(185, 174, 153); white-space: normal; -unity-text-align: middle-center; max-width: 800px; margin-bottom: 16px; }
+.status.error { color: rgb(232, 163, 154); }
+.enter {
+    font-size: 18px; padding: 12px 34px; border-radius: 3px;
+    background-color: rgb(200, 169, 106); color: rgb(27, 26, 24);
+    border-width: 0;
+}
+.enter:hover { background-color: rgb(221, 191, 128); }
+.enter:disabled { opacity: 0.35; }
+
+.toolbar { position: absolute; top: 14px; right: 14px; flex-direction: row; }
+.icon-button {
+    width: 38px; height: 38px; margin-left: 8px; border-radius: 19px;
+    font-size: 18px; -unity-font-style: bold;
+    background-color: rgba(250, 248, 243, 0.85); color: rgb(28, 27, 26); border-width: 0;
+}
+.icon-button:hover { background-color: rgb(250, 248, 243); }
+
+.panel {
+    position: absolute; top: 64px; right: 14px; width: 420px; padding: 20px 24px;
+    background-color: rgba(250, 248, 243, 0.97); border-radius: 4px; color: rgb(28, 27, 26);
+}
+.panel-title { font-size: 20px; -unity-font-style: bold; margin-bottom: 10px; }
+.panel-body { font-size: 15px; white-space: normal; }
+.panel-close { margin-top: 14px; align-self: flex-end; }
+
+.hints {
+    position: absolute; bottom: 14px; left: 0; right: 0;
+    -unity-text-align: middle-center; font-size: 14px; color: rgb(250, 248, 243);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
