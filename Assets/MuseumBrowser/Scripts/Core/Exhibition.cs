@@ -153,7 +153,17 @@ namespace MuseumBrowser.Core
     {
         public string Url;
         public int? DurationSec;
+        public string Title;
         public string Tour;
+        public List<AudioTour> Tours = new();
+        /// Relative to the API (/api/{folio}/rows/{soundId}?core=sound).
         public string TranscriptUrl;
+    }
+
+    public sealed class AudioTour
+    {
+        public string Id;
+        public string Title;
+        public int? Ordinal;
     }
 }

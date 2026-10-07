@@ -116,11 +116,19 @@ namespace MuseumBrowser.Core
             public string Title;
         }
 
-        /// How works are grouped on a wall, and what the group is called. Tags first (a
-        /// subject like "Sports"), else place; plus the years. Tags arrive once WallCards
-        /// carry them (harvest task #3 follow-up).
-        static string GroupKey(WallCard c) =>
-            c.Tags?.FirstOrDefault() ?? c.Subjects?.FirstOrDefault() ?? City(c.Label?.Place) ?? "";
+        /// How works are grouped on a wall, and what the group is called: the work's subject
+        /// that is most shared within the room ("Leisure", "Fairs and Festivals"), else its most
+        /// shared tag, else its town; plus the years. Set per room by HangGroups.
+        static System.Func<WallCard, string> GroupKey = c => City(c.Label?.Place) ?? "";
+
+        static System.Func<WallCard, string> SharedKey(List<WallCard> cards)
+        {
+            var subjects = cards.SelectMany(c => c.Subjects ?? new List<string>()).GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
+            var tags = cards.SelectMany(c => c.Tags ?? new List<string>()).GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
+            string Best(List<string> values, Dictionary<string, int> counts) =>
+                values?.Where(v => counts.TryGetValue(v, out var n) && n >= 3).OrderByDescending(v => counts[v]).FirstOrDefault();
+            return c => Best(c.Subjects, subjects) ?? Best(c.Tags, tags) ?? City(c.Label?.Place) ?? "";
+        }
 
         static string City(string place) => string.IsNullOrWhiteSpace(place) ? null : place.Split(',')[0].Trim();
 
@@ -139,7 +147,8 @@ namespace MuseumBrowser.Core
         /// beside it; groups are spaced well apart. Sizes are the layout's choice.
         static void HangGroups(List<WallCard> cards, Wall[] walls, ref int depthMm, ref int order)
         {
-            // Related works together: by group key (tag/place), in time order; big sets are split
+            GroupKey = SharedKey(cards);
+            // Related works together: by group key (subject/tag/place), in time order; big sets are split
             // into groups of up to six, and leftovers of one or two join a neighbouring group.
             var buckets = cards.GroupBy(GroupKey)
                 .Select(b => b.OrderBy(c => c.Year ?? int.MaxValue).ToList())
