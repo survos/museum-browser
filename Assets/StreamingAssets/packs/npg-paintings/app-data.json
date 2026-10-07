@@ -1,0 +1,4475 @@
+{
+ "version": 0,
+ "folio": "smith/npg",
+ "title": "National Portrait Gallery — Paintings",
+ "generatedAt": "2026-10-07T12:29:00+00:00",
+ "facets": [],
+ "items": [
+  {
+   "id": "ld1-1643399756728-1643399756954-0",
+   "title": "John Ericsson",
+   "label": {
+    "creator": "Arvid Frederick Nyholm, 1866 - 1927",
+    "title": "John Ericsson",
+    "subject": "Mathew B. Brady, 1823? - 15 Jan 1896 (Photographer), John Ericsson",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 154.3 x 122.6 x 11.4cm (60 3/4 x 48 1/4 x 4 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of the Swedish American Republican League of Illinois to the Smithsonian Institution, 1912",
+    "accession": "NPG.66.54"
+   },
+   "sizeCm": {
+    "w": 122.6,
+    "h": 154.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_54&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_54_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.54",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399757815-0",
+   "title": "Harrison Gray Otis",
+   "label": {
+    "creator": "Chester Harding, 1 Sep 1792 - 10 Apr 1866",
+    "title": "Harrison Gray Otis",
+    "subject": "Harrison Gray Otis",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 121.9 × 101.6 × 9.5 cm (48 × 40 × 3 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Emily Morison Beck",
+    "accession": "NPG.77.30"
+   },
+   "sizeCm": {
+    "w": 101.6,
+    "h": 121.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_30&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_30_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.30",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399757849-1",
+   "title": "Benjamin Harrison",
+   "label": {
+    "creator": "William Thomas Mathews, 7 May 1821 - 11 Jan 1905",
+    "title": "Benjamin Harrison",
+    "subject": "Benjamin Harrison",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 74.3 × 61.9 cm (29 1/4 × 24 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Museum Purchase, Gallery Fund) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.35"
+   },
+   "sizeCm": {
+    "w": 61.9,
+    "h": 74.3,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_35&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_35_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.35",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399758223-0",
+   "title": "Gulian Crommelin Verplanck",
+   "label": {
+    "creator": "Daniel Huntington, 14 Oct 1816 - 18 Apr 1906",
+    "title": "Gulian Crommelin Verplanck",
+    "subject": "Gulian Crommelin Verplanck",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 132.1 x 114 x 6.7cm (52 x 44 7/8 x 2 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.70.48"
+   },
+   "sizeCm": {
+    "w": 114.0,
+    "h": 132.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_48Verplanck-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_48Verplanck-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.48",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399758485-0",
+   "title": "Thomas Jonathan Jackson",
+   "label": {
+    "creator": "John Adams Elder, 3 Feb 1833 - 24 Feb 1895",
+    "title": "Thomas Jonathan Jackson",
+    "subject": "Minnis & Cowell, active c. 1860 - 1865, Thomas Jonathan Jackson",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 138.1 × 100.5 cm (54 3/8 × 39 9/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Gift of William Wilson Corcoran) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.24"
+   },
+   "sizeCm": {
+    "w": 100.5,
+    "h": 138.1,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_24-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_24-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.24",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399758522-2",
+   "title": "Anson Phelps Stokes",
+   "label": {
+    "creator": "Julius Rolshoven, 1858 - 1930",
+    "title": "Anson Phelps Stokes",
+    "subject": "Anson Phelps Stokes",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 137.5 × 113.7 × 3.2 cm (54 1/8 × 44 3/4 × 1 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the sitter's grandchildren",
+    "accession": "NPG.85.9"
+   },
+   "sizeCm": {
+    "w": 113.7,
+    "h": 137.5,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8500018A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-8500018A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.85.9",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399758568-0",
+   "title": "Unidentified Man",
+   "label": {
+    "creator": "Thomas Hicks, 18 Oct 1823 - 8 Oct 1890",
+    "title": "Unidentified Man",
+    "subject": "Unidentified Man, Stephen Collins Foster",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 89.5 x 76.2 x 5.1cm (35 1/4 x 30 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the A.W. Mellon Educational and Charitable Trust, 1942",
+    "accession": "NPG.65.52"
+   },
+   "sizeCm": {
+    "w": 76.2,
+    "h": 89.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_52&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_52_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.52",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399759096-1",
+   "title": "Juliana Westray Wood",
+   "label": {
+    "creator": "Rembrandt Peale, 22 Feb 1778 - 3 Oct 1860",
+    "title": "Juliana Westray Wood",
+    "subject": "Juliana Westray Wood",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 103.8 x 90.8 x 10.8cm (40 7/8 x 35 3/4 x 4 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; frame conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.81.120"
+   },
+   "sizeCm": {
+    "w": 90.8,
+    "h": 103.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_120Wood_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_81_120Wood_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.120",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399759125-1",
+   "title": "Nelson Wilmarth Aldrich",
+   "label": {
+    "creator": "Anders Leonard Zorn, 18 Feb 1860 - 1920",
+    "title": "Nelson Wilmarth Aldrich",
+    "subject": "Nelson Wilmarth Aldrich",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 145.7 x 111.8 x 6.4cm (57 3/8 x 44 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Stephanie Edgell in memory of Elsie Aldrich Campbell",
+    "accession": "NPG.69.85"
+   },
+   "sizeCm": {
+    "w": 111.8,
+    "h": 145.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_85Aldrich-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_85Aldrich-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.85",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399759201-0",
+   "title": "Richard Watson Gilder",
+   "label": {
+    "creator": "Cecilia Beaux, 1 May 1855 - 17 Sep 1942",
+    "title": "Richard Watson Gilder",
+    "subject": "Richard Watson Gilder",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 128.9 x 99.4 x 7cm (50 3/4 x 39 1/8 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Rodman and Mary Ellen Gilder",
+    "accession": "NPG.98.77"
+   },
+   "sizeCm": {
+    "w": 99.4,
+    "h": 128.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_77Gilder-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_77Gilder-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.77",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399760188-0",
+   "title": "George Catlin",
+   "label": {
+    "creator": "William Fisk, 1796 - 8 Nov 1872",
+    "title": "George Catlin",
+    "subject": "George Catlin",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 158.8 x 133.4 x 7cm (62 1/2 x 52 1/2 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Miss May C. Kinney, Ernest C. Kinney and Bradford Wickes, 1945",
+    "accession": "NPG.70.14"
+   },
+   "sizeCm": {
+    "w": 133.4,
+    "h": 158.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_14&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_14_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.14",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399760361-0",
+   "title": "Unidentified Man",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Unidentified Man",
+    "subject": "John Wollaston, c. 1710 - c. 1767, Unidentified Man, John Bartram",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 107.6 × 87.3 × 7.3 cm (42 3/8 × 34 3/8 × 2 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "S/NPG.66.73"
+   },
+   "sizeCm": {
+    "w": 87.3,
+    "h": 107.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_73_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_73_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.73",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399760553-0",
+   "title": "Bret Harte",
+   "label": {
+    "creator": "John Pettie, 17 Mar 1839 - 21 Feb 1893",
+    "title": "Bret Harte",
+    "subject": "Bret Harte",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 123.2 x 85.1 x 7.6cm (48 1/2 x 33 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; frame conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.69.52"
+   },
+   "sizeCm": {
+    "w": 85.1,
+    "h": 123.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_52Harte_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_52Harte_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.52",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399760652-0",
+   "title": "West Family in the Studio Garden",
+   "label": {
+    "creator": "Benjamin West, 10 Oct 1738 - 11 Mar 1820",
+    "title": "West Family in the Studio Garden",
+    "subject": null,
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 45.1 x 51.8 x 4.8 cm (17 3/4 x 20 3/8 x 1 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.77.34"
+   },
+   "sizeCm": {
+    "w": 51.8,
+    "h": 45.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_34Westfamily-000004&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_34Westfamily-000004_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.34",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399760952-0",
+   "title": "Charles Herbert Woodbury",
+   "label": {
+    "creator": "John Singer Sargent, 12 Jan 1856 - 15 Apr 1925",
+    "title": "Charles Herbert Woodbury",
+    "subject": "Charles Herbert Woodbury",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 86 × 57.2 × 6.4 cm (33 7/8 × 22 1/2 × 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mr. and Mrs. David O. Woodbury",
+    "accession": "NPG.77.244"
+   },
+   "sizeCm": {
+    "w": 57.2,
+    "h": 86.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_244Woodbury-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_244Woodbury-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.244",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399761089-1",
+   "title": "Matthew Pratt Self-Portrait",
+   "label": {
+    "creator": "Matthew Pratt, 23 Sep 1734 - 9 Jan 1805",
+    "title": "Matthew Pratt Self-Portrait",
+    "subject": null,
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 92.1 x 80 x 5.7cm (36 1/4 x 31 1/2 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.69.35"
+   },
+   "sizeCm": {
+    "w": 80.0,
+    "h": 92.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_35&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_35_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.35",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399761209-1",
+   "title": "Unidentified Man",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Unidentified Man",
+    "subject": "Unidentified Man, William Wirt",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 67.9 × 60.3 × 5.7 cm (26 3/4 × 23 3/4 × 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Wilmarth Sheldon Lewis in memory of Annie Burr Jennings (1856-1939) and Annie Burr Lewis (1902-1959)",
+    "accession": "S/NPG.71.9"
+   },
+   "sizeCm": {
+    "w": 60.3,
+    "h": 67.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_71_9&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_71_9_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.71.9",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399761567-0",
+   "title": "Henry Laurens",
+   "label": {
+    "creator": "John Singleton Copley, 3 Jul 1738 - 9 Sep 1815",
+    "title": "Henry Laurens",
+    "subject": "Henry Laurens",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 155.9 × 121.9 × 9.2 cm (61 3/8 × 48 × 3 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the A.W. Mellon Educational and Charitable Trust, 1942",
+    "accession": "NPG.65.45"
+   },
+   "sizeCm": {
+    "w": 121.9,
+    "h": 155.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_45Laurens_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_45Laurens_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.45",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399761760-1",
+   "title": "Juliette Gordon Low",
+   "label": {
+    "creator": "Edward Hughes, 1832 - 1908",
+    "title": "Juliette Gordon Low",
+    "subject": "Juliette Gordon Low",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 167 x 130.8 x 10.2cm (65 3/4 x 51 1/2 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Girl Scouts of the United States of America; frame conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.73.5"
+   },
+   "sizeCm": {
+    "w": 130.8,
+    "h": 167.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_73_5&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_73_5_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.73.5",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399761953-0",
+   "title": "Minimic",
+   "label": {
+    "creator": "James Wells Champney, 1843 - 1903",
+    "title": "Minimic",
+    "subject": "Minimic, ? - 1881",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 74.6 x 54 x 6.4cm (29 3/8 x 21 1/4 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gallery purchase, in memory of Brigadier General Richard Henry Pratt and his Wife, Anna Laura Mason Pratt, Friends of Minimic",
+    "accession": "NPG.96.163"
+   },
+   "sizeCm": {
+    "w": 54.0,
+    "h": 74.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_163Minimic-000003&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_96_163Minimic-000003_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.163",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399762124-0",
+   "title": "Zachary Taylor",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "Zachary Taylor",
+    "subject": "Jacques Guillaume Lucien Amans, Zachary Taylor",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 74.8 × 61.8 cm (29 7/16 × 24 5/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Museum Purchase, Gallery Fund) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.19"
+   },
+   "sizeCm": {
+    "w": 61.8,
+    "h": 74.8,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_19-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_19-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.19",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399762146-0",
+   "title": "Fisher Ames",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "Fisher Ames",
+    "subject": "Fisher Ames",
+    "medium": "Oil on wood",
+    "dimensions": "Frame: 89.2 x 75.6 x 8.9cm (35 1/8 x 29 3/4 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of George Cabot Lodge",
+    "accession": "NPG.79.215"
+   },
+   "sizeCm": {
+    "w": 75.6,
+    "h": 89.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_79_215Ames-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_79_215Ames-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.79.215",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399762167-1",
+   "title": "Elisha Kent Kane",
+   "label": {
+    "creator": "Thomas Hicks, 18 Oct 1823 - 8 Oct 1890",
+    "title": "Elisha Kent Kane",
+    "subject": "Elisha Kent Kane",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 36.8 × 32.1 cm (14 1/2 × 12 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.91.95"
+   },
+   "sizeCm": {
+    "w": 32.1,
+    "h": 36.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9100410A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-9100410A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.95",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399762193-0",
+   "title": "Benjamin Harrison, Jr.",
+   "label": {
+    "creator": "Charles Willson Peale, 15 Apr 1741 - 22 Feb 1827",
+    "title": "Benjamin Harrison, Jr.",
+    "subject": "Benjamin Harrison, Jr., 1750? - 1799, Benjamin Harrison, Sr.",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 90.2 x 76.8 x 6.4cm (35 1/2 x 30 1/4 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the A.W. Mellon Educational and Charitable Trust, 1942",
+    "accession": "S/NPG.65.109"
+   },
+   "sizeCm": {
+    "w": 76.8,
+    "h": 90.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_109Harrison-000004&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_65_109Harrison-000004_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.65.109",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399763122-0",
+   "title": "Anne Catharine Hoof Green",
+   "label": {
+    "creator": "Charles Willson Peale, 15 Apr 1741 - 22 Feb 1827",
+    "title": "Anne Catharine Hoof Green",
+    "subject": "Anne Catharine Hoof Green, c. 1720 - 23 Mar 1775",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 108 x 87.6 x 6.4cm (42 1/2 x 34 1/2 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; partial gift with funding from the Smithsonian Collections Acquisitions Program and the Governor's Mansion Foundation of Maryland; frame conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.91.152"
+   },
+   "sizeCm": {
+    "w": 87.6,
+    "h": 108.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_152Green_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_152Green_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.152",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399763261-0",
+   "title": "Thomas Hart Benton",
+   "label": {
+    "creator": "Ferdinand Thomas Lee Boyle, 1820 - 1906",
+    "title": "Thomas Hart Benton",
+    "subject": "Thomas Hart Benton",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 116.8 x 97.8 x 18.4cm (46 x 38 1/2 x 7 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.66.1"
+   },
+   "sizeCm": {
+    "w": 97.8,
+    "h": 116.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.1",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399763440-0",
+   "title": "John James Audubon",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "John James Audubon",
+    "subject": "John Woodhouse Audubon, John James Audubon",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 71.3 × 55.6 × 2.2 cm (28 1/16 × 21 7/8 × 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the Avalon Foundation through the generosity of Ailsa Mellon Bruce, 1951",
+    "accession": "NPG.65.67"
+   },
+   "sizeCm": {
+    "w": 55.6,
+    "h": 71.3,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_67&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_67_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.67",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399763975-0",
+   "title": "John Brown",
+   "label": {
+    "creator": "Ole Peter Hansen Balling, 13 Apr 1823 - 1 May 1906",
+    "title": "John Brown",
+    "subject": "John Brown",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 109.2 x 96.5 x 12.7cm (43 x 38 x 5\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.74.2"
+   },
+   "sizeCm": {
+    "w": 96.5,
+    "h": 109.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_2Brown_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_2Brown_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.2",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399764676-0",
+   "title": "Willard Huntington Wright (S. S. Van Dine)",
+   "label": {
+    "creator": "Stanton MacDonald-Wright, 8 Jul 1890 - 22 Aug 1973",
+    "title": "Willard Huntington Wright (S. S. Van Dine)",
+    "subject": "Willard Huntington Wright",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 109.5 x 94 x 6.4cm (43 1/8 x 37 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; this acquisition was made possible by a generous contribution from the James Smithson Society",
+    "accession": "NPG.86.7"
+   },
+   "sizeCm": {
+    "w": 94.0,
+    "h": 109.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_7&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_86_7_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.86.7",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399764875-0",
+   "title": "William Gilmore Simms",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "William Gilmore Simms",
+    "subject": "William Gilmore Simms",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 82.6 x 70.2 x 7cm (32 1/2 x 27 5/8 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; donated in memory of the Charles Carroll Simms family",
+    "accession": "NPG.95.20"
+   },
+   "sizeCm": {
+    "w": 70.2,
+    "h": 82.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_95_20Simms_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_95_20Simms_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.95.20",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399764904-0",
+   "title": "Charlotte Cushman",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Charlotte Cushman",
+    "subject": "Charlotte Saunders Cushman",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 61.3 × 49.2 × 2.5 cm (24 1/8 × 19 3/8 × 1\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.72.106"
+   },
+   "sizeCm": {
+    "w": 49.2,
+    "h": 61.3,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_106&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_106_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.106",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399765152-0",
+   "title": "Eben Jenks Loomis",
+   "label": {
+    "creator": "Edwin Burrage Child, 1868 - 1937",
+    "title": "Eben Jenks Loomis",
+    "subject": "Eben Jenks Loomis",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 144.6 × 108.7 × 4.4 cm (56 15/16 × 42 13/16 × 1 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; bequest of Millicent Todd Bingham",
+    "accession": "S/NPG.69.39"
+   },
+   "sizeCm": {
+    "w": 108.7,
+    "h": 144.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_39_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_69_39_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.69.39",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399765308-0",
+   "title": "Isaac Merrit Singer",
+   "label": {
+    "creator": "Edward Harrison May, 1824 - 1887",
+    "title": "Isaac Merrit Singer",
+    "subject": "Isaac Merrit Singer",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 144.8 x 112.4 x 6.7cm (57 x 44 1/4 x 2 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Singer Company",
+    "accession": "NPG.75.37"
+   },
+   "sizeCm": {
+    "w": 112.4,
+    "h": 144.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_37Singer_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_37Singer_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.37",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399765815-1",
+   "title": "Samuel Francis Du Pont",
+   "label": {
+    "creator": "Daniel Huntington, 14 Oct 1816 - 18 Apr 1906",
+    "title": "Samuel Francis Du Pont",
+    "subject": "Samuel Francis Du Pont",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 177.2 x 131 x 8.3cm (69 3/4 x 51 9/16 x 3 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; bequest of May DuPont Saulsbury, 1927",
+    "accession": "NPG.65.22"
+   },
+   "sizeCm": {
+    "w": 131.0,
+    "h": 177.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_22&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_22_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399766217-0",
+   "title": "DeWitt Clinton",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "DeWitt Clinton",
+    "subject": "DeWitt Clinton",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 147 x 116.2 x 11.4cm (57 7/8 x 45 3/4 x 4 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the A.W. Mellon Educational and Charitable Trust, 1942",
+    "accession": "NPG.65.53"
+   },
+   "sizeCm": {
+    "w": 116.2,
+    "h": 147.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_53&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_53_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.53",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399766380-1",
+   "title": "Jefferson Davis",
+   "label": {
+    "creator": "George Lethbridge Saunders, 1807 - 25 Aug 1863",
+    "title": "Jefferson Davis",
+    "subject": "Jefferson Davis",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Case Open: 19.4 x 33 x 1.3cm (7 5/8 x 13 x 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Joel A. H. Webb and Varina Webb Stewart Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.79.228"
+   },
+   "sizeCm": {
+    "w": 33.0,
+    "h": 19.4,
+    "kind": "case open"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-7900502A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-7900502A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.79.228",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767026-0",
+   "title": "Edmund Charles Tarbell Self-Portrait",
+   "label": {
+    "creator": "Edmund Charles Tarbell, 26 Apr 1862 - 1 Aug 1938",
+    "title": "Edmund Charles Tarbell Self-Portrait",
+    "subject": null,
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 133 × 115.3 × 4.8 cm (52 3/8 × 45 3/8 × 1 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Mrs. Josephine Tarbell Ferrell and Mary Tarbell Shaffer, 1962",
+    "accession": "NPG.70.22"
+   },
+   "sizeCm": {
+    "w": 115.3,
+    "h": 133.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_22&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_22_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767159-1",
+   "title": "Zachary Taylor",
+   "label": {
+    "creator": "William Garl Browne Jr., 10 Oct 1822 - 28 Jul 1894",
+    "title": "Zachary Taylor",
+    "subject": "Zachary Taylor",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 98.7 × 86.2 × 8.3 cm (38 7/8 × 33 15/16 × 3 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Gift of Mrs. J.L.M. Curry) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.33"
+   },
+   "sizeCm": {
+    "w": 86.2,
+    "h": 98.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_33&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_33_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.33",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767201-0",
+   "title": "William Morris Meredith",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "William Morris Meredith",
+    "subject": "William Morris Meredith",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 97.2 × 85.4 × 6 cm (38 1/4 × 33 5/8 × 2 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Theodore Baldwin III",
+    "accession": "S/NPG.72.7"
+   },
+   "sizeCm": {
+    "w": 85.4,
+    "h": 97.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_72_7_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_72_7_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.72.7",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767215-0",
+   "title": "John Jay",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "John Jay",
+    "subject": "John Trumbull, John Jay",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 150.5 x 122.6 x 12.1cm (59 1/4 x 48 1/4 x 4 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.74.46"
+   },
+   "sizeCm": {
+    "w": 122.6,
+    "h": 150.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_46JayHR_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_46JayHR_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.46",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767479-0",
+   "title": "Samuel Miles",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "Samuel Miles",
+    "subject": "Samuel Miles",
+    "medium": "Oil on wood panel",
+    "dimensions": "Frame: 94.3 × 80.6 × 6.4cm (37 1/8 × 31 3/4 × 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Gift of Elizabeth F. McKean) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.22"
+   },
+   "sizeCm": {
+    "w": 80.6,
+    "h": 94.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_22-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_22-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767548-1",
+   "title": "Mary Henderson",
+   "label": {
+    "creator": "Jean Joseph Benjamin-Constant, 10 Jun 1845 - 26 May 1902",
+    "title": "Mary Henderson",
+    "subject": "Mary Newton Foote Henderson",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 105.3 × 90.2 × 7.6 cm (41 7/16 × 35 1/2 × 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of the heirs of Mrs. John B. Henderson, 1935",
+    "accession": "S/NPG.65.104"
+   },
+   "sizeCm": {
+    "w": 90.2,
+    "h": 105.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_104&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_65_104_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.65.104",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399767916-0",
+   "title": "John Marshall",
+   "label": {
+    "creator": "William James Hubard, 1807 - 1862",
+    "title": "John Marshall",
+    "subject": "John Marshall",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 66 × 50.8 × 6.7 cm (26 × 20 × 2 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.74.71"
+   },
+   "sizeCm": {
+    "w": 50.8,
+    "h": 66.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_71Marshall-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_71Marshall-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.71",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399768332-1",
+   "title": "Cecilia Beaux Self-Portrait",
+   "label": {
+    "creator": "Cecilia Beaux, 1 May 1855 - 17 Sep 1942",
+    "title": "Cecilia Beaux Self-Portrait",
+    "subject": null,
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 57.2 x 46.7 x 5.4cm (22 1/2 x 18 3/8 x 2 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.71.34"
+   },
+   "sizeCm": {
+    "w": 46.7,
+    "h": 57.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_34&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_34_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.34",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399768404-2",
+   "title": "Thomas William Sweeny",
+   "label": {
+    "creator": "John Randolph Stites, 1836 - 1887?",
+    "title": "Thomas William Sweeny",
+    "subject": "Thomas William Sweeny",
+    "medium": "Oil on canvas",
+    "dimensions": "68.6 x 55.9 cm (27 x 22\" )",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. Vincent L. Buckley",
+    "accession": "NPG.82.127"
+   },
+   "sizeCm": {
+    "w": 55.9,
+    "h": 68.6,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_127_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_82_127_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.82.127",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399768405-0",
+   "title": "Daniel Huntington",
+   "label": {
+    "creator": "Henry Inman, 28 Oct 1801 - 17 Jan 1846",
+    "title": "Daniel Huntington",
+    "subject": "Daniel Huntington",
+    "medium": "Oil on canvas",
+    "dimensions": "40.6 x 35.6 cm (16 x 14\" )",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.82.132"
+   },
+   "sizeCm": {
+    "w": 35.6,
+    "h": 40.6,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_132_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_82_132_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.82.132",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399768997-1",
+   "title": "Unidentified Black Woman with Turban",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Unidentified Black Woman with Turban",
+    "subject": "Unidentified Woman",
+    "medium": "Oil on canvas",
+    "dimensions": "Image: 52 × 42.2 cm (20 1/2 × 16 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Paul and Jan Mills",
+    "accession": "S/NPG.89.52"
+   },
+   "sizeCm": {
+    "w": 42.2,
+    "h": 52.0,
+    "kind": "image"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_89_52_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_89_52_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.89.52",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399769106-1",
+   "title": "John Marshall",
+   "label": {
+    "creator": "James Reid Lambdin, 10 May 1807 - 31 Jan 1889",
+    "title": "John Marshall",
+    "subject": "Henry Inman, John Marshall",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 113 × 95.6 cm (44 1/2 × 37 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the A.W. Mellon Educational and Charitable Trust, 1942",
+    "accession": "NPG.65.54"
+   },
+   "sizeCm": {
+    "w": 95.6,
+    "h": 113.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_54Marshall-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_54Marshall-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.54",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399769700-1",
+   "title": "Stephen Arnold Douglas",
+   "label": {
+    "creator": "Duncan Styles",
+    "title": "Stephen Arnold Douglas",
+    "subject": "Stephen Arnold Douglas",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 141.6 x 110.8 x 5.7cm (55 3/4 x 43 5/8 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.70.42"
+   },
+   "sizeCm": {
+    "w": 110.8,
+    "h": 141.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_42-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_42-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.42",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399769950-1",
+   "title": "Ira Aldridge as Othello",
+   "label": {
+    "creator": "Henry Perronet Briggs, c. 1791 - 18 Jan 1844",
+    "title": "Ira Aldridge as Othello",
+    "subject": "Ira Frederick Aldridge",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 162.6 x 136.8 x 12.7cm (64 x 53 7/8 x 5\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.72.73"
+   },
+   "sizeCm": {
+    "w": 136.8,
+    "h": 162.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_73Aldrige_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_73Aldrige_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.73",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399769954-0",
+   "title": "John Summerfield",
+   "label": {
+    "creator": "William Jewett, 1792 - 1874",
+    "title": "John Summerfield",
+    "subject": "John Summerfield",
+    "medium": "Oil on panel",
+    "dimensions": "Frame: 40 x 34.6 x 5.4cm (15 3/4 x 13 5/8 x 2 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Joan B. Anderson",
+    "accession": "NPG.86.214"
+   },
+   "sizeCm": {
+    "w": 34.6,
+    "h": 40.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_214&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_86_214_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.86.214",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399770120-0",
+   "title": "Rufus King",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "Rufus King",
+    "subject": "Rufus King",
+    "medium": "Oil on panel",
+    "dimensions": "Frame: 108.6 x 95.9 x 11.4cm (42 3/4 x 37 3/4 x 4 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; this acquisition was made possible by a generous contribution from the James Smithson Society",
+    "accession": "NPG.88.1"
+   },
+   "sizeCm": {
+    "w": 95.9,
+    "h": 108.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_88_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_88_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.88.1",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399770206-0",
+   "title": "James Robert Mann",
+   "label": {
+    "creator": "Gari Melchers, 11 Aug 1860 - 30 Nov 1932",
+    "title": "James Robert Mann",
+    "subject": "James Robert Mann",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 154.5 × 96.8 × 2.5 cm (60 13/16 × 38 1/8 × 1\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Mrs. James R. Mann, 1924",
+    "accession": "NPG.66.62"
+   },
+   "sizeCm": {
+    "w": 96.8,
+    "h": 154.5,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_62&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_62_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.62",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399770653-0",
+   "title": "Stonewall Jackson",
+   "label": {
+    "creator": "J. W. King, active c. 1860",
+    "title": "Stonewall Jackson",
+    "subject": "George W. Minnis, active 1847 - 1860, Thomas Jonathan Jackson",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 100.3 x 82.6 x 5.1cm (39 1/2 x 32 1/2 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; given in memory of Lieselotte Richardson",
+    "accession": "NPG.96.133"
+   },
+   "sizeCm": {
+    "w": 82.6,
+    "h": 100.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9600314A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-9600314A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.133",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399770790-1",
+   "title": "Albert James Myer",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "Albert James Myer",
+    "subject": "Albert James Myer",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 105.4 × 91.4 × 13.7cm (41 1/2 × 36 × 5 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; bequest of Viola Walden Myer, 1919",
+    "accession": "NPG.70.20"
+   },
+   "sizeCm": {
+    "w": 91.4,
+    "h": 105.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_20MyerM-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_20MyerM-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.20",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399770862-0",
+   "title": "John Armstrong",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "John Armstrong",
+    "subject": "John Armstrong",
+    "medium": "Oil on wood",
+    "dimensions": "Stretcher: 76.2 x 61cm (30 x 24\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.72.12"
+   },
+   "sizeCm": {
+    "w": 61.0,
+    "h": 76.2,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_12Armstrong-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_12Armstrong-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.12",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771029-0",
+   "title": "Minnie Maddern Fiske",
+   "label": {
+    "creator": "Maximilien Colin, 1862 - 1894",
+    "title": "Minnie Maddern Fiske",
+    "subject": "Minnie Maddern Fiske",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 203.2 x 139.7 x 8.9cm (80 x 55 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mr. and Mrs. Walter Schnormeier",
+    "accession": "NPG.67.19"
+   },
+   "sizeCm": {
+    "w": 139.7,
+    "h": 203.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_19Fiske-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_67_19Fiske-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.67.19",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771247-0",
+   "title": "John Merven Carrere",
+   "label": {
+    "creator": "William De Leftwich Dodge, 9 Mar 1867 - 25 Mar 1935",
+    "title": "John Merven Carrere",
+    "subject": "John Merven Carrere",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 101.6 × 76 × 2.7 cm (40 × 29 15/16 × 1 1/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Joseph Carrere Fox",
+    "accession": "NPG.81.3"
+   },
+   "sizeCm": {
+    "w": 76.0,
+    "h": 101.6,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8100006A_2&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-8100006A_2_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.3",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771527-0",
+   "title": "Bessie Potter Vonnoh",
+   "label": {
+    "creator": "Robert William Vonnoh, 17 Sep 1858 - 28 Dec 1933",
+    "title": "Bessie Potter Vonnoh",
+    "subject": "Bessie Potter Vonnoh",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 55.2 × 47 × 6.4 cm (21 3/4 × 18 1/2 × 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Bequest of Bessie Potter Vonnoh Keyes) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.30"
+   },
+   "sizeCm": {
+    "w": 47.0,
+    "h": 55.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_30&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_30_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.30",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771606-0",
+   "title": "Henry Lee",
+   "label": {
+    "creator": "James Herring, 12 Jan 1794 - 8 Oct 1867",
+    "title": "Henry Lee",
+    "subject": "Gilbert Stuart, Henry Lee",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 84.5 x 68.6 x 6.4cm (33 1/4 x 27 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.78.51"
+   },
+   "sizeCm": {
+    "w": 68.6,
+    "h": 84.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_51_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_51_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.51",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771656-0",
+   "title": "John Schuyler Crosby",
+   "label": {
+    "creator": "Alphonse Jongers, 17 Nov 1872 - 2 Oct 1945",
+    "title": "John Schuyler Crosby",
+    "subject": "John Schuyler Crosby",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 188.6 × 156.8 × 11.7 cm (74 1/4 × 61 3/4 × 4 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Museum of American History; gift of Mrs. S.V.R. Crosby, 1936",
+    "accession": "S/NPG.66.63"
+   },
+   "sizeCm": {
+    "w": 156.8,
+    "h": 188.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_63_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_63_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.63",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771725-0",
+   "title": "Edward Everett Hale",
+   "label": {
+    "creator": "Philip Leslie Hale, 1865 - 1931",
+    "title": "Edward Everett Hale",
+    "subject": "Edward Everett Hale",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 97.5 × 82.1 × 0.5 cm (38 3/8 × 32 5/16 × 3/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. Fredson Bowers",
+    "accession": "NPG.75.10"
+   },
+   "sizeCm": {
+    "w": 82.1,
+    "h": 97.5,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_10Hale-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_10Hale-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.10",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399771941-0",
+   "title": "Unidentified Man",
+   "label": {
+    "creator": "Thomas Le Clear, 11 Mar 1818 - 26 Nov 1882",
+    "title": "Unidentified Man",
+    "subject": "Unidentified Man, Mathew B. Brady, 1823? - 15 Jan 1896",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 74.6 × 64.8 × 4.4 cm (29 3/8 × 25 1/2 × 1 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "S/NPG.70.14"
+   },
+   "sizeCm": {
+    "w": 64.8,
+    "h": 74.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_70_14&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_70_14_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.70.14",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399772373-0",
+   "title": "Ben Lindsey",
+   "label": {
+    "creator": "Mary Frances Schreiber, active c. 1940",
+    "title": "Ben Lindsey",
+    "subject": "Benjamin B. Lindsey",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 68.6 × 58.4 × 3.7 cm (27 × 23 × 1 7/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of David Mellinkoff",
+    "accession": "NPG.83.153"
+   },
+   "sizeCm": {
+    "w": 58.4,
+    "h": 68.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8300400A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-8300400A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.83.153",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399772444-1",
+   "title": "Nathaniel Hawthorne",
+   "label": {
+    "creator": "Emanuel Gottlieb Leutze, 24 May 1816 - 18 Jul 1868",
+    "title": "Nathaniel Hawthorne",
+    "subject": "Nathaniel Hawthorne",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 101.6 x 91.8 x 10.2cm (40 x 36 1/8 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Gallery of Art; gift of the A.W. Mellon Educational and Charitable Trust, 1942",
+    "accession": "NPG.65.55"
+   },
+   "sizeCm": {
+    "w": 91.8,
+    "h": 101.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_55&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_55_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.55",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399772488-0",
+   "title": "John Middleton Clayton",
+   "label": {
+    "creator": "David Acheson Woodward, 1823 - 1909",
+    "title": "John Middleton Clayton",
+    "subject": "John Middleton Clayton",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 95.3 x 83.8 x 10.2cm (37 1/2 x 33 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.74.3"
+   },
+   "sizeCm": {
+    "w": 83.8,
+    "h": 95.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_3&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_3_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.3",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399772715-1",
+   "title": "Jane Cocking Glover",
+   "label": {
+    "creator": "Pietro Bonanni, 26 Nov 1789 - 15 Jun 1821",
+    "title": "Jane Cocking Glover",
+    "subject": "Jane Cocking Glover",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 72.7 × 61 cm (28 5/8 × 24\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Gift of Mrs. Nancy E. Symington and Mr. Charles C. Glover III) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "S/NPG.2019.29"
+   },
+   "sizeCm": {
+    "w": 61.0,
+    "h": 72.7,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_29&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_29_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2019.29",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399773325-0",
+   "title": "George Gershwin Self-Portrait",
+   "label": {
+    "creator": "George Gershwin, 26 Sep 1898 - 11 Jul 1937",
+    "title": "George Gershwin Self-Portrait",
+    "subject": null,
+    "medium": "Oil on canvas board",
+    "dimensions": "Frame: 41.3 × 49.8 × 5.4cm (16 1/4 × 19 5/8 × 2 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Ira Gershwin",
+    "accession": "NPG.66.48"
+   },
+   "sizeCm": {
+    "w": 49.8,
+    "h": 41.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_48_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_48_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.48",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399774008-1",
+   "title": "Mary Cassatt",
+   "label": {
+    "creator": "Edgar Degas, 19 Jul 1834 - 27 Sep 1917",
+    "title": "Mary Cassatt",
+    "subject": "Mary Stevenson Cassatt",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 94.6 x 80.3 x 8.9cm (37 1/4 x 31 5/8 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Morris and Gwendolyn Cafritz Foundation and the Regents' Major Acquisitions Fund, Smithsonian Institution",
+    "accession": "NPG.84.34"
+   },
+   "sizeCm": {
+    "w": 80.3,
+    "h": 94.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_84_34_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_84_34_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.84.34",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399774026-0",
+   "title": "John Jacob Astor",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "John Jacob Astor",
+    "subject": "John Jacob Astor",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 94.6 x 81.9 x 10.2cm (37 1/4 x 32 1/4 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Susan Mary Alsop",
+    "accession": "NPG.78.204"
+   },
+   "sizeCm": {
+    "w": 81.9,
+    "h": 94.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_204Astor_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_204Astor_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.204",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399774260-1",
+   "title": "Ernest Lawson",
+   "label": {
+    "creator": "May Wilson Preston, 1873 - 1949",
+    "title": "Ernest Lawson",
+    "subject": "Ernest Lawson",
+    "medium": "Oil on canvas",
+    "dimensions": "76.2 × 63.5 cm (30 × 25\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.89.39"
+   },
+   "sizeCm": {
+    "w": 63.5,
+    "h": 76.2,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8900088A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-8900088A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.89.39",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399774760-0",
+   "title": "Julia Ward Howe",
+   "label": {
+    "creator": "John Elliott, 1858 - 1925",
+    "title": "Julia Ward Howe",
+    "subject": "William Henry Cotton, Julia Ward Howe",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 123.2 x 87.3 x 7cm (48 1/2 x 34 3/8 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Maud Howe Elliott to the Smithsonian Institution, 1933",
+    "accession": "NPG.65.31"
+   },
+   "sizeCm": {
+    "w": 87.3,
+    "h": 123.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_31Howe_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_31Howe_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.31",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399775214-1",
+   "title": "Franklin Pierce",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "Franklin Pierce",
+    "subject": "Franklin Pierce",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 74.5 × 61.4 cm (29 5/16 × 24 3/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Museum Purchase, Gallery Fund) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.15"
+   },
+   "sizeCm": {
+    "w": 61.4,
+    "h": 74.5,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_15-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_15-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.15",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399775247-0",
+   "title": "Thomas Corwin Mendenhall",
+   "label": {
+    "creator": "Annie Ware Sabine Siebert, 24 Feb 1864 - 7 Nov 1947",
+    "title": "Thomas Corwin Mendenhall",
+    "subject": "Thomas Corwin Mendenhall",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Frame: 14 x 11.9cm (5 1/2 x 4 11/16\"), Accurate",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Elizabeth L. Howie and John F. Marshall Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.67.138"
+   },
+   "sizeCm": {
+    "w": 11.9,
+    "h": 14.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_138MendenhallM_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_67_138MendenhallM_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.67.138",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399775344-0",
+   "title": "Henry Clay",
+   "label": {
+    "creator": "Chester Harding, 1 Sep 1792 - 10 Apr 1866",
+    "title": "Henry Clay",
+    "subject": "Ralph Eleaser Whiteside Earl, c. 1788 - 1838, Henry Clay",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 255.3 × 158.4 × 7.6 cm (100 1/2 × 62 3/8 × 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum",
+    "accession": "NPG.77.12"
+   },
+   "sizeCm": {
+    "w": 158.4,
+    "h": 255.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_12&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_12_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.12",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399775355-1",
+   "title": "William Cullen Bryant",
+   "label": {
+    "creator": "Daniel Huntington, 14 Oct 1816 - 18 Apr 1906",
+    "title": "William Cullen Bryant",
+    "subject": "William Cullen Bryant",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 80.5 × 69.9 × 6.4 cm (31 11/16 × 27 1/2 × 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.91.93"
+   },
+   "sizeCm": {
+    "w": 69.9,
+    "h": 80.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_93&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_93_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.93",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399775832-0",
+   "title": "James Madison",
+   "label": {
+    "creator": "Thomas Sully, 19 Jun 1783 - 5 Nov 1872",
+    "title": "James Madison",
+    "subject": "Gilbert Stuart, James Madison",
+    "medium": "Oil on panel",
+    "dimensions": "Frame: 97.6 × 78.1 × 5.7 cm (38 7/16 × 30 3/4 × 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Gift of Frederic Edwin Church) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.32"
+   },
+   "sizeCm": {
+    "w": 78.1,
+    "h": 97.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_32-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_32-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.32",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399775849-0",
+   "title": "James Wilkinson",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "James Wilkinson",
+    "subject": "James Wilkinson",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 91.4 x 77.5 x 7.6cm (36 x 30 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.75.15"
+   },
+   "sizeCm": {
+    "w": 77.5,
+    "h": 91.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_15-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_15-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.15",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399776519-1",
+   "title": "James Johnson",
+   "label": {
+    "creator": "Matthew Harris Jouett, 1788 - 1827",
+    "title": "James Johnson",
+    "subject": "James Johnson, Richard Mentor Johnson",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 83.8 x 78.7 x 8.9cm (33 x 31 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. Henry Lyne, Jr.",
+    "accession": "NPG.83.11"
+   },
+   "sizeCm": {
+    "w": 78.7,
+    "h": 83.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_83_11Johnson-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_83_11Johnson-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.83.11",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399776764-0",
+   "title": "Arvid Frederick Nyholm Self-Portrait",
+   "label": {
+    "creator": "Arvid Frederick Nyholm, 1866 - 1927",
+    "title": "Arvid Frederick Nyholm Self-Portrait",
+    "subject": null,
+    "medium": "Oil on panel",
+    "dimensions": "Frame: 55.6 × 47.9 × 4.4 cm (21 7/8 × 18 7/8 × 1 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Estate of James and Wilma Harlan",
+    "accession": "S/NPG.94.28"
+   },
+   "sizeCm": {
+    "w": 47.9,
+    "h": 55.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_94_28-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_94_28-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.94.28",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399776955-0",
+   "title": "Edwin Forrest",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Edwin Forrest",
+    "subject": "Edwin Forrest",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 109.2 x 90.2 x 8.9cm (43 x 35 1/2 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Historical Society of Pennsylvania on behalf of the Edwin Forrest Home for Retired Actors",
+    "accession": "NPG.90.45"
+   },
+   "sizeCm": {
+    "w": 90.2,
+    "h": 109.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_90_45_S&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_90_45_S_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.90.45",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399777280-0",
+   "title": "Francis Davis Millet",
+   "label": {
+    "creator": "George Willoughby Maynard, 1843 - 1923",
+    "title": "Francis Davis Millet",
+    "subject": "Francis Davis Millet",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 165.1 x 113 x 5.7cm (65 x 44 1/2 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; bequest of Dr. John A. P. Millet",
+    "accession": "NPG.78.205"
+   },
+   "sizeCm": {
+    "w": 113.0,
+    "h": 165.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_205Millet-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_205Millet-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.205",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399777781-0",
+   "title": "Thomas Hancock",
+   "label": {
+    "creator": "John Singleton Copley, 3 Jul 1738 - 9 Sep 1815",
+    "title": "Thomas Hancock",
+    "subject": "Thomas Hancock",
+    "medium": "Oil on copper",
+    "dimensions": "Frame: 23.2 x 25.7 x 1.9cm (9 1/8 x 10 1/8 x 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.81.17"
+   },
+   "sizeCm": {
+    "w": 25.7,
+    "h": 23.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_17_inex&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_81_17_inex_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.17",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399777928-0",
+   "title": "Leonard Wood",
+   "label": {
+    "creator": "John Singer Sargent, 12 Jan 1856 - 15 Apr 1925",
+    "title": "Leonard Wood",
+    "subject": "Leonard Wood",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 91.4 x 78.7 x 6.4cm (36 x 31 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.96.50"
+   },
+   "sizeCm": {
+    "w": 78.7,
+    "h": 91.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_50Wood_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_96_50Wood_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.50",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399778072-0",
+   "title": "Ulysses S. Grant",
+   "label": {
+    "creator": "Ole Peter Hansen Balling, 13 Apr 1823 - 1 May 1906",
+    "title": "Ulysses S. Grant",
+    "subject": "Ulysses Simpson Grant",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame (Without shield & eagle): 188 x 161.9 x 15.2cm (74 x 63 3/4 x 6\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.67.34"
+   },
+   "sizeCm": {
+    "w": 161.9,
+    "h": 188.0,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_34&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_67_34_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.67.34",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399778546-0",
+   "title": "Philip Henry Sheridan",
+   "label": {
+    "creator": "Thomas Buchanan Read, 12 Mar 1822 - 11 May 1872",
+    "title": "Philip Henry Sheridan",
+    "subject": "Philip Henry Sheridan",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 180.7 x 140.7 x 14.6cm (71 1/8 x 55 3/8 x 5 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Museum of American History; gift of Ulysses S. Grant III, 1939",
+    "accession": "NPG.68.51"
+   },
+   "sizeCm": {
+    "w": 140.7,
+    "h": 180.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_51&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_51_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.51",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399778728-0",
+   "title": "Washington Irving",
+   "label": {
+    "creator": "Daniel Huntington, 14 Oct 1816 - 18 Apr 1906",
+    "title": "Washington Irving",
+    "subject": "Washington Irving",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 63.5 x 50.2 x 4.4cm (25 x 19 3/4 x 1 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.69.23"
+   },
+   "sizeCm": {
+    "w": 50.2,
+    "h": 63.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_23Irving-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_23Irving-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.23",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399778936-0",
+   "title": "Franklin D. Roosevelt",
+   "label": {
+    "creator": "Henry Salem Hubbell, 25 Dec 1870 - 9 Jan 1949",
+    "title": "Franklin D. Roosevelt",
+    "subject": "Franklin Delano Roosevelt",
+    "medium": "Oil on Masonite",
+    "dimensions": "Board: 121.8 × 117 × 0.6 cm (47 15/16 × 46 1/16 × 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Willard Hubbell, 1964",
+    "accession": "NPG.66.68"
+   },
+   "sizeCm": {
+    "w": 117.0,
+    "h": 121.8,
+    "kind": "board"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_68&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_68_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.68",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399779357-0",
+   "title": "Daniel of St. Thomas Jenifer",
+   "label": {
+    "creator": "John Hesselius, 1728 - 9 Apr 1778",
+    "title": "Daniel of St. Thomas Jenifer",
+    "subject": "Daniel of St. Thomas Jenifer",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 138.7 x 114.9 x 5.1cm (54 5/8 x 45 1/4 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.70.43"
+   },
+   "sizeCm": {
+    "w": 114.9,
+    "h": 138.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_43Daniel-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_43Daniel-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.43",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399779710-0",
+   "title": "Charles Carroll Glover",
+   "label": {
+    "creator": "John McLure Hamilton, 31 Jan 1853 - 1936",
+    "title": "Charles Carroll Glover",
+    "subject": "Charles Carroll Glover",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 130.2 × 105.1 × 4.8 cm (51 1/4 × 41 3/8 × 1 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Charles Carroll Glover, Jr.",
+    "accession": "S/NPG.66.60"
+   },
+   "sizeCm": {
+    "w": 105.1,
+    "h": 130.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_60&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_60_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.60",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399780426-0",
+   "title": "George Brinton McClellan",
+   "label": {
+    "creator": "Julian Scott, 1846 - 1901",
+    "title": "George Brinton McClellan",
+    "subject": "George Brinton McClellan",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 119.7 x 94 x 10.2cm (47 1/8 x 37 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; bequest of Georgiana L. McClellan, 1953",
+    "accession": "NPG.65.35"
+   },
+   "sizeCm": {
+    "w": 94.0,
+    "h": 119.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_35&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_35_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.35",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399780600-0",
+   "title": "The Penny Image of Abraham Lincoln",
+   "label": {
+    "creator": "William Willard, 1819 - 1904",
+    "title": "The Penny Image of Abraham Lincoln",
+    "subject": "Abraham Lincoln",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 70 × 59.7 × 6 cm (27 9/16 × 23 1/2 × 2 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mr. and Mrs. David A. Morse",
+    "accession": "NPG.76.36"
+   },
+   "sizeCm": {
+    "w": 59.7,
+    "h": 70.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_76_36Lincoln-000003&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_76_36Lincoln-000003_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.76.36",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399781560-1",
+   "title": "Philip Key",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Philip Key",
+    "subject": "Charles Willson Peale, Philip Key",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 101 × 86 × 8.6 cm (39 3/4 × 33 7/8 × 3 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Charles Lionberger van Ravenswaay",
+    "accession": "S/NPG.65.103"
+   },
+   "sizeCm": {
+    "w": 86.0,
+    "h": 101.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_103_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_65_103_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.65.103",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399781726-1",
+   "title": "Margaret Spear Smith",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "Margaret Spear Smith",
+    "subject": "Margaret Spear Smith",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 92.4 × 79.3 × 5.7 cm (36 3/8 × 31 1/4 × 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Dr. and Mrs. B. Noland Carter in memory of the Misses Mary Coles Carter and Sally Randolph Carter",
+    "accession": "S/NPG.66.64"
+   },
+   "sizeCm": {
+    "w": 79.3,
+    "h": 92.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_64&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_64_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.64",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399781893-1",
+   "title": "Chief Joseph",
+   "label": {
+    "creator": "Cyrenius Hall, 20 Mar 1830 - 1904",
+    "title": "Chief Joseph",
+    "subject": "Chief Joseph, c. 1840 - 21 Sep 1904",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 67.6 x 57.2 x 7cm (26 5/8 x 22 1/2 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.68.19"
+   },
+   "sizeCm": {
+    "w": 57.2,
+    "h": 67.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_19Joseph_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_19Joseph_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.19",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399781968-1",
+   "title": "Cardinal James Gibbons",
+   "label": {
+    "creator": "Théobald Chartran, 20 Jul 1849 - 18 Jul 1907",
+    "title": "Cardinal James Gibbons",
+    "subject": "James Gibbons",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 177.8 x 128.9 x 8.9cm (70 x 50 3/4 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; donated in memory of James Gibbons Burke by Mary Rose Shea Burke and children",
+    "accession": "NPG.91.196"
+   },
+   "sizeCm": {
+    "w": 128.9,
+    "h": 177.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_196-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_196-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.196",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399783086-0",
+   "title": "Admiral George Dewey",
+   "label": {
+    "creator": "Théobald Chartran, 20 Jul 1849 - 18 Jul 1907",
+    "title": "Admiral George Dewey",
+    "subject": "George Dewey",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 154.9 x 115.6 x 13.3cm (61 x 45 1/2 x 5 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; bequest of Frederick McLean Bugher",
+    "accession": "NPG.86.144"
+   },
+   "sizeCm": {
+    "w": 115.6,
+    "h": 154.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_144Dewey_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_86_144Dewey_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.86.144",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399783248-1",
+   "title": "Franklin Knight Lane",
+   "label": {
+    "creator": "Ossip Perelma, 1876 - 23 May 1949",
+    "title": "Franklin Knight Lane",
+    "subject": "Franklin Knight Lane",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 190.2 × 139.4 × 7 cm (74 7/8 × 54 7/8 × 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Frank B. Noyes",
+    "accession": "S/NPG.66.72"
+   },
+   "sizeCm": {
+    "w": 139.4,
+    "h": 190.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_72_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_72_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.72",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399783693-0",
+   "title": "David E. Finley",
+   "label": {
+    "creator": "Augustus Vincent Tack, 9 Nov 1870 - 22 Jul 1949",
+    "title": "David E. Finley",
+    "subject": "David Edward Finley",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 121.9 × 91.8 × 3.2 cm (48 × 36 1/8 × 1 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of W. Bedford Moore",
+    "accession": "NPG.77.231"
+   },
+   "sizeCm": {
+    "w": 91.8,
+    "h": 121.9,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_231&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_231_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.231",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399784011-0",
+   "title": "John Randolf of Roanoke",
+   "label": {
+    "creator": "Chester Harding, 1 Sep 1792 - 10 Apr 1866",
+    "title": "John Randolf of Roanoke",
+    "subject": "John Randolph",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 74.9 × 62.2 cm (29 1/2 × 24 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Museum Purchase, Gallery Fund) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.9"
+   },
+   "sizeCm": {
+    "w": 62.2,
+    "h": 74.9,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_9-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_9-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.9",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399784405-1",
+   "title": "Lydia Henchman Hancock",
+   "label": {
+    "creator": "John Singleton Copley, 3 Jul 1738 - 9 Sep 1815",
+    "title": "Lydia Henchman Hancock",
+    "subject": "Lydia Henchman Hancock",
+    "medium": "Oil on copper",
+    "dimensions": "Frame: 26 x 23.2 x 1.9cm (10 1/4 x 9 1/8 x 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Charles H. Wood Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "S/NPG.81.4"
+   },
+   "sizeCm": {
+    "w": 23.2,
+    "h": 26.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8110008A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-8110008A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.81.4",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399784891-0",
+   "title": "Edward Hicks Painting the Peaceable Kingdom",
+   "label": {
+    "creator": "Thomas Hicks, 18 Oct 1823 - 8 Oct 1890",
+    "title": "Edward Hicks Painting the Peaceable Kingdom",
+    "subject": "Edward Hicks",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 114.3 x 96.5 x 7.6cm (45 x 38 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.88.53"
+   },
+   "sizeCm": {
+    "w": 96.5,
+    "h": 114.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_88_53&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_88_53_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.88.53",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399784979-1",
+   "title": "Elizabeth Cady Stanton",
+   "label": {
+    "creator": "Anna Elizabeth Klumpke, 1856 - 1942",
+    "title": "Elizabeth Cady Stanton",
+    "subject": "Elizabeth Cady Stanton",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 116.8 x 97.8 x 7cm (46 x 38 1/2 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Museum of American History; gift of the National American Woman Suffrage Association through Mrs. Harriot Stanton Blatch, 1924",
+    "accession": "NPG.71.30"
+   },
+   "sizeCm": {
+    "w": 97.8,
+    "h": 116.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_30Stanton_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_30Stanton_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.30",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399785169-1",
+   "title": "James Cochran Dobbin",
+   "label": {
+    "creator": "John Cranch, 1807 - 1891",
+    "title": "James Cochran Dobbin",
+    "subject": "James Cochran Dobbin",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 91.8 × 74.3 × 2.7 cm (36 1/8 × 29 1/4 × 1 1/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of James Dobbin Haughton",
+    "accession": "NPG.93.385"
+   },
+   "sizeCm": {
+    "w": 74.3,
+    "h": 91.8,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_93_385_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_93_385_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.93.385",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399785378-0",
+   "title": "Enoch Crosby",
+   "label": {
+    "creator": "Samuel Lovett Waldo, 6 Apr 1783 - 16 Feb 1861",
+    "title": "Enoch Crosby",
+    "subject": "William Jewett, Enoch Crosby",
+    "medium": "Oil on wood",
+    "dimensions": "Stretcher: 83.7 × 64.6 × 1.1 cm (32 15/16 × 25 7/16 × 7/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.77.23"
+   },
+   "sizeCm": {
+    "w": 64.6,
+    "h": 83.7,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_23&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_23_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.23",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399785568-0",
+   "title": "Robert Milligan McLane",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "Robert Milligan McLane",
+    "subject": "Robert Milligan McLane",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 165.4 × 115.6 × 4.8 cm (65 1/8 × 45 1/2 × 1 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Robert M. McLane",
+    "accession": "S/NPG.93.121"
+   },
+   "sizeCm": {
+    "w": 115.6,
+    "h": 165.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_93_12&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_93_12_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.93.121",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399786036-0",
+   "title": "Charles Dewitt Fillmore",
+   "label": {
+    "creator": "James A. Bogle, c. 1817 - 12 Oct 1873",
+    "title": "Charles Dewitt Fillmore",
+    "subject": "Charles Dewitt Fillmore, Millard Fillmore",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 95.9 × 83.5 × 8.3 cm (37 3/4 × 32 7/8 × 3 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "S/NPG.66.71"
+   },
+   "sizeCm": {
+    "w": 83.5,
+    "h": 95.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_71_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_71_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.71",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399786260-1",
+   "title": "John Paul Jones",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "John Paul Jones",
+    "subject": "Charlotte-Marguerite de Bourbon, Comtesse de Lowendahl, John Paul Jones",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Frame: 7.3 x 5.1 x 0.3cm (2 7/8 x 2 x 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.73.10"
+   },
+   "sizeCm": {
+    "w": 5.1,
+    "h": 7.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_73_10Jones_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_73_10Jones_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.73.10",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399786371-0",
+   "title": "John Randolph",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "John Randolph",
+    "subject": "John Randolph",
+    "medium": "Oil on wood",
+    "dimensions": "Frame: 89.9 x 77.2 x 7.6cm (35 3/8 x 30 3/8 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. Gerard B. Lambert",
+    "accession": "NPG.70.46"
+   },
+   "sizeCm": {
+    "w": 77.2,
+    "h": 89.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_246Randolph_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_246Randolph_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.46",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399786507-0",
+   "title": "Unidentified Woman",
+   "label": {
+    "creator": "Francis Bicknell Carpenter, 1830 - 1900",
+    "title": "Unidentified Woman",
+    "subject": "Unidentified Woman, Jenny Lind",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 107.3 x 88.9 x 7.6cm (42 1/4 x 35 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Eleanor Morein Foster in Honor of First Lady Hillary Rodham Clinton",
+    "accession": "NPG.94.123"
+   },
+   "sizeCm": {
+    "w": 88.9,
+    "h": 107.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9400246A_2&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-9400246A_2_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.94.123",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399786753-0",
+   "title": "Stephen Decatur",
+   "label": {
+    "creator": "Charles Bird King, 26 Sep 1785 - 18 Mar 1862",
+    "title": "Stephen Decatur",
+    "subject": "Gilbert Stuart, Stephen Decatur Jr.",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 99.7 x 87.3 x 12.7cm (39 1/4 x 34 3/8 x 5\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; bequest of William Decatur Parsons, 1930",
+    "accession": "NPG.87.26"
+   },
+   "sizeCm": {
+    "w": 87.3,
+    "h": 99.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_87_26&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_87_26_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.87.26",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399787065-0",
+   "title": "John Joseph Pershing",
+   "label": {
+    "creator": "Sir William Newenham Montague Orpen, 27 Nov 1878 - 29 Sep 1931",
+    "title": "John Joseph Pershing",
+    "subject": "John Joseph Pershing",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 110.5 x 95.3 x 5.1cm (43 1/2 x 37 1/2 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the International Business Machines Corporation",
+    "accession": "NPG.68.12"
+   },
+   "sizeCm": {
+    "w": 95.3,
+    "h": 110.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_12&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_12_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.12",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399787156-1",
+   "title": "William Trost Richards",
+   "label": {
+    "creator": "Anna Richards Brewster, 1870 - 1952",
+    "title": "William Trost Richards",
+    "subject": "William Trost Richards",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 53.7 × 56.5 × 4.1 cm (21 1/8 × 22 1/4 × 1 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. James Bryant Conant",
+    "accession": "NPG.80.135"
+   },
+   "sizeCm": {
+    "w": 56.5,
+    "h": 53.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_135&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_135_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.135",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399787158-0",
+   "title": "John Jay Chapman",
+   "label": {
+    "creator": "Alfred Quinton Collins, 1862 - 1903",
+    "title": "John Jay Chapman",
+    "subject": "John Jay Chapman",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 80 × 67.3 cm (31 1/2 × 26 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Chanler A. Chapman",
+    "accession": "NPG.80.130"
+   },
+   "sizeCm": {
+    "w": 67.3,
+    "h": 80.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_130&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_130_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.130",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399787164-0",
+   "title": "William Starke Rosecrans",
+   "label": {
+    "creator": "Samuel Woodson Price, 5 Aug 1828 - 22 Jan 1918",
+    "title": "William Starke Rosecrans",
+    "subject": "William Starke Rosecrans",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 92.7 x 80 x 7.6cm (36 1/2 x 31 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Museum of American History; transfer from the Veterans Administration Center, Dayton, OH, 1957",
+    "accession": "NPG.71.22"
+   },
+   "sizeCm": {
+    "w": 80.0,
+    "h": 92.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_22&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_22_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399787788-0",
+   "title": "Hayes Platform of Sound Money",
+   "label": {
+    "creator": "Lenna Dimock Glackens, 6 Dec 1913 - 3 Jun 1943",
+    "title": "Hayes Platform of Sound Money",
+    "subject": "Rutherford Birchard Hayes",
+    "medium": "Oil on wood panel",
+    "dimensions": "Frame: 60 × 54 × 4.8 cm (23 5/8 × 21 1/4 × 1 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Ira Glackens",
+    "accession": "S/NPG.89.3"
+   },
+   "sizeCm": {
+    "w": 54.0,
+    "h": 60.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_89_3&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_89_3_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.89.3",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399788382-0",
+   "title": "J. A. M. Whistler",
+   "label": {
+    "creator": "Walter Greaves, 4 Jul 1846 - 23 Nov 1930",
+    "title": "J. A. M. Whistler",
+    "subject": "James Abbott McNeill Whistler",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 100 x 74.9 x 3.5cm (39 3/8 x 29 1/2 x 1 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.91.125"
+   },
+   "sizeCm": {
+    "w": 74.9,
+    "h": 100.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_125Whistler-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_125Whistler-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.125",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399788481-1",
+   "title": "Samuel Smith",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "Samuel Smith",
+    "subject": "Samuel Smith",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 74.3 × 61.9 × 3.2 cm (29 1/4 × 24 3/8 × 1 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Dr. and Mrs. B. Noland Carter in memory of the Misses Mary Coles Carter and Sally Randolph Carter",
+    "accession": "NPG.66.50"
+   },
+   "sizeCm": {
+    "w": 61.9,
+    "h": 74.3,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_50Smith-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_50Smith-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.50",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399788567-0",
+   "title": "Henry White",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Henry White",
+    "subject": "John Singleton Copley, Henry White",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 92.9 × 80 × 6.4 cm (36 9/16 × 31 1/2 × 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mr. and Mrs. R. Hilles Graham",
+    "accession": "S/NPG.72.20"
+   },
+   "sizeCm": {
+    "w": 80.0,
+    "h": 92.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_72_20_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_72_20_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.72.20",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399788881-0",
+   "title": "John Adams",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "John Adams",
+    "subject": "Gilbert Stuart, John Adams",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 81.9 x 67.9 x 4.1cm (32 1/4 x 26 3/4 x 1 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.71.4"
+   },
+   "sizeCm": {
+    "w": 67.9,
+    "h": 81.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_4Adams-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_4Adams-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.4",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789017-0",
+   "title": "Richard Alexander Penrose",
+   "label": {
+    "creator": "Julian Russell Story, 1857 - 1919",
+    "title": "Richard Alexander Penrose",
+    "subject": "Bernard Albrecht Uhle, Richard Alexander F. Penrose Jr.",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 180 × 129.9 × 7.6 cm (70 7/8 × 51 1/8 × 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. Martin Beaver",
+    "accession": "S/NPG.69.18"
+   },
+   "sizeCm": {
+    "w": 129.9,
+    "h": 180.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_18_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_69_18_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.69.18",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789247-1",
+   "title": "Thomas Alva Edison",
+   "label": {
+    "creator": "Abraham Archibald Anderson, 1847 - 1940",
+    "title": "Thomas Alva Edison",
+    "subject": "Thomas Alva Edison",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 157.5 x 181.8 x 9.8cm (62 x 71 9/16 x 3 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Eleanor A. Campbell to the Smithsonian Institution, 1942",
+    "accession": "NPG.65.23"
+   },
+   "sizeCm": {
+    "w": 181.8,
+    "h": 157.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_23Edison_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_23Edison_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.23",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789306-0",
+   "title": "John Quincy Adams",
+   "label": {
+    "creator": "Pieter Van Huffel, 1769 - 1844",
+    "title": "John Quincy Adams",
+    "subject": "John Quincy Adams",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 77.5 x 67.3 x 8.9cm (30 1/2 x 26 1/2 x 3 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Mary Louisa Adams Clement in memory of her mother, Louisa Catherine Adams Clement, 1950",
+    "accession": "NPG.70.12"
+   },
+   "sizeCm": {
+    "w": 67.3,
+    "h": 77.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_12Adams-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_12Adams-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.12",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789379-0",
+   "title": "Harriet Beecher Stowe",
+   "label": {
+    "creator": "Alanson Fisher, 1807 - 1884",
+    "title": "Harriet Beecher Stowe",
+    "subject": "Harriet Elizabeth Beecher Stowe",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 105.4 x 88.3 x 8.6cm (41 1/2 x 34 3/4 x 3 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.68.1"
+   },
+   "sizeCm": {
+    "w": 88.3,
+    "h": 105.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.1",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789392-0",
+   "title": "Paul Wayland Bartlett",
+   "label": {
+    "creator": "Charles Sprague Pearce, 13 Oct 1851 - 8 May 1914",
+    "title": "Paul Wayland Bartlett",
+    "subject": "Paul Wayland Bartlett",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 150.5 × 117.8 × 12.1 cm (59 1/4 × 46 3/8 × 4 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Caroline Peter (Mrs. Armistead Peter III), 1958",
+    "accession": "NPG.65.20"
+   },
+   "sizeCm": {
+    "w": 117.8,
+    "h": 150.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_20Bartlett-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_20Bartlett-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.20",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789466-0",
+   "title": "Joel Chandler Harris",
+   "label": {
+    "creator": "Lucy May Stanton, 22 May 1875 - 19 Mar 1931",
+    "title": "Joel Chandler Harris",
+    "subject": "Joel Chandler Harris",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Frame: 33.7 x 28.6cm (13 1/4 x 11 1/4\"), Accurate",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Walter T. Forbes Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.71.38"
+   },
+   "sizeCm": {
+    "w": 28.6,
+    "h": 33.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_38Harris-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_38Harris-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.38",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399789619-0",
+   "title": "John Jordan Crittenden",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "John Jordan Crittenden",
+    "subject": "John Jordan Crittenden",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 104.1 x 91.4 x 10.2cm (41 x 36 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mr. and Mrs. Silas B. McKinley",
+    "accession": "NPG.64.1"
+   },
+   "sizeCm": {
+    "w": 91.4,
+    "h": 104.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_64_1-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_64_1-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.64.1",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399790622-0",
+   "title": "David Glasgow Farragut",
+   "label": {
+    "creator": "William Swain, 27 Dec 1803 - Feb 1847",
+    "title": "David Glasgow Farragut",
+    "subject": "David Glasgow Farragut",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 95.9 x 83.8 x 7.6cm (37 3/4 x 33 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Museum of American History; gift of the Estate of Loyall Farragut to the United States National Museum, 1917",
+    "accession": "NPG.69.29"
+   },
+   "sizeCm": {
+    "w": 83.8,
+    "h": 95.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_29Farragut_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_29Farragut_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.29",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399790844-0",
+   "title": "John Howard Payne",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "John Howard Payne",
+    "subject": "John Howard Payne",
+    "medium": "Oil on wood panel",
+    "dimensions": "Sight: 84.7 × 66.8 cm (33 3/8 × 26 5/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Gift of William Wilson Corcoran) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.28"
+   },
+   "sizeCm": {
+    "w": 66.8,
+    "h": 84.7,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_28-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_28-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.28",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399790969-1",
+   "title": "Zachary Taylor",
+   "label": {
+    "creator": "James Walker, 1819 - 1889",
+    "title": "Zachary Taylor",
+    "subject": "Zachary Taylor",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 105.4 x 92.7 x 10.2cm (41 1/2 x 36 1/2 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Eric Martin Wunsch",
+    "accession": "NPG.72.26"
+   },
+   "sizeCm": {
+    "w": 92.7,
+    "h": 105.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_26&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_26_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.26",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791107-0",
+   "title": "Samuel L. Clemens (Mark Twain)",
+   "label": {
+    "creator": "John White Alexander, 7 Oct 1856 - 31 May 1915",
+    "title": "Samuel L. Clemens (Mark Twain)",
+    "subject": "Samuel Langhorne Clemens",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 210.2 x 109.2 x 7.6cm (82 3/4 x 43 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.81.116"
+   },
+   "sizeCm": {
+    "w": 109.2,
+    "h": 210.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_116Clemens-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_81_116Clemens-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.116",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791318-1",
+   "title": "James Fenimore Cooper",
+   "label": {
+    "creator": "Charles Loring Elliott, 12 Oct 1812 - 25 Aug 1868",
+    "title": "James Fenimore Cooper",
+    "subject": "Mathew B. Brady, 1823? - 15 Jan 1896 (Photographer), James Fenimore Cooper",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 89.2 × 76.5 × 10.8 cm (35 1/8 × 30 1/8 × 4 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Alexis I. duPont deBie",
+    "accession": "NPG.66.97"
+   },
+   "sizeCm": {
+    "w": 76.5,
+    "h": 89.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_97&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_97_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.97",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791361-1",
+   "title": "Samuel Ringgold",
+   "label": {
+    "creator": "John Vanderlyn, 15 Oct 1775 - 23 Sep 1852",
+    "title": "Samuel Ringgold",
+    "subject": "Samuel Ringgold",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 96.5 x 83.2 x 5.7cm (38 x 32 3/4 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the William Woodville Estate",
+    "accession": "NPG.96.93"
+   },
+   "sizeCm": {
+    "w": 83.2,
+    "h": 96.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_93Ringgold-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_96_93Ringgold-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.93",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791526-0",
+   "title": "Louis McLane",
+   "label": {
+    "creator": "Charles Bird King, 26 Sep 1785 - 18 Mar 1862",
+    "title": "Louis McLane",
+    "subject": "Louis McLane",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 87.6 x 74.9 x 7.6cm (34 1/2 x 29 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Robert Milligan McLane",
+    "accession": "S/NPG.93.120"
+   },
+   "sizeCm": {
+    "w": 74.9,
+    "h": 87.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_93_120-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_93_120-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.93.120",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791566-0",
+   "title": "Andrew Jackson",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "Andrew Jackson",
+    "subject": "Andrew Jackson",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 68.9 × 57.1 cm (27 1/8 × 22 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Museum Purchase, Gallery Fund) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.20"
+   },
+   "sizeCm": {
+    "w": 57.1,
+    "h": 68.9,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_20-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_20-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.20",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791875-0",
+   "title": "John Stevens",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "John Stevens",
+    "subject": "John Stevens",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 118.7 x 100.3 x 12.1cm (46 3/4 x 39 1/2 x 4 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of H.H. Walker Lewis in memory of his parents, Mr. and Mrs. Edwin A.S. Lewis",
+    "accession": "NPG.75.13"
+   },
+   "sizeCm": {
+    "w": 100.3,
+    "h": 118.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_13Stevens_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_13Stevens_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.13",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791920-1",
+   "title": "John Charles Frémont",
+   "label": {
+    "creator": "William Smith Jewett, 6 Aug 1812 - 3 Dec 1873",
+    "title": "John Charles Frémont",
+    "subject": "John Charles Frémont",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 47.6 x 38.4 x 5.1cm (18 3/4 x 15 1/8 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.72.17"
+   },
+   "sizeCm": {
+    "w": 38.4,
+    "h": 47.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_17Fremont_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_17Fremont_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.17",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399791962-0",
+   "title": "Albert Pinkham Ryder",
+   "label": {
+    "creator": "Louise Fitzpatrick, 1833 - 1933?",
+    "title": "Albert Pinkham Ryder",
+    "subject": "Albert Pinkham Ryder",
+    "medium": "Oil on canvas",
+    "dimensions": "57.8 x 48.6 cm (22 3/4 x 19 1/8\" )",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Katherine Caldwell in memory of C.E.S. Wood, friend and early patron of Ryder",
+    "accession": "NPG.83.1"
+   },
+   "sizeCm": {
+    "w": 48.6,
+    "h": 57.8,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_83_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_83_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.83.1",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399792274-0",
+   "title": "Edwin Forrest in the Role of Metamora",
+   "label": {
+    "creator": "Frederick Styles Agate, 1807 - 1 May 1844",
+    "title": "Edwin Forrest in the Role of Metamora",
+    "subject": "Edwin Forrest",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 84.8 x 73 x 9.5cm (33 3/8 x 28 3/4 x 3 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Kathryn and Gilbert Miller Fund in memory of Alexander Ince",
+    "accession": "NPG.66.20"
+   },
+   "sizeCm": {
+    "w": 73.0,
+    "h": 84.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_20Forrest_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_20Forrest_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.20",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399792621-1",
+   "title": "Charles Tyson Yerkes",
+   "label": {
+    "creator": "Jan van Beers, 1852 - 1927",
+    "title": "Charles Tyson Yerkes",
+    "subject": "Charles Tyson Yerkes",
+    "medium": "Oil on wood",
+    "dimensions": "Frame: 54 x 48.3 x 5.7cm (21 1/4 x 19 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mrs. Jay Besson Rudolphy",
+    "accession": "NPG.76.28"
+   },
+   "sizeCm": {
+    "w": 48.3,
+    "h": 54.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_76_28Yerkes-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_76_28Yerkes-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.76.28",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399792624-0",
+   "title": "Zachary Taylor at Walnut Springs",
+   "label": {
+    "creator": "William Garl Browne Jr., 10 Oct 1822 - 28 Jul 1894",
+    "title": "Zachary Taylor at Walnut Springs",
+    "subject": "Zachary Taylor, William Wallace Smith Bliss, Braxton Bragg, Presley H. Craig, 19th century, Joseph Horace Eaton, Robert Selden Garnett, Thomas B. Linnard, 1800 - 1900?, Joseph King Fenno Mansfield, John Monroe, 1800 - 1900?",
+    "medium": "Oil on canvas mounted on wood",
+    "dimensions": "Panel: 74.3 × 92.1 × 0.3 cm (29 1/4 × 36 1/4 × 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.71.57"
+   },
+   "sizeCm": {
+    "w": 92.1,
+    "h": 74.3,
+    "kind": "panel"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_57&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_57_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.57",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399792846-1",
+   "title": "Louis Albert Gudebrod",
+   "label": {
+    "creator": "Edward Bradstreet, 11 Nov 1878 - 14 Jan 1921",
+    "title": "Louis Albert Gudebrod",
+    "subject": "Louis Albert Gudebrod, 1872 - Dec 1961",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 62.5 × 52.5 × 2.9 cm (24 5/8 × 20 11/16 × 1 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Anne K. Rettenmeyer",
+    "accession": "S/NPG.69.22"
+   },
+   "sizeCm": {
+    "w": 52.5,
+    "h": 62.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_22&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_69_22_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.69.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399792942-1",
+   "title": "Henry James",
+   "label": {
+    "creator": "Jacques-Emile Blanche, 1861 - 1942",
+    "title": "Henry James",
+    "subject": "Henry James",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 120.7 x 102.9 x 7.6cm (47 1/2 x 40 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; bequest of Mrs. Katharine Dexter McCormick; frame conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.68.13"
+   },
+   "sizeCm": {
+    "w": 102.9,
+    "h": 120.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_13James_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_13James_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.13",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399793229-0",
+   "title": "Henry Larcom Abbot",
+   "label": {
+    "creator": "Nahum Ball Onthank, 1823 - 1888",
+    "title": "Henry Larcom Abbot",
+    "subject": "John Adams Whipple, 10 Sep 1822 - 10 Apr 1891 (Photographer), Henry Larcom Abbot",
+    "medium": "Oil on canvas",
+    "dimensions": "41.9 × 36.8 cm (16 1/2 × 14 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Henry Merriam Abbot, in loving memory of his great-grandfather, Henry Larcom Abbot",
+    "accession": "NPG.92.127"
+   },
+   "sizeCm": {
+    "w": 36.8,
+    "h": 41.9,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_92_127Abbot-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_92_127Abbot-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.92.127",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399794140-0",
+   "title": "William T. Sherman",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "William T. Sherman",
+    "subject": "William Tecumseh Sherman",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 175.6 x 114.3 x 7.6cm (69 1/8 x 45 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of P. Tecumseh Sherman, 1935",
+    "accession": "NPG.65.40"
+   },
+   "sizeCm": {
+    "w": 114.3,
+    "h": 175.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_40&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_40_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.40",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399794625-0",
+   "title": "Marquis De Lafayette",
+   "label": {
+    "creator": "Ary Scheffer, 1795 - 1858",
+    "title": "Marquis De Lafayette",
+    "subject": "Marquis de Lafayette",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 109.9 × 89.5 cm (43 1/4 × 35 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the John Hay Whitney Collection",
+    "accession": "NPG.82.150"
+   },
+   "sizeCm": {
+    "w": 89.5,
+    "h": 109.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_150Lafayette-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_82_150Lafayette-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.82.150",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399794703-0",
+   "title": "August Belmont and Isabel Perry",
+   "label": {
+    "creator": "Wouterus Verschuur, 11 Jun 1812 - 4 Jul 1874",
+    "title": "August Belmont and Isabel Perry",
+    "subject": "August Belmont, Isabella Bolton Perry Tiffany, Caroline Slidell Perry Belmont",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 100.6 x 133.4 x 6.4cm (39 5/8 x 52 1/2 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Paul Mellon",
+    "accession": "NPG.80.138"
+   },
+   "sizeCm": {
+    "w": 133.4,
+    "h": 100.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_138_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_138_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.138",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399794979-0",
+   "title": "Edwin McMasters Stanton",
+   "label": {
+    "creator": "Henry Ulke, 29 Jan 1821 - 17 Feb 1910",
+    "title": "Edwin McMasters Stanton",
+    "subject": "Edwin McMasters Stanton",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 101.6 x 86.4 x 11.4cm (40 x 34 x 4 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of Sophy Stanton to the Smithsonian Institution, 1923",
+    "accession": "NPG.66.69"
+   },
+   "sizeCm": {
+    "w": 86.4,
+    "h": 101.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_69&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_69_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.69",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399795061-0",
+   "title": "George Caleb Bingham Self-Portrait",
+   "label": {
+    "creator": "George Caleb Bingham, 20 Mar 1811 - 7 Jul 1879",
+    "title": "George Caleb Bingham Self-Portrait",
+    "subject": null,
+    "medium": "Oil on copper",
+    "dimensions": "Frame: 11.7 x 10.2cm (4 5/8 x 4\"), Accurate",
+    "credit": "National Portrait Gallery, Smithsonian Institution Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.79.46"
+   },
+   "sizeCm": {
+    "w": 10.2,
+    "h": 11.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_79_46Bingham-000003&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_79_46Bingham-000003_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.79.46",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399795192-1",
+   "title": "Edward Maynard",
+   "label": {
+    "creator": "George Willoughby Maynard, 1843 - 1923",
+    "title": "Edward Maynard",
+    "subject": "Edward Maynard",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 105.4 × 92.7 cm (41 1/2 × 36 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the Smithsonian American Art Museum; gift of the artist, 1910",
+    "accession": "NPG.71.3"
+   },
+   "sizeCm": {
+    "w": 92.7,
+    "h": 105.4,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_3&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_3_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.3",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399795302-0",
+   "title": "William Hull",
+   "label": {
+    "creator": "Gilbert Stuart, 3 Dec 1755 - 9 Jul 1828",
+    "title": "William Hull",
+    "subject": "William Hull",
+    "medium": "Oil on wood",
+    "dimensions": "Board (Wood): 67.5 × 55.2 × 1 cm (26 9/16 × 21 3/4 × 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.84.177"
+   },
+   "sizeCm": {
+    "w": 55.2,
+    "h": 67.5,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_84_177Hull-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_84_177Hull-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.84.177",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399795352-0",
+   "title": "Benjamin West",
+   "label": {
+    "creator": "James Smith, 1749 - 1794",
+    "title": "Benjamin West",
+    "subject": "Benjamin West",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 67 x 59.8 x 5.7cm (26 3/8 x 23 9/16 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Margaret Hall Foundation",
+    "accession": "NPG.80.136"
+   },
+   "sizeCm": {
+    "w": 59.8,
+    "h": 67.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_136West-000004&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_136West-000004_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.136",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399796448-0",
+   "title": "Salmon P. Chase",
+   "label": {
+    "creator": "Francis Bicknell Carpenter, 1830 - 1900",
+    "title": "Salmon P. Chase",
+    "subject": "Salmon Portland Chase",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 42.9 × 38.1 × 7.9cm (16 7/8 × 15 × 3 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of David Rockefeller",
+    "accession": "NPG.69.47"
+   },
+   "sizeCm": {
+    "w": 38.1,
+    "h": 42.9,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_47&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_47_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.47",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399796449-0",
+   "title": "Thomas Paul",
+   "label": {
+    "creator": "Thomas Badger, 1792 - 1868",
+    "title": "Thomas Paul",
+    "subject": "Thomas Paul",
+    "medium": "Oil on wood panel",
+    "dimensions": "Frame: 33.3 x 29.2 x 6.4cm (13 1/8 x 11 1/2 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.70.45"
+   },
+   "sizeCm": {
+    "w": 29.2,
+    "h": 33.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_45Paul_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_45Paul_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.45",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399796648-0",
+   "title": "Joseph Galloway",
+   "label": {
+    "creator": "Thomas Day, c. 1732 - c. 1807",
+    "title": "Joseph Galloway",
+    "subject": "Joseph Galloway",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Locket: 5.1 x 3.5 x 0.5cm (2 x 1 3/8 x 3/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.92.33"
+   },
+   "sizeCm": {
+    "w": 3.5,
+    "h": 5.1,
+    "kind": "locket"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_92_33_int-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_92_33_int-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.92.33",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803327-0",
+   "title": "Dorothea Lynde Dix",
+   "label": {
+    "creator": "Samuel Bell Waugh, 1814 - 1885",
+    "title": "Dorothea Lynde Dix",
+    "subject": "Dorothea Lynde Dix",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 90.2 x 77.5 x 7.6cm (35 1/2 x 30 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the St. Elizabeths Hospital Museum",
+    "accession": "NPG.97.38"
+   },
+   "sizeCm": {
+    "w": 77.5,
+    "h": 90.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_97_38&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_97_38_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.97.38",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803360-0",
+   "title": "Benjamin Tappan",
+   "label": {
+    "creator": "Washington Blanchard, 1808 - ?",
+    "title": "Benjamin Tappan",
+    "subject": "Benjamin Tappan",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Case Closed: 12.1 x 10.2 x 1.9cm (4 3/4 x 4 x 3/4\"), Accurate",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Mary Louise and Benjamin Wright Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.98.78"
+   },
+   "sizeCm": {
+    "w": 10.2,
+    "h": 12.1,
+    "kind": "case closed"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_78Tappandet_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_78Tappandet_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.78",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803550-0",
+   "title": "Jacob Jennings Brown",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "Jacob Jennings Brown",
+    "subject": "Jacob Jennings Brown",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 125.1 × 108 × 4.4 cm (49 1/4 × 42 1/2 × 1 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.98.2"
+   },
+   "sizeCm": {
+    "w": 108.0,
+    "h": 125.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_2&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_2_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.2",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803586-1",
+   "title": "George Inness",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "George Inness",
+    "subject": "George Inness",
+    "medium": "Oil on canvas",
+    "dimensions": "58.4 x 45.7 cm (23 x 18\" )",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.98.22"
+   },
+   "sizeCm": {
+    "w": 45.7,
+    "h": 58.4,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_22Inness-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_22Inness-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803593-0",
+   "title": "Louisa Dunmore Mums Mott",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Louisa Dunmore Mums Mott",
+    "subject": "Louisa Dunmore Mums Mott, 19th century",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 108.3 × 91.8 × 11.4 cm (42 5/8 × 36 1/8 × 4 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "S/NPG.98.4"
+   },
+   "sizeCm": {
+    "w": 91.8,
+    "h": 108.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_98_4&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_98_4_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.98.4",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803618-1",
+   "title": "John Rutledge",
+   "label": {
+    "creator": "John Trumbull, 6 Jun 1756 - 10 Nov 1843",
+    "title": "John Rutledge",
+    "subject": "John Rutledge",
+    "medium": "Oil on mahogany panel",
+    "dimensions": "Frame: 17.5 x 16.5 x 3.8cm (6 7/8 x 6 1/2 x 1 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.97.190"
+   },
+   "sizeCm": {
+    "w": 16.5,
+    "h": 17.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9700390A_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-9700390A_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.97.190",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803801-0",
+   "title": "John Quincy Adams",
+   "label": {
+    "creator": "William Hudson Jr., 30 Dec 1820 - 7 Aug 1907",
+    "title": "John Quincy Adams",
+    "subject": "John Quincy Adams",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 103.5 x 84.1 x 6cm (40 3/4 x 33 1/8 x 2 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.99.1"
+   },
+   "sizeCm": {
+    "w": 84.1,
+    "h": 103.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_99_1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_99_1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.99.1",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803805-1",
+   "title": "Henry James",
+   "label": {
+    "creator": "Ellen Gertrude Emmet Rand, 4 Mar 1875 - 18 Dec 1941",
+    "title": "Henry James",
+    "subject": "Henry James",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 64.8 × 50.2 × 6cm (25 1/2 × 19 3/4 × 2 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Marjorie Edel in memory of Leon Edel",
+    "accession": "NPG.98.74"
+   },
+   "sizeCm": {
+    "w": 50.2,
+    "h": 64.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_74James-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_74James-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.74",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399803806-0",
+   "title": "Henry James",
+   "label": {
+    "creator": "Ellen Gertrude Emmet Rand, 4 Mar 1875 - 18 Dec 1941",
+    "title": "Henry James",
+    "subject": "Henry James",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 64.8 × 50.2 × 6.4cm (25 1/2 × 19 3/4 × 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Marjorie Edel in memory of Leon Edel",
+    "accession": "NPG.98.75"
+   },
+   "sizeCm": {
+    "w": 50.2,
+    "h": 64.8,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_75James-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_75James-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.75",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399805442-0",
+   "title": "H. H. Richardson",
+   "label": {
+    "creator": "Hubert Von Herkomer, 26 May 1849 - 31 Mar 1914",
+    "title": "H. H. Richardson",
+    "subject": "H. H. Richardson",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 127.6 × 158.4 × 5.7 cm (50 1/4 × 62 3/8 × 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2010.13"
+   },
+   "sizeCm": {
+    "w": 158.4,
+    "h": 127.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_13_Richardson_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2010_13_Richardson_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2010.13",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399805692-1",
+   "title": "Daniel Morgan",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Daniel Morgan",
+    "subject": "Daniel Morgan",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 92.7 x 78.1 x 6.7cm (36 1/2 x 30 3/4 x 2 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2001.3"
+   },
+   "sizeCm": {
+    "w": 78.1,
+    "h": 92.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_3Morgan-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_3Morgan-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.3",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399806886-1",
+   "title": "Red Cloud (Makhpiya-luta)",
+   "label": {
+    "creator": "Elbridge Ayer Burbank, 1858 - 1949",
+    "title": "Red Cloud (Makhpiya-luta)",
+    "subject": "Red Cloud",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 39.7 x 32.1 x 3.5cm (15 5/8 x 12 5/8 x 1 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Dr. and Mrs. Dudley F. Rochester",
+    "accession": "NPG.2001.11"
+   },
+   "sizeCm": {
+    "w": 32.1,
+    "h": 39.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_11&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_11_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.11",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399806893-0",
+   "title": "Elisha Tyson",
+   "label": {
+    "creator": "Robert Street, 17 Jan 1796 - 1865",
+    "title": "Elisha Tyson",
+    "subject": "Elisha Tyson",
+    "medium": "Oil on canvas",
+    "dimensions": "81.3 x 66.1 cm (32 x 26\" )",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2001.12"
+   },
+   "sizeCm": {
+    "w": 66.1,
+    "h": 81.3,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_12&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_12_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.12",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399807274-2",
+   "title": "Maud Powell",
+   "label": {
+    "creator": "Nicholas Richard Brewer, 1857 - 1949",
+    "title": "Maud Powell",
+    "subject": "Maud Powell",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 168.3 x 143.5 x 5.7cm (66 1/4 x 56 1/2 x 2 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Joyce McFarland Dlugopolski (in memory of George A. Doole, Jr.) and the Maud Powell Society for Music and Education",
+    "accession": "NPG.2001.74"
+   },
+   "sizeCm": {
+    "w": 143.5,
+    "h": 168.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_74&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_74_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.74",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399809248-1",
+   "title": "Myron T. Herrick",
+   "label": {
+    "creator": "Sir William Newenham Montague Orpen, 27 Nov 1878 - 29 Sep 1931",
+    "title": "Myron T. Herrick",
+    "subject": "Myron Timothy Herrick",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 95.3 x 82.6 x 10.2cm (37 1/2 x 32 1/2 x 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of George G. Herrick",
+    "accession": "NPG.2003.6"
+   },
+   "sizeCm": {
+    "w": 82.6,
+    "h": 95.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2003_6&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2003_6_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2003.6",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399809619-0",
+   "title": "James Buchanan",
+   "label": {
+    "creator": "George Peter Alexander Healy, 15 Jul 1813 - 24 Jun 1894",
+    "title": "James Buchanan",
+    "subject": "James Buchanan",
+    "medium": "Oil on canvas",
+    "dimensions": "Sight: 74.5 × 61.3 cm (29 5/16 × 24 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Trustees of the Corcoran Gallery of Art (Museum Purchase, Gallery Fund) The Corcoran Gallery of Art, one of the country’s first private museums, was established in 1869 to promote art and American genius. In 2014 the Works from the Corcoran Collection were distributed to institutions in Washington, D.C.",
+    "accession": "NPG.2019.18"
+   },
+   "sizeCm": {
+    "w": 61.3,
+    "h": 74.5,
+    "kind": "sight"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_18-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_18-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.18",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399810943-0",
+   "title": "Thurlow Weed",
+   "label": {
+    "creator": "Chester Harding, 1 Sep 1792 - 10 Apr 1866",
+    "title": "Thurlow Weed",
+    "subject": "Thurlow Weed",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 85.1 x 73 x 5.1cm (33 1/2 x 28 3/4 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2005.95"
+   },
+   "sizeCm": {
+    "w": 73.0,
+    "h": 85.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_95Weed_d1&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2005_95Weed_d1_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2005.95",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399810978-0",
+   "title": "Thomas E. Kirby",
+   "label": {
+    "creator": "William Merritt Chase, 1 Nov 1849 - 25 Oct 1916",
+    "title": "Thomas E. Kirby",
+    "subject": "Thomas E. Kirby",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 114.1 × 97.9 × 2.9 cm (44 15/16 × 38 9/16 × 1 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; bequest of Wilhelmine K. Waller",
+    "accession": "NPG.2005.71"
+   },
+   "sizeCm": {
+    "w": 97.9,
+    "h": 114.1,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_71Kirby-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2005_71Kirby-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2005.71",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399810987-0",
+   "title": "Henry Kirke Brown",
+   "label": {
+    "creator": "Louis Lang, 29 Mar 1814 - 6 May 1893",
+    "title": "Henry Kirke Brown",
+    "subject": "Henry Kirke Brown",
+    "medium": "Oil on board",
+    "dimensions": "Frame: 57.2 x 50.8 x 5.1cm (22 1/2 x 20 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2005.46"
+   },
+   "sizeCm": {
+    "w": 50.8,
+    "h": 57.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_46-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2005_46-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2005.46",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399812644-0",
+   "title": "Frank Billings Kellogg",
+   "label": {
+    "creator": "Philip Alexius de László, 1869 - 1937",
+    "title": "Frank Billings Kellogg",
+    "subject": "Frank Billings Kellogg",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 128.3 x 108 x 7.6 cm (50 1/2 x 42 1/2 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Dr. Edward T. Wilson",
+    "accession": "NPG.2006.113"
+   },
+   "sizeCm": {
+    "w": 108.0,
+    "h": 128.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2006_113Kellogg-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2006_113Kellogg-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2006.113",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399812645-0",
+   "title": "Clara Cook Kellogg",
+   "label": {
+    "creator": "Philip Alexius de László, 1869 - 1937",
+    "title": "Clara Cook Kellogg",
+    "subject": "Clara Margaret Cook Kellogg",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 113 x 92.4 x 7.6 cm (44 1/2 x 36 3/8 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Dr. Edward T. Wilson",
+    "accession": "S/NPG.2006.114"
+   },
+   "sizeCm": {
+    "w": 92.4,
+    "h": 113.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2006_114Kellogg-000003&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2006_114Kellogg-000003_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2006.114",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399812894-0",
+   "title": "General John Bradstreet",
+   "label": {
+    "creator": "Thomas McIlworth, active c. 1757 - 1770",
+    "title": "General John Bradstreet",
+    "subject": "John Bradstreet",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 93.3 × 80 × 5.4 cm (36 3/4 × 31 1/2 × 2 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2007.5"
+   },
+   "sizeCm": {
+    "w": 80.0,
+    "h": 93.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_5&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2007_5_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2007.5",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399812938-1",
+   "title": "William Carmichael",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "William Carmichael",
+    "subject": "William Carmichael, ? - Feb 1795",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Frame: 6 x 3.8cm (2 3/8 x 1 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Grace Carmichael Moore and Janet Moore Ewing",
+    "accession": "NPG.2010.49"
+   },
+   "sizeCm": {
+    "w": 3.8,
+    "h": 6.0,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_49_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2010_49_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2010.49",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399813284-1",
+   "title": "William Linn",
+   "label": {
+    "creator": "John Wesley Jarvis, 1780 - 14 Jan 1840",
+    "title": "William Linn",
+    "subject": "William Linn",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 74.9 x 55.9cm (29 1/2 x 22\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of DeWitt Linn Sage",
+    "accession": "S/NPG.2007.12"
+   },
+   "sizeCm": {
+    "w": 55.9,
+    "h": 74.9,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2007_12Linn-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2007_12Linn-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2007.12",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399813286-0",
+   "title": "William Linn",
+   "label": {
+    "creator": "Archibald Robertson, 8 May 1765 - 6 Dec 1835",
+    "title": "William Linn",
+    "subject": "William Linn",
+    "medium": "Watercolor on ivory",
+    "dimensions": "5.7 x 4.4 x 0.6cm (2 1/4 x 1 3/4 x 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of DeWitt Linn Sage Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.2007.11"
+   },
+   "sizeCm": {
+    "w": 4.4,
+    "h": 5.7,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_11Linn-000003&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2007_11Linn-000003_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2007.11",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399813991-0",
+   "title": "Adolfo Müller-Ury Self-portrait",
+   "label": {
+    "creator": "Adolfo Müller-Ury, 29 Mar 1862 - 7 Jul 1947",
+    "title": "Adolfo Müller-Ury Self-portrait",
+    "subject": null,
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 66.7 x 74.3cm (26 1/4 x 29 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution: gift of Nicholas Turner, Jessica Dragonette, and the American Heritage Center, University of Wyoming",
+    "accession": "NPG.2007.219"
+   },
+   "sizeCm": {
+    "w": 74.3,
+    "h": 66.7,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_219&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2007_219_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2007.219",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399815511-0",
+   "title": "William Dunlap self-portrait",
+   "label": {
+    "creator": "William Dunlap, 18 Feb 1766 - 28 Sep 1839",
+    "title": "William Dunlap self-portrait",
+    "subject": null,
+    "medium": "Watercolor on ivory",
+    "dimensions": "6.4 × 4.8cm (2 1/2 × 1 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Robert Bayard Severy in memory of Josephine McClintock Bellamy Severy (1914 -- 2001), great, great granddaughter of William Walton Woolsey (1766 -- 1839), brother-in-law of William Dunlap, from her family of Donald Phelps Severy, Robert Bayard Severy, and Arabella McClintock Severy Olander Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.2013.40"
+   },
+   "sizeCm": {
+    "w": 4.8,
+    "h": 6.4,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_40&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_40_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.40",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399816570-0",
+   "title": "Elizabeth Depeyster Peale",
+   "label": {
+    "creator": "James Peale, 1749 - 24 May 1831",
+    "title": "Elizabeth Depeyster Peale",
+    "subject": "Elizabeth Depeyster Peale",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Ivory: 7 x 5.9cm (2 3/4 x 2 5/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; transfer from the National Museum of American History, gift of the CIGNA Corporation Conserved with funds from the Smithsonian Women's Committee",
+    "accession": "S/NPG.2009.49"
+   },
+   "sizeCm": {
+    "w": 5.9,
+    "h": 7.0,
+    "kind": "ivory"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2009_49Depeyster-000004&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2009_49Depeyster-000004_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2009.49",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399817177-0",
+   "title": "Pauline Morton Sabin",
+   "label": {
+    "creator": "Philip Alexius de László, 1869 - 1937",
+    "title": "Pauline Morton Sabin",
+    "subject": "Pauline Morton Sabin",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 76.5 × 63.5 × 2.4 cm (30 1/8 × 25 × 15/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of her granddaughter, Sheila Morton Smith Cochran",
+    "accession": "NPG.2017.57"
+   },
+   "sizeCm": {
+    "w": 63.5,
+    "h": 76.5,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2017_57&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2017_57_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2017.57",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399817574-1",
+   "title": "John Marshall",
+   "label": {
+    "creator": "Cephas Thompson, 1 Jul 1775 - 6 Nov 1856",
+    "title": "John Marshall",
+    "subject": "John Marshall",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 73.5 x 64.6 x 6.4cm (28 15/16 x 25 7/16 x 2 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2010.48"
+   },
+   "sizeCm": {
+    "w": 64.6,
+    "h": 73.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_48_ext&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2010_48_ext_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2010.48",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399818711-1",
+   "title": "Amerigo Vespucci",
+   "label": {
+    "creator": "Charles Willson Peale, 15 Apr 1741 - 22 Feb 1827",
+    "title": "Amerigo Vespucci",
+    "subject": "Amerigo Vespucci, Mar 1454 - 22 Feb 1512",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 65.1 x 55.9 x 3.2cm (25 5/8 x 22 x 1 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2011.14"
+   },
+   "sizeCm": {
+    "w": 55.9,
+    "h": 65.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_14Vespucci-000002&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2011_14Vespucci-000002_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2011.14",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399818717-1",
+   "title": "Caroline Chrysler Lee",
+   "label": {
+    "creator": "John Horsburgh, 1835 - 1924",
+    "title": "Caroline Chrysler Lee",
+    "subject": "Caroline Chrysler Lee, ? - 1888",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 127.3 x 101.9cm (50 1/8 x 40 1/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Robert Lee Morris, Jr. and Frances Mathews Morris",
+    "accession": "S/NPG.2011.58"
+   },
+   "sizeCm": {
+    "w": 101.9,
+    "h": 127.3,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2011_58Lee-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2011_58Lee-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2011.58",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399818936-0",
+   "title": "Samuel Blodget",
+   "label": {
+    "creator": "John Trumbull, 6 Jun 1756 - 10 Nov 1843",
+    "title": "Samuel Blodget",
+    "subject": "Samuel Blodget, Jr.",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 110.5 x 90.2 x 5.1cm (43 1/2 x 35 1/2 x 2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2013.29"
+   },
+   "sizeCm": {
+    "w": 90.2,
+    "h": 110.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_29Blodget-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_29Blodget-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.29",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399819125-0",
+   "title": "Adolph Ochs",
+   "label": {
+    "creator": "Philip Alexius de László, 1869 - 1937",
+    "title": "Adolph Ochs",
+    "subject": "Adolph Simon Ochs",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 127.6 x 94.3 x 6cm (50 1/4 x 37 1/8 x 2 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Ochs / Sulzberger Family",
+    "accession": "NPG.2011.142"
+   },
+   "sizeCm": {
+    "w": 94.3,
+    "h": 127.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_142Ochs_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2011_142Ochs_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2011.142",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399819126-0",
+   "title": "Iphigenia Wise Ochs",
+   "label": {
+    "creator": "Philip Alexius de László, 1869 - 1937",
+    "title": "Iphigenia Wise Ochs",
+    "subject": "Iphigenia Wise Ochs",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 127.6 x 94.3 x 6cm (50 1/4 x 37 1/8 x 2 3/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift from the Ochs / Sulzberger Family",
+    "accession": "S/NPG.2011.143"
+   },
+   "sizeCm": {
+    "w": 94.3,
+    "h": 127.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2011_143Ochs-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2011_143Ochs-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2011.143",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399819682-1",
+   "title": "Richard Bache",
+   "label": {
+    "creator": "John Hoppner, 1758 - 1810",
+    "title": "Richard Bache",
+    "subject": "Richard Bache",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 96.5 x 84 x 7.6 cm (38 x 33 1/16 x 3\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the Richard Bache Duane Family",
+    "accession": "NPG.2011.145"
+   },
+   "sizeCm": {
+    "w": 84.0,
+    "h": 96.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_145Bache-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2011_145Bache-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2011.145",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399820257-2",
+   "title": "William George Fargo",
+   "label": {
+    "creator": "Thomas Le Clear, 11 Mar 1818 - 26 Nov 1882",
+    "title": "William George Fargo",
+    "subject": "William George Fargo",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 91.4 × 73.5 × 2.4 cm (36 × 28 15/16 × 15/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2012.24"
+   },
+   "sizeCm": {
+    "w": 73.5,
+    "h": 91.4,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2012_24&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2012_24_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2012.24",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399821871-0",
+   "title": "George Washington",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "George Washington",
+    "subject": "Gilbert Stuart, George Washington",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Frame: 12.1 × 10.8cm (4 3/4 × 4 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the McNeil Americana Collection; conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.2013.140"
+   },
+   "sizeCm": {
+    "w": 10.8,
+    "h": 12.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_140GW-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_140GW-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.140",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399821872-0",
+   "title": "George Washington",
+   "label": {
+    "creator": "William Russell Birch, 1755 - 1834",
+    "title": "George Washington",
+    "subject": "Gilbert Stuart, George Washington",
+    "medium": "Enamel on copper",
+    "dimensions": "Case Closed: 8.3 × 7.3cm (3 1/4 × 2 7/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of the McNeil Americana Collection; conserved with funds from the Smithsonian Women's Committee",
+    "accession": "NPG.2013.141"
+   },
+   "sizeCm": {
+    "w": 7.3,
+    "h": 8.3,
+    "kind": "case closed"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_141detGW-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_141detGW-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.141",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399824142-1",
+   "title": "William Smith Otis",
+   "label": {
+    "creator": "Bass Otis, 1784 - 1861",
+    "title": "William Smith Otis",
+    "subject": "William Smith Otis",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 98.1 × 85.4 × 6.7cm (38 5/8 × 33 5/8 × 2 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Wendell G. Sykes and Betsy J. Constantine",
+    "accession": "NPG.2015.43"
+   },
+   "sizeCm": {
+    "w": 85.4,
+    "h": 98.1,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2015_43&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2015_43_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2015.43",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399824167-0",
+   "title": "Emma Embury",
+   "label": {
+    "creator": "Jacob Hart Lazarus, 1822 - 1891",
+    "title": "Emma Embury",
+    "subject": "Henry Inman, Emma Catherine Embury",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 108.6 × 94.6 × 8.3 cm (42 3/4 × 37 1/4 × 3 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Richard B. Neff, Jr. in honor of Joan Russell Neff and James Townsend Russell, Jr.",
+    "accession": "NPG.2016.23"
+   },
+   "sizeCm": {
+    "w": 94.6,
+    "h": 108.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2016_23&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2016_23_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2016.23",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399824822-0",
+   "title": "Francis Scott Key",
+   "label": {
+    "creator": "Rembrandt Peale, 22 Feb 1778 - 3 Oct 1860",
+    "title": "Francis Scott Key",
+    "subject": "Francis Scott Key",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 74 × 63.8 × 3 cm (29 1/8 × 25 1/8 × 1 3/16\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; funded with support from the Secretary and the Smithsonian National Board and Chapter I - Baltimore, Maryland, The Colonial Dames of America, the Elizabeth Welsh Young Legacy Fund",
+    "accession": "NPG.2016.22"
+   },
+   "sizeCm": {
+    "w": 63.8,
+    "h": 74.0,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2016_22&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2016_22_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2016.22",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399826528-1",
+   "title": "Harriet Bradford Tiffany Stewart",
+   "label": {
+    "creator": "Charles Cromwell Ingham, 1796 - 1863",
+    "title": "Harriet Bradford Tiffany Stewart",
+    "subject": "Harriet Bradford Tiffany Stewart",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 112.2 × 92.1 × 10.2 cm (44 3/16 × 36 1/4 × 4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; given in honor of Stewart W. Bowers",
+    "accession": "S/NPG.2017.74"
+   },
+   "sizeCm": {
+    "w": 92.1,
+    "h": 112.2,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2017_74&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2017_74_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2017.74",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399827571-0",
+   "title": "Lewis Malone Ayer, Jr.",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Lewis Malone Ayer, Jr.",
+    "subject": "Lewis Malone Ayer Jr.",
+    "medium": "Watercolor on ivory",
+    "dimensions": "Frame: 2.5 × 2.1 × 0.7 cm (1 × 13/16 × 1/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2017.114"
+   },
+   "sizeCm": {
+    "w": 2.1,
+    "h": 2.5,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-B7000230A&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-B7000230A_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2017.114",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1643399756728-1643399828105-0",
+   "title": "Franklin Delano Roosevelt",
+   "label": {
+    "creator": "Ellen Gertrude Emmet Rand, 4 Mar 1875 - 18 Dec 1941",
+    "title": "Franklin Delano Roosevelt",
+    "subject": "Franklin Delano Roosevelt",
+    "medium": "Oil on canvas",
+    "dimensions": "Stretcher: 76.2 × 63.5 cm (30 × 25\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; gift of Sue K. and Stuart P. Feld",
+    "accession": "NPG.2018.71"
+   },
+   "sizeCm": {
+    "w": 63.5,
+    "h": 76.2,
+    "kind": "stretcher"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2018_71&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2018_71_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2018.71",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1678527067697-1678527070957-0",
+   "title": "Unidentified Man",
+   "label": {
+    "creator": "Unidentified Artist",
+    "title": "Unidentified Man",
+    "subject": "Unidentified Man, Millard Fillmore",
+    "medium": "Oil on canvas",
+    "dimensions": "Frame: 87.6 x 74.9 x 7cm (34 1/2 x 29 1/2 x 2 3/4\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.78.50"
+   },
+   "sizeCm": {
+    "w": 74.9,
+    "h": 87.6,
+    "kind": "frame"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_50Fillmore-000001&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_50Fillmore-000001_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.50",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1693385069958-1693385119480-1",
+   "title": "Stonewall Jackson",
+   "label": {
+    "creator": "Edward Caledon Bruce, 1825 - 1901",
+    "title": "Stonewall Jackson",
+    "subject": "Unidentified Artist, Thomas Jonathan Jackson",
+    "medium": "Oil on canvas on panel",
+    "dimensions": "20.3 x 16.5cm (8 x 6 1/2\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution; Gift of Edward Pye Chamberlayne, 2023",
+    "accession": "NPG.2023.5"
+   },
+   "sizeCm": {
+    "w": 16.5,
+    "h": 20.3,
+    "kind": null
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2023_5_int&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2023_5_int_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2023.5",
+   "license": "CC0"
+  },
+  {
+   "id": "ld1-1715938889731-1715938944581-1",
+   "title": "Self-Portrait",
+   "label": {
+    "creator": "Alfred Jones, 1819 - 1900",
+    "title": "Self-Portrait",
+    "subject": null,
+    "medium": "Watercolor and graphite on paper",
+    "dimensions": "Image/Sheet: 10.7 × 9.2 cm (4 3/16 × 3 5/8\")",
+    "credit": "National Portrait Gallery, Smithsonian Institution",
+    "accession": "NPG.2023.8"
+   },
+   "sizeCm": {
+    "w": 9.2,
+    "h": 10.7,
+    "kind": "sheet"
+   },
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2023_8_inex&max=1024",
+   "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2023_8_inex_thumb",
+   "sourceUrl": "https://npg.si.edu/object/npg_NPG.2023.8",
+   "license": "CC0"
+  }
+ ]
+}

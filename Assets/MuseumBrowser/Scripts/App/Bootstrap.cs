@@ -1,4 +1,3 @@
-using MuseumBrowser.Core;
 using UnityEngine;
 
 namespace MuseumBrowser.App
@@ -7,7 +6,7 @@ namespace MuseumBrowser.App
     {
         void Start()
         {
-            Debug.Log($"{BuildInfo.Name} {Application.version} started on {Application.platform}");
+            Debug.Log($"{Application.productName} {Application.version} started on {Application.platform}");
         }
     }
 }

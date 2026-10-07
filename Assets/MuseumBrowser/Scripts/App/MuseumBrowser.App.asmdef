@@ -3,7 +3,8 @@
     "rootNamespace": "MuseumBrowser.App",
     "references": [
         "MuseumBrowser.Core",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
