@@ -3,8 +3,10 @@ using UnityEngine.InputSystem;
 
 namespace MuseumBrowser.App
 {
-    /// The visitor: walk (WASD/arrows/left stick), look (drag), zoom (scroll), click a
-    /// work to walk to it, Space/Backspace for the next/previous work in tour order.
+    /// The visitor. Non-gamer conventions first (Street View style): up/down arrows walk,
+    /// left/right arrows turn; W/S walk, A/D step sideways, Q/E turn; drag to look,
+    /// scroll to zoom, click a work to walk to it, Space/Backspace for the
+    /// next/previous work in tour order.
     /// Discrete actions are InputAction callbacks; move/look/zoom values are read
     /// each frame. Keeps the camera on a CharacterController so walls are solid.
     [RequireComponent(typeof(CharacterController))]
@@ -14,13 +16,14 @@ namespace MuseumBrowser.App
         [SerializeField] Camera eye;
         [SerializeField] float walkSpeed = 2.2f;
         [SerializeField] float lookSensitivity = 0.12f;
+        [SerializeField] float turnSpeed = 90f; // degrees per second for keys
         [SerializeField] float viewingDistance = 2.2f;
         [SerializeField] float minFov = 12f, maxFov = 60f;
 
         /// Index of the work the visitor has arrived at, or -1 when walking freely.
         public event System.Action<int> Focused;
 
-        InputAction move, look, drag, zoom, click, next, previous;
+        InputAction move, turn, look, drag, zoom, click, next, previous;
         CharacterController body;
         float yaw, pitch;
         int index = -1;
@@ -37,9 +40,11 @@ namespace MuseumBrowser.App
             move = new InputAction("Move", InputActionType.Value);
             move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/w").With("Down", "<Keyboard>/s")
                 .With("Left", "<Keyboard>/a").With("Right", "<Keyboard>/d");
-            move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/upArrow").With("Down", "<Keyboard>/downArrow")
-                .With("Left", "<Keyboard>/leftArrow").With("Right", "<Keyboard>/rightArrow");
+            move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/upArrow").With("Down", "<Keyboard>/downArrow");
             move.AddBinding("<Gamepad>/leftStick");
+            turn = new InputAction("Turn", InputActionType.Value);
+            turn.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/leftArrow").With("Positive", "<Keyboard>/rightArrow");
+            turn.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/q").With("Positive", "<Keyboard>/e");
             look = new InputAction("Look", InputActionType.Value, "<Pointer>/delta");
             look.AddBinding("<Gamepad>/rightStick").WithProcessor("scaleVector2(x=8,y=8)");
             drag = new InputAction("Drag", InputActionType.Button, "<Mouse>/leftButton");
@@ -62,7 +67,7 @@ namespace MuseumBrowser.App
         void OnEnable() { foreach (var a in Actions) a.Enable(); }
         void OnDisable() { foreach (var a in Actions) a.Disable(); }
         void OnDestroy() { foreach (var a in Actions) a.Dispose(); }
-        InputAction[] Actions => new[] { move, look, drag, zoom, click, next, previous };
+        InputAction[] Actions => new[] { move, turn, look, drag, zoom, click, next, previous };
 
         void Update()
         {
@@ -74,6 +79,13 @@ namespace MuseumBrowser.App
             {
                 yaw += delta.x * lookSensitivity;
                 pitch = Mathf.Clamp(pitch - delta.y * lookSensitivity, -60f, 60f);
+                autoWalking = false;
+            }
+
+            float turning = turn.ReadValue<float>();
+            if (Mathf.Abs(turning) > 0.01f)
+            {
+                yaw += turning * turnSpeed * Time.deltaTime;
                 autoWalking = false;
             }
 
