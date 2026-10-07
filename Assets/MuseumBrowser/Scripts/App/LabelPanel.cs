@@ -11,7 +11,7 @@ namespace MuseumBrowser.App
     public sealed class LabelPanel : MonoBehaviour
     {
         [SerializeField] ExhibitionBuilder exhibition;
-        [SerializeField] GalleryWalk walk;
+        [SerializeField] Visitor walk;
         [SerializeField] StyleSheet styleSheet;
 
         Label creator, title, subject, details, credit, counter;
@@ -46,6 +46,7 @@ namespace MuseumBrowser.App
 
         void Show(int index)
         {
+            if (index < 0) { card.style.display = DisplayStyle.None; return; }
             var c = exhibition.Cards[index];
             var l = c.Label ?? new WallLabel();
             counter.text = $"{index + 1} / {exhibition.Cards.Count}";

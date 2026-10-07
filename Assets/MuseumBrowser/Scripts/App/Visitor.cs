@@ -1,0 +1,154 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace MuseumBrowser.App
+{
+    /// The visitor: walk (WASD/arrows/left stick), look (drag), zoom (scroll), click a
+    /// work to walk to it, Space/Backspace for the next/previous work in tour order.
+    /// Discrete actions are InputAction callbacks; move/look/zoom values are read
+    /// each frame. Keeps the camera on a CharacterController so walls are solid.
+    [RequireComponent(typeof(CharacterController))]
+    public sealed class Visitor : MonoBehaviour
+    {
+        [SerializeField] ExhibitionBuilder exhibition;
+        [SerializeField] Camera eye;
+        [SerializeField] float walkSpeed = 2.2f;
+        [SerializeField] float lookSensitivity = 0.12f;
+        [SerializeField] float viewingDistance = 2.2f;
+        [SerializeField] float minFov = 12f, maxFov = 60f;
+
+        /// Index of the work the visitor has arrived at, or -1 when walking freely.
+        public event System.Action<int> Focused;
+
+        InputAction move, look, drag, zoom, click, next, previous;
+        CharacterController body;
+        float yaw, pitch;
+        int index = -1;
+        bool autoWalking;
+        Vector3 autoTarget;
+        float autoYaw;
+        bool dragged;
+
+        void Awake()
+        {
+            body = GetComponent<CharacterController>();
+            if (!eye) eye = GetComponentInChildren<Camera>();
+
+            move = new InputAction("Move", InputActionType.Value);
+            move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/w").With("Down", "<Keyboard>/s")
+                .With("Left", "<Keyboard>/a").With("Right", "<Keyboard>/d");
+            move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/upArrow").With("Down", "<Keyboard>/downArrow")
+                .With("Left", "<Keyboard>/leftArrow").With("Right", "<Keyboard>/rightArrow");
+            move.AddBinding("<Gamepad>/leftStick");
+            look = new InputAction("Look", InputActionType.Value, "<Pointer>/delta");
+            look.AddBinding("<Gamepad>/rightStick").WithProcessor("scaleVector2(x=8,y=8)");
+            drag = new InputAction("Drag", InputActionType.Button, "<Mouse>/leftButton");
+            zoom = new InputAction("Zoom", InputActionType.Value, "<Mouse>/scroll/y");
+            click = new InputAction("Select", InputActionType.Button, "<Mouse>/leftButton");
+            next = new InputAction("Next", InputActionType.Button, "<Keyboard>/space");
+            next.AddBinding("<Gamepad>/buttonSouth");
+            previous = new InputAction("Previous", InputActionType.Button, "<Keyboard>/backspace");
+            previous.AddBinding("<Gamepad>/buttonEast");
+
+            drag.started += _ => dragged = false;
+            click.canceled += _ => { if (!dragged) SelectUnderPointer(); };
+            next.performed += _ => GoTo(index + 1);
+            previous.performed += _ => GoTo(index - 1);
+            exhibition.Built += b => StandAt(b.Entrance, b.EntranceYaw);
+
+            yaw = transform.eulerAngles.y;
+        }
+
+        void OnEnable() { foreach (var a in Actions) a.Enable(); }
+        void OnDisable() { foreach (var a in Actions) a.Disable(); }
+        void OnDestroy() { foreach (var a in Actions) a.Dispose(); }
+        InputAction[] Actions => new[] { move, look, drag, zoom, click, next, previous };
+
+        void Update()
+        {
+            // Look while dragging (mouse) or always (gamepad stick).
+            var delta = look.ReadValue<Vector2>();
+            bool mouseLook = drag.IsPressed() && delta.sqrMagnitude > 0.5f;
+            if (mouseLook) dragged = true;
+            if (mouseLook || look.activeControl?.device is Gamepad)
+            {
+                yaw += delta.x * lookSensitivity;
+                pitch = Mathf.Clamp(pitch - delta.y * lookSensitivity, -60f, 60f);
+                autoWalking = false;
+            }
+
+            // Zoom by narrowing the field of view.
+            float scroll = zoom.ReadValue<float>();
+            if (Mathf.Abs(scroll) > 0.01f)
+                eye.fieldOfView = Mathf.Clamp(eye.fieldOfView - Mathf.Sign(scroll) * 3f, minFov, maxFov);
+
+            var input = move.ReadValue<Vector2>();
+            Vector3 velocity;
+            if (input.sqrMagnitude > 0.01f)
+            {
+                if (autoWalking || index >= 0) { autoWalking = false; SetFocus(-1); }
+                var forward = Quaternion.Euler(0, yaw, 0);
+                velocity = forward * new Vector3(input.x, 0, input.y) * walkSpeed;
+            }
+            else if (autoWalking)
+            {
+                var to = autoTarget - transform.position;
+                to.y = 0;
+                velocity = Vector3.ClampMagnitude(to * 2.5f, walkSpeed * 1.6f);
+                yaw = Mathf.LerpAngle(yaw, autoYaw, Time.deltaTime * 4f);
+                pitch = Mathf.Lerp(pitch, 0f, Time.deltaTime * 4f);
+                if (to.magnitude < 0.05f) { autoWalking = false; }
+            }
+            else velocity = Vector3.zero;
+
+            body.Move((velocity + Physics.gravity) * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, yaw, 0);
+            eye.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
+        }
+
+        /// Place the visitor without walking (start of the visit).
+        void StandAt(Vector3 position, float facingYaw)
+        {
+            body.enabled = false;
+            transform.position = position;
+            body.enabled = true;
+            yaw = facingYaw;
+            pitch = 0f;
+        }
+
+        void SelectUnderPointer()
+        {
+            var ray = eye.ScreenPointToRay(Pointer.current.position.ReadValue());
+            if (Physics.Raycast(ray, out var hit, 40f) && hit.collider.GetComponentInParent<HungWork>() is { } work)
+                GoTo(work.Index);
+        }
+
+        void GoTo(int i, bool snap = false)
+        {
+            var works = exhibition.Works;
+            if (works.Count == 0) return;
+            i = Mathf.Clamp(i, 0, works.Count - 1);
+            var work = works[i];
+            autoTarget = work.position - work.forward * viewingDistance + work.right * 0.25f;
+            autoTarget.y = transform.position.y;
+            autoYaw = Quaternion.LookRotation(work.forward).eulerAngles.y;
+            eye.fieldOfView = maxFov;
+            if (snap)
+            {
+                body.enabled = false;
+                transform.position = autoTarget;
+                body.enabled = true;
+                yaw = autoYaw;
+            }
+            else autoWalking = true;
+            SetFocus(i);
+        }
+
+        void SetFocus(int i)
+        {
+            if (i == index) return;
+            index = i;
+            Focused?.Invoke(i);
+        }
+    }
+}

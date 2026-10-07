@@ -33,6 +33,9 @@ namespace MuseumBrowser.App
 
         public IReadOnlyList<Transform> Works => works;
         public IReadOnlyList<WallCard> Cards => cards;
+        /// Where a visit starts: just inside the first room, looking into it.
+        public Vector3 Entrance { get; private set; }
+        public float EntranceYaw { get; private set; }
         public event System.Action<ExhibitionBuilder> Built;
 
         readonly List<Transform> works = new();
@@ -49,6 +52,13 @@ namespace MuseumBrowser.App
             else exhibition = await JsonLoader.LoadAsync<Exhibition>(layoutSource);
             Debug.Log($"Exhibition {exhibition.Code}: {exhibition.Rooms.Count} room(s)");
             foreach (var room in exhibition.Rooms) BuildRoom(room);
+            if (exhibition.Rooms.Count > 0)
+            {
+                var first = exhibition.Rooms[0];
+                Entrance = transform.TransformPoint(new Vector3((first.OriginXMm + first.WidthMm / 2) / 1000f, 0.1f,
+                    first.OriginYMm / 1000f + 1.2f));
+                EntranceYaw = transform.eulerAngles.y;
+            }
             Built?.Invoke(this);
         }
 
@@ -79,8 +89,10 @@ namespace MuseumBrowser.App
                 {
                     if (p.Card == null) continue;
                     var local = a + right * (p.XMm / 1000f) + Vector3.up * (p.CenterMm / 1000f);
-                    works.Add(WorkHanger.Hang(root, p.Card, root.TransformPoint(local), rotation,
-                        frameMaterial, spotIntensity));
+                    var work = WorkHanger.Hang(root, p.Card, root.TransformPoint(local), rotation,
+                        frameMaterial, spotIntensity);
+                    work.gameObject.AddComponent<HungWork>().Index = works.Count;
+                    works.Add(work);
                     cards.Add(p.Card);
                 }
             }

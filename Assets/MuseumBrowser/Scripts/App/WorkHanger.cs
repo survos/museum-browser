@@ -28,7 +28,7 @@ namespace MuseumBrowser.App
             frame.transform.localScale = new Vector3(w, h, FrameDepth);
             frame.transform.localPosition = new Vector3(0, 0, -FrameDepth / 2f);
             if (frameMaterial) frame.GetComponent<Renderer>().sharedMaterial = frameMaterial;
-            Object.Destroy(frame.GetComponent<Collider>());
+            // The frame's collider stays: clicking a work walks the visitor to it.
 
             var canvas = GameObject.CreatePrimitive(PrimitiveType.Quad);
             canvas.name = "Image";
