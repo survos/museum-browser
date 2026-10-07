@@ -1,0 +1,10 @@
+{
+    "name": "MuseumBrowser.Core",
+    "rootNamespace": "MuseumBrowser.Core",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
+}

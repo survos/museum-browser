@@ -1,0 +1,13 @@
+{
+    "name": "MuseumBrowser.App",
+    "rootNamespace": "MuseumBrowser.App",
+    "references": [
+        "MuseumBrowser.Core",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
+}
