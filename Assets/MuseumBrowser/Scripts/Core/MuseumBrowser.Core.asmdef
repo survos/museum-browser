@@ -1,7 +1,9 @@
 {
     "name": "MuseumBrowser.Core",
     "rootNamespace": "MuseumBrowser.Core",
-    "references": [],
+    "references": [
+        "unity.webp"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -17,6 +17,13 @@
       },
       "hash": "aa5fc638d623f56178d50329d9ad8c541a57fe66"
     },
+    "com.netpyoung.webp": {
+      "version": "https://github.com/netpyoung/unity.webp.git?path=unity_project/Assets/unity.webp#0.3.22",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "9818db6327e09d399bf4fb84da4ed19f03b565b4"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.14",
       "depth": 0,
