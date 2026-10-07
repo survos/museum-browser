@@ -17,6 +17,8 @@ namespace MuseumBrowser.Core
     {
         public string Code;
         public string Title;
+        /// Wall code that carries the room title (usually the wall facing the entrance).
+        public string TitleWall;
         public int WidthMm;
         public int DepthMm;
         public int HeightMm;
@@ -33,7 +35,16 @@ namespace MuseumBrowser.Core
         public string Side;
         public int X0Mm, Y0Mm, X1Mm, Y1Mm;
         public int HeightMm;
+        public List<Opening> Openings = new();
         public List<Placement> Placements = new();
+    }
+
+    /// A doorway in a wall, measured along the wall from its left end.
+    public sealed class Opening
+    {
+        public int FromMm;
+        public int ToMm;
+        public int HeightMm = 3000;
     }
 
     public sealed class Placement

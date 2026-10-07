@@ -452,6 +452,8 @@ MonoBehaviour:
   wallBlock: {fileID: 5929950731744032277, guid: dd7d3325c81b70c40900ddeefa88413f, type: 3}
   wallBlockLength: 6
   wallBlockHeight: 12
+  wallBlockThickness: 3
+  wallThickness: 0.3
   floorTile: {fileID: 7548311569666973253, guid: 25aad698de4add5499fc7b80bae5764c, type: 3}
   ceilingTile: {fileID: 9122559540374743235, guid: 8d8b41c1c3b7edb4293c55bae25c11d3, type: 3}
   tileSize: 12
@@ -508,6 +510,77 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797463896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1867917140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867917143}
+  - component: {fileID: 1867917142}
+  - component: {fileID: 1867917141}
+  m_Layer: 0
+  m_Name: Label Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867917141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867917140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c76cc9ffe26143fbbf5b7e1c1079389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.LabelPanel
+  exhibition: {fileID: 1098967367}
+  walk: {fileID: 963194236}
+  styleSheet: {fileID: 7433441132597879392, guid: 96da6edd12eb749689de97c76513bf92, type: 3}
+--- !u!114 &1867917142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867917140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: e3e46aee0e0aa4354a6b660494b9a899, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 0}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1867917143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867917140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -574,3 +647,4 @@ SceneRoots:
   - {fileID: 2028866748}
   - {fileID: 1797463898}
   - {fileID: 1098967368}
+  - {fileID: 1867917143}

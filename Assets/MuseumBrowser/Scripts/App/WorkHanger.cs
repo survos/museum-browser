@@ -51,17 +51,29 @@ namespace MuseumBrowser.App
             catch (System.Exception e) { Debug.LogWarning(e.Message); }
         }
 
+        /// A white wall plaque beside the work, its centre at museum label height.
         static void AddLabel(Transform work, WallLabel label, float workWidth)
         {
-            var go = new GameObject("Label");
-            go.transform.SetParent(work, false);
-            go.transform.localPosition = new Vector3(workWidth / 2f + 0.25f, -0.25f, -0.01f);
+            const float PlaqueW = 0.30f, PlaqueH = 0.24f, LabelHeight = 1.35f;
+            var plaque = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            plaque.name = "Label";
+            plaque.transform.SetParent(work, false);
+            float y = LabelHeight - work.position.y; // local y, so the plaque sits at 1.35 m whatever the work's size
+            plaque.transform.localPosition = new Vector3(workWidth / 2f + 0.3f + PlaqueW / 2f, y, -0.006f);
+            plaque.transform.localScale = new Vector3(PlaqueW, PlaqueH, 0.012f);
+            plaque.GetComponent<Renderer>().material.SetColor("_BaseColor", new Color(0.96f, 0.95f, 0.92f));
+            Object.Destroy(plaque.GetComponent<Collider>());
 
+            var go = new GameObject("Text");
+            go.transform.SetParent(work, false);
+            go.transform.localPosition = new Vector3(workWidth / 2f + 0.3f + PlaqueW / 2f, y, -0.014f);
             var text = go.AddComponent<TextMeshPro>();
-            text.rectTransform.sizeDelta = new Vector2(0.32f, 0.4f);
-            text.rectTransform.pivot = new Vector2(0f, 1f);
-            text.fontSize = 0.16f;
-            text.color = new Color(0.12f, 0.12f, 0.12f);
+            text.rectTransform.sizeDelta = new Vector2(PlaqueW - 0.04f, PlaqueH - 0.04f);
+            text.enableAutoSizing = true;
+            text.fontSizeMin = 0.1f;
+            text.fontSizeMax = 0.42f;
+            text.alignment = TextAlignmentOptions.TopLeft;
+            text.color = new Color(0.1f, 0.1f, 0.1f);
             text.text = Tombstone(label);
         }
 
@@ -82,7 +94,7 @@ namespace MuseumBrowser.App
             light.shadows = LightShadows.None;
         }
 
-        static string Tombstone(WallLabel l)
+        public static string Tombstone(WallLabel l)
         {
             if (l == null) return "";
             if (!string.IsNullOrEmpty(l.Tombstone)) return l.Tombstone;

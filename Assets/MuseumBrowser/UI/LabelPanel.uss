@@ -1,0 +1,16 @@
+.label-card {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    width: 460px;
+    padding: 22px 26px;
+    background-color: rgba(250, 248, 243, 0.94);
+    border-radius: 4px;
+    color: rgb(28, 27, 26);
+}
+.counter { font-size: 13px; color: rgb(120, 116, 110); margin-bottom: 8px; }
+.creator { font-size: 22px; -unity-font-style: bold; white-space: normal; }
+.title { font-size: 26px; -unity-font-style: italic; white-space: normal; margin-top: 2px; }
+.subject { font-size: 17px; white-space: normal; margin-top: 8px; }
+.details { font-size: 15px; white-space: normal; margin-top: 10px; }
+.credit { font-size: 12px; color: rgb(95, 92, 88); white-space: normal; margin-top: 12px; }

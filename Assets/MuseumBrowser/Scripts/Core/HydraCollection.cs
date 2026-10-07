@@ -12,7 +12,17 @@ namespace MuseumBrowser.Core
         [JsonProperty("hydra:totalItems")] int? hydraTotal;
         [JsonProperty("totalItems")] int? total;
 
+        [JsonProperty("folio")] public FolioInfo Folio;
+
         [JsonIgnore] public List<T> Members => hydraMember ?? member ?? new List<T>();
         [JsonIgnore] public int TotalItems => hydraTotal ?? total ?? Members.Count;
+    }
+
+    public sealed class FolioInfo
+    {
+        public string Code;
+        public string Title;
+        public string License;
+        public string Credit;
     }
 }

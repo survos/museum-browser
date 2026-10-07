@@ -15,6 +15,9 @@ namespace MuseumBrowser.App
         int index;
         Vector3 target, velocity, facing = Vector3.forward;
 
+        /// Raised with the index of the work the visitor has stopped at.
+        public event System.Action<int> Focused;
+
         void Awake()
         {
             next = new InputAction("Next", InputActionType.Button);
@@ -45,6 +48,7 @@ namespace MuseumBrowser.App
             target = work.position - work.forward * viewingDistance + work.right * 0.2f;
             target.y = 1.6f;
             facing = work.forward;
+            Focused?.Invoke(index);
             if (snap) transform.position = target;
         }
 
