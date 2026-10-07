@@ -28,6 +28,7 @@
     font-size: 18px; -unity-font-style: bold;
     background-color: rgba(250, 248, 243, 0.85); color: rgb(28, 27, 26); border-width: 0;
 }
+.icon-button.text-button { width: auto; padding: 0 14px; font-size: 14px; }
 .icon-button:hover { background-color: rgb(250, 248, 243); }
 
 .panel {

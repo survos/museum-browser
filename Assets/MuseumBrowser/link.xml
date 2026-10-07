@@ -3,4 +3,11 @@
 <linker>
   <assembly fullname="MuseumBrowser.Core" preserve="all"/>
   <assembly fullname="MuseumBrowser.App" preserve="all"/>
+  <!-- Engine-code stripping removes native classes our scripts never name. The kit's wall,
+       floor and ceiling prefabs carry colliders that the walking visitor needs. -->
+  <assembly fullname="UnityEngine.PhysicsModule">
+    <type fullname="UnityEngine.MeshCollider" preserve="all"/>
+    <type fullname="UnityEngine.BoxCollider" preserve="all"/>
+    <type fullname="UnityEngine.CharacterController" preserve="all"/>
+  </assembly>
 </linker>

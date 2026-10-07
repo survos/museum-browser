@@ -13,7 +13,8 @@ namespace MuseumBrowser.App
         const float FrameDepth = 0.05f;
 
         public static Transform Hang(Transform parent, WallCard card, (int w, int h) sizeMm, Vector3 position,
-            Quaternion rotation, Material frameMaterial, float spotIntensity, bool plaque, System.Action imageDone = null)
+            Quaternion rotation, Material frameMaterial, Material imageMaterial, float spotIntensity, bool plaque,
+            System.Action imageDone = null)
         {
             var (wMm, hMm) = sizeMm;
             float w = wMm / 1000f, h = hMm / 1000f;
@@ -36,7 +37,9 @@ namespace MuseumBrowser.App
             canvas.transform.localPosition = new Vector3(0, 0, -FrameDepth - 0.001f);
             canvas.transform.localScale = new Vector3(w - 2 * FrameBorder, h - 2 * FrameBorder, 1f);
             Object.Destroy(canvas.GetComponent<Collider>());
-            var material = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
+            // A copy of a material asset, not Shader.Find: a build only contains shaders that a
+            // material references, so a shader found by name at runtime is missing on the Web.
+            var material = new Material(imageMaterial);
             canvas.GetComponent<Renderer>().material = material;
             if (card.Image?.Best is { } url) LoadImage(url, material, imageDone);
             else imageDone?.Invoke();

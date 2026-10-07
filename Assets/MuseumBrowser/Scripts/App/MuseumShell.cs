@@ -58,7 +58,9 @@ namespace MuseumBrowser.App
 
             // Toolbar.
             var tools = Box(root, "toolbar");
-            tools.Add(IconButton("▶", "Slideshow, in time order", OpenSlideshow));
+            var slides = IconButton("Slides", "Slideshow, in time order", OpenSlideshow);
+            slides.AddToClassList("text-button");
+            tools.Add(slides);
             tools.Add(IconButton("?", "Keyboard help", () => Toggle(help)));
             tools.Add(IconButton("i", "About", () => Toggle(about)));
 

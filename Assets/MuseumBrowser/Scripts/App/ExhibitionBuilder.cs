@@ -48,6 +48,8 @@ namespace MuseumBrowser.App
 
         [Header("Works")]
         [SerializeField] Material frameMaterial;
+        [Tooltip("URP/Unlit material the photos are drawn with (copied per work).")]
+        [SerializeField] Material imageMaterial;
         [SerializeField] float spotIntensity = 12f;
         [Tooltip("Physical wall plaques. The on-screen label replaces them, so they are off by default.")]
         [SerializeField] bool wallPlaques;
@@ -216,7 +218,7 @@ namespace MuseumBrowser.App
                     var local = a + right * (p.XMm / 1000f) + Vector3.up * (p.CenterMm / 1000f);
                     imagesTotal++;
                     var work = WorkHanger.Hang(root, p.Card, p.HangMm(), root.TransformPoint(local), rotation,
-                        frameMaterial, spotIntensity, wallPlaques, ImageDone);
+                        frameMaterial, imageMaterial, spotIntensity, wallPlaques, ImageDone);
                     work.gameObject.AddComponent<HungWork>().Index = works.Count;
                     works.Add(work);
                     cards.Add(p.Card);

@@ -526,6 +526,7 @@ MonoBehaviour:
   ceilingTile: {fileID: 9122559540374743235, guid: 8d8b41c1c3b7edb4293c55bae25c11d3, type: 3}
   tileSize: 12
   frameMaterial: {fileID: 2100000, guid: d7b1f9405462c42a5b53795d1d42fc9c, type: 2}
+  imageMaterial: {fileID: 2100000, guid: 18e6b242872ac4c22a2fbea11fe6ca37, type: 2}
   spotIntensity: 12
   wallPlaques: 0
 --- !u!4 &1098967368
