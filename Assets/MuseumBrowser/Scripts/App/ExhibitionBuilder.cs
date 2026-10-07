@@ -11,8 +11,8 @@ namespace MuseumBrowser.App
     public sealed class ExhibitionBuilder : MonoBehaviour
     {
         [Header("Museado API (zm / recordia.org)")]
-        [Tooltip("Base for /api/... paths while running in the Editor (local zm).")]
-        [SerializeField] string editorApiBase = "https://127.0.0.1:8001";
+        [Tooltip("Base for /api/... paths while running in the Editor: local zm through the m4 dev tunnel.")]
+        [SerializeField] string editorApiBase = "https://m4-zm.survos.org";
         [Tooltip("Base for /api/... paths in player builds (desktop and Web).")]
         [SerializeField] string playerApiBase = "https://recordia.org";
         [Tooltip("Folio to show in the Editor, as if the page URL had ?folio=...")]
@@ -54,6 +54,11 @@ namespace MuseumBrowser.App
 
         public IReadOnlyList<Transform> Works => works;
         public string Title { get; private set; }
+        /// Folio code and metadata from the collection, when loaded by folio (else null).
+        public string FolioCode { get; private set; }
+        public FolioInfo Folio { get; private set; }
+        public int TotalRecords { get; private set; }
+        public string SiteUrl => ApiBase;
         /// 0..1 while loading: the layout/records first, then the images.
         public float Progress { get; private set; }
         public string Stage { get; private set; } = "Opening the galleries…";
@@ -72,7 +77,7 @@ namespace MuseumBrowser.App
 
         /// In the Editor: the local zm. On the Web: the site that serves the page (zm embeds the
         /// build, so the API is same-origin). Desktop builds use playerApiBase.
-        string ApiBase
+        public string ApiBase
         {
             get
             {
@@ -90,16 +95,19 @@ namespace MuseumBrowser.App
         }
 
         /// ?folio=mus/fpus on the page URL (Web) or editorFolio (Editor).
-        string RequestedFolio()
+        string RequestedFolio() =>
+            Application.isEditor ? (string.IsNullOrWhiteSpace(editorFolio) ? null : editorFolio.Trim()) : QueryParam("folio");
+
+        /// A query-string parameter of the page URL (Web builds), or null.
+        public static string QueryParam(string name)
         {
-            if (Application.isEditor) return string.IsNullOrWhiteSpace(editorFolio) ? null : editorFolio.Trim();
             var url = Application.absoluteURL;
             int q = url?.IndexOf('?') ?? -1;
             if (q < 0) return null;
             foreach (var pair in url.Substring(q + 1).Split('&'))
             {
                 var kv = pair.Split(new[] { '=' }, 2);
-                if (kv.Length == 2 && kv[0] == "folio") return System.Uri.UnescapeDataString(kv[1]);
+                if (kv.Length == 2 && kv[0] == name) return System.Uri.UnescapeDataString(kv[1].Replace('+', ' '));
             }
             return null;
         }
@@ -127,6 +135,9 @@ namespace MuseumBrowser.App
                 // A folio passed in by the embedding page: hang its first works with images.
                 var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(
                     Resolve($"/api/{folio}/rows?hasImage=1&itemsPerPage=48"));
+                FolioCode = folio;
+                Folio = page.Folio;
+                TotalRecords = page.TotalItems;
                 exhibition = AutoLayout.Suite(page.Folio?.Title ?? folio, page.Members);
             }
             else if (roomSources.Count > 0)
@@ -142,6 +153,9 @@ namespace MuseumBrowser.App
             else if (layoutSource.Contains("/rows"))
             {
                 var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(Resolve(layoutSource));
+                Folio = page.Folio;
+                FolioCode = page.Folio?.Code;
+                TotalRecords = page.TotalItems;
                 exhibition = AutoLayout.Suite(page.Folio?.Title ?? "Exhibition", page.Members);
             }
             else exhibition = await JsonLoader.LoadAsync<Exhibition>(Resolve(layoutSource));

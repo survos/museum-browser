@@ -23,9 +23,13 @@ namespace MuseumBrowser.Core
             if (Cache.TryGetValue(url, out var cached) && cached) return cached;
 
             using var request = UnityWebRequest.Get(url);
+            request.timeout = 10;
+            Diag.Begin(url);
             await request.SendWebRequest();
+            Diag.End(url, request.result == UnityWebRequest.Result.Success ? "OK" : $"FAIL {request.responseCode} {request.error}",
+                (long)request.downloadedBytes);
             if (request.result != UnityWebRequest.Result.Success)
-                throw new IOException($"Cannot load image {url}: {request.error}");
+                throw new IOException($"Cannot load image {Diag.Short(url)}: {request.responseCode} {request.error}");
 
             var texture = Decode(request.downloadHandler.data, url);
             texture.wrapMode = TextureWrapMode.Clamp;

@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67dec74df62d4bd1bcd8e7842235316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.ExhibitionBuilder
-  editorApiBase: https://127.0.0.1:8001
+  editorApiBase: https://m4-zm.survos.org
   playerApiBase: https://recordia.org
   editorFolio: 
   layoutSource: /api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40
@@ -535,6 +535,77 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098967366}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1437850264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437850267}
+  - component: {fileID: 1437850266}
+  - component: {fileID: 1437850265}
+  m_Layer: 0
+  m_Name: Slideshow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1437850265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437850264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028785124955a49c08fe7e2bc71d3170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.Slideshow
+  exhibition: {fileID: 1098967367}
+  visitor: {fileID: 826349799}
+  styleSheet: {fileID: 0}
+--- !u!114 &1437850266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437850264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: e3e46aee0e0aa4354a6b660494b9a899, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 0}
+  m_SortingOrder: 20
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1437850267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437850264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -575,6 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.MuseumShell
   exhibition: {fileID: 1098967367}
   visitor: {fileID: 826349799}
+  slideshow: {fileID: 1437850265}
   styleSheet: {fileID: 0}
   hintSeconds: 10
 --- !u!114 &1487959962
@@ -790,3 +862,4 @@ SceneRoots:
   - {fileID: 1867917143}
   - {fileID: 826349801}
   - {fileID: 1487959963}
+  - {fileID: 1437850267}

@@ -43,3 +43,9 @@
     -unity-text-align: middle-center; font-size: 14px; color: rgb(250, 248, 243);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
+
+.debug {
+    position: absolute; left: 10px; top: 10px; width: 62%; max-height: 70%;
+    padding: 8px 10px; background-color: rgba(0, 0, 0, 0.78); border-radius: 3px; overflow: hidden;
+}
+.debug-text { font-size: 11px; color: rgb(170, 230, 170); white-space: normal; }
