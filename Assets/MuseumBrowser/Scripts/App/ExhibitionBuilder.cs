@@ -10,8 +10,9 @@ namespace MuseumBrowser.App
     /// Layout decisions are made in harvest; this only renders them.
     public sealed class ExhibitionBuilder : MonoBehaviour
     {
-        [Tooltip("http(s) URL of a layout JSON, or a path under StreamingAssets.")]
-        [SerializeField] string layoutSource = "exhibitions/npg-sample.json";
+        [Tooltip("Layout JSON: http(s) URL or a path under StreamingAssets. A harvest /rows URL "
+               + "(WallCard collection) is hung with the AutoLayout stand-in.")]
+        [SerializeField] string layoutSource = "https://127.0.0.1:8011/api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40";
 
         [Header("Room pieces")]
         [Tooltip("Wall block: inner face on local x=0, thickness along +x, length along +z.")]
@@ -34,7 +35,9 @@ namespace MuseumBrowser.App
 
         async void Start()
         {
-            var exhibition = await JsonLoader.LoadAsync<Exhibition>(layoutSource);
+            var exhibition = layoutSource.Contains("/rows")
+                ? AutoLayout.SingleRoom(layoutSource, (await JsonLoader.LoadAsync<HydraCollection<WallCard>>(layoutSource)).Members)
+                : await JsonLoader.LoadAsync<Exhibition>(layoutSource);
             Debug.Log($"Exhibition {exhibition.Code}: {exhibition.Rooms.Count} room(s)");
             foreach (var room in exhibition.Rooms) BuildRoom(room);
             Built?.Invoke(this);

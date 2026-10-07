@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67dec74df62d4bd1bcd8e7842235316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.ExhibitionBuilder
-  layoutSource: exhibitions/npg-sample.json
+  layoutSource: https://127.0.0.1:8011/api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40
   wallBlock: {fileID: 5929950731744032277, guid: dd7d3325c81b70c40900ddeefa88413f, type: 3}
   wallBlockLength: 6
   wallBlockHeight: 12

@@ -90,7 +90,12 @@ namespace MuseumBrowser.Core
         public string Full;
 
         /// Low-res first: thumbnails are what this phase uses.
-        public string Best => Thumb ?? Medium ?? Full;
+        public string Best => Thumb ?? Medium ?? Shrink(Full);
+
+        // Until harvest serves JPEG thumbnails, ask the Smithsonian image server for a
+        // small rendition rather than the full-resolution original.
+        static string Shrink(string url) =>
+            url != null && url.Contains("ids.si.edu") && !url.Contains("max=") ? url + "&max=400" : url;
     }
 
     public sealed class AudioStop
