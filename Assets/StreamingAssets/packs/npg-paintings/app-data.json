@@ -2,7 +2,7 @@
  "version": 0,
  "folio": "smith/npg",
  "title": "National Portrait Gallery — Paintings",
- "generatedAt": "2026-10-07T12:29:00+00:00",
+ "generatedAt": "2026-10-07T12:48:21+00:00",
  "facets": [],
  "items": [
   {
@@ -22,7 +22,7 @@
     "h": 154.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_54&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_54&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_54_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.54",
    "license": "CC0"
@@ -44,7 +44,7 @@
     "h": 121.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_30&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_30&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_30_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.30",
    "license": "CC0"
@@ -66,7 +66,7 @@
     "h": 74.3,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_35&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_35&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_35_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.35",
    "license": "CC0"
@@ -88,7 +88,7 @@
     "h": 132.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_48Verplanck-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_48Verplanck-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_48Verplanck-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.48",
    "license": "CC0"
@@ -110,7 +110,7 @@
     "h": 138.1,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_24-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_24-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_24-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.24",
    "license": "CC0"
@@ -132,7 +132,7 @@
     "h": 137.5,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8500018A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8500018A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-8500018A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.85.9",
    "license": "CC0"
@@ -154,7 +154,7 @@
     "h": 89.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_52&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_52&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_52_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.52",
    "license": "CC0"
@@ -176,7 +176,7 @@
     "h": 103.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_120Wood_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_120Wood_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_81_120Wood_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.120",
    "license": "CC0"
@@ -198,7 +198,7 @@
     "h": 145.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_85Aldrich-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_85Aldrich-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_85Aldrich-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.85",
    "license": "CC0"
@@ -220,7 +220,7 @@
     "h": 128.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_77Gilder-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_77Gilder-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_77Gilder-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.77",
    "license": "CC0"
@@ -242,7 +242,7 @@
     "h": 158.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_14&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_14&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_14_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.14",
    "license": "CC0"
@@ -264,7 +264,7 @@
     "h": 107.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_73_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_73_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_73_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.73",
    "license": "CC0"
@@ -286,7 +286,7 @@
     "h": 123.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_52Harte_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_52Harte_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_52Harte_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.52",
    "license": "CC0"
@@ -308,7 +308,7 @@
     "h": 45.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_34Westfamily-000004&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_34Westfamily-000004&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_34Westfamily-000004_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.34",
    "license": "CC0"
@@ -330,7 +330,7 @@
     "h": 86.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_244Woodbury-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_244Woodbury-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_244Woodbury-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.244",
    "license": "CC0"
@@ -352,7 +352,7 @@
     "h": 92.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_35&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_35&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_35_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.35",
    "license": "CC0"
@@ -374,7 +374,7 @@
     "h": 67.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_71_9&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_71_9&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_71_9_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.71.9",
    "license": "CC0"
@@ -396,7 +396,7 @@
     "h": 155.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_45Laurens_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_45Laurens_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_45Laurens_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.45",
    "license": "CC0"
@@ -418,7 +418,7 @@
     "h": 167.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_73_5&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_73_5&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_73_5_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.73.5",
    "license": "CC0"
@@ -440,7 +440,7 @@
     "h": 74.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_163Minimic-000003&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_163Minimic-000003&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_96_163Minimic-000003_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.163",
    "license": "CC0"
@@ -462,7 +462,7 @@
     "h": 74.8,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_19-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_19-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_19-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.19",
    "license": "CC0"
@@ -484,7 +484,7 @@
     "h": 89.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_79_215Ames-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_79_215Ames-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_79_215Ames-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.79.215",
    "license": "CC0"
@@ -506,7 +506,7 @@
     "h": 36.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9100410A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9100410A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-9100410A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.95",
    "license": "CC0"
@@ -528,7 +528,7 @@
     "h": 90.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_109Harrison-000004&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_109Harrison-000004&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_65_109Harrison-000004_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.65.109",
    "license": "CC0"
@@ -550,7 +550,7 @@
     "h": 108.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_152Green_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_152Green_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_152Green_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.152",
    "license": "CC0"
@@ -572,7 +572,7 @@
     "h": 116.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.1",
    "license": "CC0"
@@ -594,7 +594,7 @@
     "h": 71.3,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_67&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_67&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_67_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.67",
    "license": "CC0"
@@ -616,7 +616,7 @@
     "h": 109.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_2Brown_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_2Brown_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_2Brown_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.2",
    "license": "CC0"
@@ -638,7 +638,7 @@
     "h": 109.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_7&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_7&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_86_7_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.86.7",
    "license": "CC0"
@@ -660,7 +660,7 @@
     "h": 82.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_95_20Simms_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_95_20Simms_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_95_20Simms_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.95.20",
    "license": "CC0"
@@ -682,7 +682,7 @@
     "h": 61.3,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_106&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_106&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_106_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.106",
    "license": "CC0"
@@ -704,7 +704,7 @@
     "h": 144.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_39_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_39_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_69_39_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.69.39",
    "license": "CC0"
@@ -726,7 +726,7 @@
     "h": 144.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_37Singer_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_37Singer_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_37Singer_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.37",
    "license": "CC0"
@@ -748,7 +748,7 @@
     "h": 177.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_22&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_22&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_22_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.22",
    "license": "CC0"
@@ -770,7 +770,7 @@
     "h": 147.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_53&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_53&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_53_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.53",
    "license": "CC0"
@@ -792,7 +792,7 @@
     "h": 19.4,
     "kind": "case open"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-7900502A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-7900502A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-7900502A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.79.228",
    "license": "CC0"
@@ -814,7 +814,7 @@
     "h": 133.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_22&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_22&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_22_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.22",
    "license": "CC0"
@@ -836,7 +836,7 @@
     "h": 98.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_33&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_33&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_33_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.33",
    "license": "CC0"
@@ -858,7 +858,7 @@
     "h": 97.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_72_7_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_72_7_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_72_7_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.72.7",
    "license": "CC0"
@@ -880,7 +880,7 @@
     "h": 150.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_46JayHR_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_46JayHR_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_46JayHR_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.46",
    "license": "CC0"
@@ -902,7 +902,7 @@
     "h": 94.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_22-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_22-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_22-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.22",
    "license": "CC0"
@@ -924,7 +924,7 @@
     "h": 105.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_104&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_104&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_65_104_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.65.104",
    "license": "CC0"
@@ -946,7 +946,7 @@
     "h": 66.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_71Marshall-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_71Marshall-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_71Marshall-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.71",
    "license": "CC0"
@@ -968,7 +968,7 @@
     "h": 57.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_34&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_34&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_34_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.34",
    "license": "CC0"
@@ -990,7 +990,7 @@
     "h": 68.6,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_127_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_127_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_82_127_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.82.127",
    "license": "CC0"
@@ -1012,7 +1012,7 @@
     "h": 40.6,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_132_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_132_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_82_132_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.82.132",
    "license": "CC0"
@@ -1034,7 +1034,7 @@
     "h": 52.0,
     "kind": "image"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_89_52_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_89_52_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_89_52_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.89.52",
    "license": "CC0"
@@ -1056,7 +1056,7 @@
     "h": 113.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_54Marshall-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_54Marshall-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_54Marshall-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.54",
    "license": "CC0"
@@ -1078,7 +1078,7 @@
     "h": 141.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_42-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_42-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_42-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.42",
    "license": "CC0"
@@ -1100,7 +1100,7 @@
     "h": 162.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_73Aldrige_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_73Aldrige_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_73Aldrige_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.73",
    "license": "CC0"
@@ -1122,7 +1122,7 @@
     "h": 40.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_214&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_214&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_86_214_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.86.214",
    "license": "CC0"
@@ -1144,7 +1144,7 @@
     "h": 108.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_88_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_88_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_88_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.88.1",
    "license": "CC0"
@@ -1166,7 +1166,7 @@
     "h": 154.5,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_62&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_62&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_62_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.62",
    "license": "CC0"
@@ -1188,7 +1188,7 @@
     "h": 100.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9600314A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9600314A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-9600314A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.133",
    "license": "CC0"
@@ -1210,7 +1210,7 @@
     "h": 105.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_20MyerM-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_20MyerM-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_20MyerM-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.20",
    "license": "CC0"
@@ -1232,7 +1232,7 @@
     "h": 76.2,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_12Armstrong-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_12Armstrong-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_12Armstrong-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.12",
    "license": "CC0"
@@ -1254,7 +1254,7 @@
     "h": 203.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_19Fiske-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_19Fiske-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_67_19Fiske-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.67.19",
    "license": "CC0"
@@ -1276,7 +1276,7 @@
     "h": 101.6,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8100006A_2&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8100006A_2&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-8100006A_2_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.3",
    "license": "CC0"
@@ -1298,7 +1298,7 @@
     "h": 55.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_30&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_30&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_30_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.30",
    "license": "CC0"
@@ -1320,7 +1320,7 @@
     "h": 84.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_51_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_51_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_51_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.51",
    "license": "CC0"
@@ -1342,7 +1342,7 @@
     "h": 188.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_63_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_63_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_63_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.63",
    "license": "CC0"
@@ -1364,7 +1364,7 @@
     "h": 97.5,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_10Hale-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_10Hale-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_10Hale-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.10",
    "license": "CC0"
@@ -1386,7 +1386,7 @@
     "h": 74.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_70_14&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_70_14&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_70_14_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.70.14",
    "license": "CC0"
@@ -1408,7 +1408,7 @@
     "h": 68.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8300400A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8300400A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-8300400A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.83.153",
    "license": "CC0"
@@ -1430,7 +1430,7 @@
     "h": 101.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_55&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_55&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_55_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.55",
    "license": "CC0"
@@ -1452,7 +1452,7 @@
     "h": 95.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_3&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_74_3&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_74_3_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.74.3",
    "license": "CC0"
@@ -1474,7 +1474,7 @@
     "h": 72.7,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_29&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_29&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_29_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2019.29",
    "license": "CC0"
@@ -1496,7 +1496,7 @@
     "h": 41.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_48_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_48_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_48_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.48",
    "license": "CC0"
@@ -1518,7 +1518,7 @@
     "h": 94.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_84_34_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_84_34_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_84_34_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.84.34",
    "license": "CC0"
@@ -1540,7 +1540,7 @@
     "h": 94.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_204Astor_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_204Astor_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_204Astor_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.204",
    "license": "CC0"
@@ -1562,7 +1562,7 @@
     "h": 76.2,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8900088A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8900088A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-8900088A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.89.39",
    "license": "CC0"
@@ -1584,7 +1584,7 @@
     "h": 123.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_31Howe_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_31Howe_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_31Howe_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.31",
    "license": "CC0"
@@ -1606,7 +1606,7 @@
     "h": 74.5,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_15-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_15-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_15-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.15",
    "license": "CC0"
@@ -1628,7 +1628,7 @@
     "h": 14.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_138MendenhallM_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_138MendenhallM_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_67_138MendenhallM_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.67.138",
    "license": "CC0"
@@ -1650,7 +1650,7 @@
     "h": 255.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_12&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_12&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_12_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.12",
    "license": "CC0"
@@ -1672,7 +1672,7 @@
     "h": 80.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_93&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_93&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_93_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.93",
    "license": "CC0"
@@ -1694,7 +1694,7 @@
     "h": 97.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_32-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_32-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_32-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.32",
    "license": "CC0"
@@ -1716,7 +1716,7 @@
     "h": 91.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_15-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_15-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_15-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.15",
    "license": "CC0"
@@ -1738,7 +1738,7 @@
     "h": 83.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_83_11Johnson-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_83_11Johnson-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_83_11Johnson-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.83.11",
    "license": "CC0"
@@ -1760,7 +1760,7 @@
     "h": 55.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_94_28-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_94_28-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_94_28-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.94.28",
    "license": "CC0"
@@ -1782,7 +1782,7 @@
     "h": 109.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_90_45_S&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_90_45_S&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_90_45_S_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.90.45",
    "license": "CC0"
@@ -1804,7 +1804,7 @@
     "h": 165.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_205Millet-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_205Millet-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_205Millet-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.205",
    "license": "CC0"
@@ -1826,7 +1826,7 @@
     "h": 23.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_17_inex&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_17_inex&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_81_17_inex_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.17",
    "license": "CC0"
@@ -1848,7 +1848,7 @@
     "h": 91.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_50Wood_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_50Wood_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_96_50Wood_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.50",
    "license": "CC0"
@@ -1870,7 +1870,7 @@
     "h": 188.0,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_34&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_34&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_67_34_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.67.34",
    "license": "CC0"
@@ -1892,7 +1892,7 @@
     "h": 180.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_51&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_51&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_51_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.51",
    "license": "CC0"
@@ -1914,7 +1914,7 @@
     "h": 63.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_23Irving-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_23Irving-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_23Irving-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.23",
    "license": "CC0"
@@ -1936,7 +1936,7 @@
     "h": 121.8,
     "kind": "board"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_68&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_68&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_68_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.68",
    "license": "CC0"
@@ -1958,7 +1958,7 @@
     "h": 138.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_43Daniel-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_43Daniel-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_43Daniel-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.43",
    "license": "CC0"
@@ -1980,7 +1980,7 @@
     "h": 130.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_60&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_60&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_60_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.60",
    "license": "CC0"
@@ -2002,7 +2002,7 @@
     "h": 119.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_35&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_35&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_35_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.35",
    "license": "CC0"
@@ -2024,7 +2024,7 @@
     "h": 70.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_76_36Lincoln-000003&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_76_36Lincoln-000003&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_76_36Lincoln-000003_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.76.36",
    "license": "CC0"
@@ -2046,7 +2046,7 @@
     "h": 101.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_103_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_65_103_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_65_103_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.65.103",
    "license": "CC0"
@@ -2068,7 +2068,7 @@
     "h": 92.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_64&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_64&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_64_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.64",
    "license": "CC0"
@@ -2090,7 +2090,7 @@
     "h": 67.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_19Joseph_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_19Joseph_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_19Joseph_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.19",
    "license": "CC0"
@@ -2112,7 +2112,7 @@
     "h": 177.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_196-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_196-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_196-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.196",
    "license": "CC0"
@@ -2134,7 +2134,7 @@
     "h": 154.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_144Dewey_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_86_144Dewey_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_86_144Dewey_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.86.144",
    "license": "CC0"
@@ -2156,7 +2156,7 @@
     "h": 190.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_72_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_72_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_72_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.72",
    "license": "CC0"
@@ -2178,7 +2178,7 @@
     "h": 121.9,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_231&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_231&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_231_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.231",
    "license": "CC0"
@@ -2200,7 +2200,7 @@
     "h": 74.9,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_9-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_9-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_9-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.9",
    "license": "CC0"
@@ -2222,7 +2222,7 @@
     "h": 26.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8110008A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-8110008A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-8110008A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.81.4",
    "license": "CC0"
@@ -2244,7 +2244,7 @@
     "h": 114.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_88_53&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_88_53&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_88_53_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.88.53",
    "license": "CC0"
@@ -2266,7 +2266,7 @@
     "h": 116.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_30Stanton_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_30Stanton_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_30Stanton_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.30",
    "license": "CC0"
@@ -2288,7 +2288,7 @@
     "h": 91.8,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_93_385_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_93_385_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_93_385_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.93.385",
    "license": "CC0"
@@ -2310,7 +2310,7 @@
     "h": 83.7,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_23&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_77_23&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_77_23_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.77.23",
    "license": "CC0"
@@ -2332,7 +2332,7 @@
     "h": 165.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_93_12&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_93_12&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_93_12_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.93.121",
    "license": "CC0"
@@ -2354,7 +2354,7 @@
     "h": 95.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_71_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_66_71_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_66_71_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.66.71",
    "license": "CC0"
@@ -2376,7 +2376,7 @@
     "h": 7.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_73_10Jones_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_73_10Jones_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_73_10Jones_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.73.10",
    "license": "CC0"
@@ -2398,7 +2398,7 @@
     "h": 89.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_246Randolph_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_246Randolph_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_246Randolph_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.46",
    "license": "CC0"
@@ -2420,7 +2420,7 @@
     "h": 107.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9400246A_2&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9400246A_2&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-9400246A_2_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.94.123",
    "license": "CC0"
@@ -2442,7 +2442,7 @@
     "h": 99.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_87_26&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_87_26&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_87_26_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.87.26",
    "license": "CC0"
@@ -2464,7 +2464,7 @@
     "h": 110.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_12&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_12&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_12_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.12",
    "license": "CC0"
@@ -2486,7 +2486,7 @@
     "h": 53.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_135&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_135&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_135_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.135",
    "license": "CC0"
@@ -2508,7 +2508,7 @@
     "h": 80.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_130&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_130&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_130_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.130",
    "license": "CC0"
@@ -2530,7 +2530,7 @@
     "h": 92.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_22&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_22&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_22_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.22",
    "license": "CC0"
@@ -2552,7 +2552,7 @@
     "h": 60.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_89_3&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_89_3&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_89_3_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.89.3",
    "license": "CC0"
@@ -2574,7 +2574,7 @@
     "h": 100.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_125Whistler-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_91_125Whistler-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_91_125Whistler-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.91.125",
    "license": "CC0"
@@ -2596,7 +2596,7 @@
     "h": 74.3,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_50Smith-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_50Smith-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_50Smith-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.50",
    "license": "CC0"
@@ -2618,7 +2618,7 @@
     "h": 92.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_72_20_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_72_20_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_72_20_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.72.20",
    "license": "CC0"
@@ -2640,7 +2640,7 @@
     "h": 81.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_4Adams-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_4Adams-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_4Adams-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.4",
    "license": "CC0"
@@ -2662,7 +2662,7 @@
     "h": 180.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_18_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_18_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_69_18_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.69.18",
    "license": "CC0"
@@ -2684,7 +2684,7 @@
     "h": 157.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_23Edison_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_23Edison_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_23Edison_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.23",
    "license": "CC0"
@@ -2706,7 +2706,7 @@
     "h": 77.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_12Adams-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_12Adams-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_12Adams-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.12",
    "license": "CC0"
@@ -2728,7 +2728,7 @@
     "h": 105.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.1",
    "license": "CC0"
@@ -2750,7 +2750,7 @@
     "h": 150.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_20Bartlett-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_20Bartlett-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_20Bartlett-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.20",
    "license": "CC0"
@@ -2772,7 +2772,7 @@
     "h": 33.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_38Harris-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_38Harris-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_38Harris-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.38",
    "license": "CC0"
@@ -2794,7 +2794,7 @@
     "h": 104.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_64_1-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_64_1-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_64_1-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.64.1",
    "license": "CC0"
@@ -2816,7 +2816,7 @@
     "h": 95.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_29Farragut_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_29Farragut_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_29Farragut_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.29",
    "license": "CC0"
@@ -2838,7 +2838,7 @@
     "h": 84.7,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_28-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_28-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_28-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.28",
    "license": "CC0"
@@ -2860,7 +2860,7 @@
     "h": 105.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_26&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_26&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_26_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.26",
    "license": "CC0"
@@ -2882,7 +2882,7 @@
     "h": 210.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_116Clemens-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_81_116Clemens-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_81_116Clemens-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.81.116",
    "license": "CC0"
@@ -2904,7 +2904,7 @@
     "h": 89.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_97&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_97&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_97_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.97",
    "license": "CC0"
@@ -2926,7 +2926,7 @@
     "h": 96.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_93Ringgold-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_96_93Ringgold-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_96_93Ringgold-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.96.93",
    "license": "CC0"
@@ -2948,7 +2948,7 @@
     "h": 87.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_93_120-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_93_120-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_93_120-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.93.120",
    "license": "CC0"
@@ -2970,7 +2970,7 @@
     "h": 68.9,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_20-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_20-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_20-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.20",
    "license": "CC0"
@@ -2992,7 +2992,7 @@
     "h": 118.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_13Stevens_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_75_13Stevens_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_75_13Stevens_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.75.13",
    "license": "CC0"
@@ -3014,7 +3014,7 @@
     "h": 47.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_17Fremont_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_17Fremont_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_72_17Fremont_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.72.17",
    "license": "CC0"
@@ -3036,7 +3036,7 @@
     "h": 57.8,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_83_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_83_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_83_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.83.1",
    "license": "CC0"
@@ -3058,7 +3058,7 @@
     "h": 84.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_20Forrest_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_20Forrest_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_20Forrest_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.20",
    "license": "CC0"
@@ -3080,7 +3080,7 @@
     "h": 54.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_76_28Yerkes-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_76_28Yerkes-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_76_28Yerkes-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.76.28",
    "license": "CC0"
@@ -3102,7 +3102,7 @@
     "h": 74.3,
     "kind": "panel"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_57&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_57&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_57_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.57",
    "license": "CC0"
@@ -3124,7 +3124,7 @@
     "h": 62.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_22&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_69_22&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_69_22_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.69.22",
    "license": "CC0"
@@ -3146,7 +3146,7 @@
     "h": 120.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_13James_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_68_13James_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_68_13James_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.68.13",
    "license": "CC0"
@@ -3168,7 +3168,7 @@
     "h": 41.9,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_92_127Abbot-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_92_127Abbot-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_92_127Abbot-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.92.127",
    "license": "CC0"
@@ -3190,7 +3190,7 @@
     "h": 175.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_40&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_40&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_65_40_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.65.40",
    "license": "CC0"
@@ -3212,7 +3212,7 @@
     "h": 109.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_150Lafayette-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_82_150Lafayette-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_82_150Lafayette-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.82.150",
    "license": "CC0"
@@ -3234,7 +3234,7 @@
     "h": 100.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_138_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_138_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_138_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.138",
    "license": "CC0"
@@ -3256,7 +3256,7 @@
     "h": 101.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_69&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_66_69&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_66_69_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.66.69",
    "license": "CC0"
@@ -3278,7 +3278,7 @@
     "h": 11.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_79_46Bingham-000003&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_79_46Bingham-000003&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_79_46Bingham-000003_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.79.46",
    "license": "CC0"
@@ -3300,7 +3300,7 @@
     "h": 105.4,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_3&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_71_3&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_71_3_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.71.3",
    "license": "CC0"
@@ -3322,7 +3322,7 @@
     "h": 67.5,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_84_177Hull-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_84_177Hull-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_84_177Hull-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.84.177",
    "license": "CC0"
@@ -3344,7 +3344,7 @@
     "h": 67.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_136West-000004&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_80_136West-000004&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_80_136West-000004_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.80.136",
    "license": "CC0"
@@ -3366,7 +3366,7 @@
     "h": 42.9,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_47&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_47&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_69_47_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.69.47",
    "license": "CC0"
@@ -3388,7 +3388,7 @@
     "h": 33.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_45Paul_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_70_45Paul_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_70_45Paul_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.70.45",
    "license": "CC0"
@@ -3410,7 +3410,7 @@
     "h": 5.1,
     "kind": "locket"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_92_33_int-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_92_33_int-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_92_33_int-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.92.33",
    "license": "CC0"
@@ -3432,7 +3432,7 @@
     "h": 90.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_97_38&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_97_38&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_97_38_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.97.38",
    "license": "CC0"
@@ -3454,7 +3454,7 @@
     "h": 12.1,
     "kind": "case closed"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_78Tappandet_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_78Tappandet_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_78Tappandet_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.78",
    "license": "CC0"
@@ -3476,7 +3476,7 @@
     "h": 125.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_2&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_2&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_2_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.2",
    "license": "CC0"
@@ -3498,7 +3498,7 @@
     "h": 58.4,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_22Inness-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_22Inness-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_22Inness-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.22",
    "license": "CC0"
@@ -3520,7 +3520,7 @@
     "h": 108.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_98_4&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_98_4&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_98_4_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.98.4",
    "license": "CC0"
@@ -3542,7 +3542,7 @@
     "h": 17.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9700390A_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-9700390A_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-9700390A_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.97.190",
    "license": "CC0"
@@ -3564,7 +3564,7 @@
     "h": 103.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_99_1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_99_1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_99_1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.99.1",
    "license": "CC0"
@@ -3586,7 +3586,7 @@
     "h": 64.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_74James-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_74James-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_74James-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.74",
    "license": "CC0"
@@ -3608,7 +3608,7 @@
     "h": 64.8,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_75James-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_98_75James-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_98_75James-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.98.75",
    "license": "CC0"
@@ -3630,7 +3630,7 @@
     "h": 127.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_13_Richardson_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_13_Richardson_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2010_13_Richardson_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2010.13",
    "license": "CC0"
@@ -3652,7 +3652,7 @@
     "h": 92.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_3Morgan-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_3Morgan-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_3Morgan-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.3",
    "license": "CC0"
@@ -3674,7 +3674,7 @@
     "h": 39.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_11&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_11&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_11_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.11",
    "license": "CC0"
@@ -3696,7 +3696,7 @@
     "h": 81.3,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_12&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_12&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_12_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.12",
    "license": "CC0"
@@ -3718,7 +3718,7 @@
     "h": 168.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_74&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2001_74&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2001_74_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2001.74",
    "license": "CC0"
@@ -3740,7 +3740,7 @@
     "h": 95.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2003_6&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2003_6&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2003_6_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2003.6",
    "license": "CC0"
@@ -3762,7 +3762,7 @@
     "h": 74.5,
     "kind": "sight"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_18-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2019_18-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2019_18-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2019.18",
    "license": "CC0"
@@ -3784,7 +3784,7 @@
     "h": 85.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_95Weed_d1&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_95Weed_d1&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2005_95Weed_d1_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2005.95",
    "license": "CC0"
@@ -3806,7 +3806,7 @@
     "h": 114.1,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_71Kirby-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_71Kirby-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2005_71Kirby-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2005.71",
    "license": "CC0"
@@ -3828,7 +3828,7 @@
     "h": 57.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_46-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2005_46-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2005_46-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2005.46",
    "license": "CC0"
@@ -3850,7 +3850,7 @@
     "h": 128.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2006_113Kellogg-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2006_113Kellogg-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2006_113Kellogg-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2006.113",
    "license": "CC0"
@@ -3872,7 +3872,7 @@
     "h": 113.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2006_114Kellogg-000003&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2006_114Kellogg-000003&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2006_114Kellogg-000003_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2006.114",
    "license": "CC0"
@@ -3894,7 +3894,7 @@
     "h": 93.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_5&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_5&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2007_5_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2007.5",
    "license": "CC0"
@@ -3916,7 +3916,7 @@
     "h": 6.0,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_49_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_49_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2010_49_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2010.49",
    "license": "CC0"
@@ -3938,7 +3938,7 @@
     "h": 74.9,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2007_12Linn-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2007_12Linn-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2007_12Linn-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2007.12",
    "license": "CC0"
@@ -3960,7 +3960,7 @@
     "h": 5.7,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_11Linn-000003&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_11Linn-000003&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2007_11Linn-000003_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2007.11",
    "license": "CC0"
@@ -3982,7 +3982,7 @@
     "h": 66.7,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_219&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2007_219&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2007_219_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2007.219",
    "license": "CC0"
@@ -4004,7 +4004,7 @@
     "h": 6.4,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_40&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_40&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_40_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.40",
    "license": "CC0"
@@ -4026,7 +4026,7 @@
     "h": 7.0,
     "kind": "ivory"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2009_49Depeyster-000004&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2009_49Depeyster-000004&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2009_49Depeyster-000004_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2009.49",
    "license": "CC0"
@@ -4048,7 +4048,7 @@
     "h": 76.5,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2017_57&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2017_57&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2017_57_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2017.57",
    "license": "CC0"
@@ -4070,7 +4070,7 @@
     "h": 73.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_48_ext&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2010_48_ext&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2010_48_ext_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2010.48",
    "license": "CC0"
@@ -4092,7 +4092,7 @@
     "h": 65.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_14Vespucci-000002&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_14Vespucci-000002&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2011_14Vespucci-000002_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2011.14",
    "license": "CC0"
@@ -4114,7 +4114,7 @@
     "h": 127.3,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2011_58Lee-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2011_58Lee-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2011_58Lee-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2011.58",
    "license": "CC0"
@@ -4136,7 +4136,7 @@
     "h": 110.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_29Blodget-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_29Blodget-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_29Blodget-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.29",
    "license": "CC0"
@@ -4158,7 +4158,7 @@
     "h": 127.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_142Ochs_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_142Ochs_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2011_142Ochs_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2011.142",
    "license": "CC0"
@@ -4180,7 +4180,7 @@
     "h": 127.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2011_143Ochs-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2011_143Ochs-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2011_143Ochs-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2011.143",
    "license": "CC0"
@@ -4202,7 +4202,7 @@
     "h": 96.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_145Bache-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2011_145Bache-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2011_145Bache-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2011.145",
    "license": "CC0"
@@ -4224,7 +4224,7 @@
     "h": 91.4,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2012_24&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2012_24&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2012_24_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2012.24",
    "license": "CC0"
@@ -4246,7 +4246,7 @@
     "h": 12.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_140GW-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_140GW-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_140GW-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.140",
    "license": "CC0"
@@ -4268,7 +4268,7 @@
     "h": 8.3,
     "kind": "case closed"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_141detGW-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2013_141detGW-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2013_141detGW-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2013.141",
    "license": "CC0"
@@ -4290,7 +4290,7 @@
     "h": 98.1,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2015_43&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2015_43&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2015_43_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2015.43",
    "license": "CC0"
@@ -4312,7 +4312,7 @@
     "h": 108.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2016_23&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2016_23&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2016_23_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2016.23",
    "license": "CC0"
@@ -4334,7 +4334,7 @@
     "h": 74.0,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2016_22&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2016_22&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2016_22_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2016.22",
    "license": "CC0"
@@ -4356,7 +4356,7 @@
     "h": 112.2,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2017_74&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-S_NPG_2017_74&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-S_NPG_2017_74_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_S_NPG.2017.74",
    "license": "CC0"
@@ -4378,7 +4378,7 @@
     "h": 2.5,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-B7000230A&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-B7000230A&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-B7000230A_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2017.114",
    "license": "CC0"
@@ -4400,7 +4400,7 @@
     "h": 76.2,
     "kind": "stretcher"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2018_71&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2018_71&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2018_71_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2018.71",
    "license": "CC0"
@@ -4422,7 +4422,7 @@
     "h": 87.6,
     "kind": "frame"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_50Fillmore-000001&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_78_50Fillmore-000001&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_78_50Fillmore-000001_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.78.50",
    "license": "CC0"
@@ -4444,7 +4444,7 @@
     "h": 20.3,
     "kind": null
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2023_5_int&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2023_5_int&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2023_5_int_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2023.5",
    "license": "CC0"
@@ -4466,7 +4466,7 @@
     "h": 10.7,
     "kind": "sheet"
    },
-   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2023_8_inex&max=1024",
+   "img": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_2023_8_inex&max=300",
    "thumb": "https://ids.si.edu/ids/download?id=NPG-NPG_2023_8_inex_thumb",
    "sourceUrl": "https://npg.si.edu/object/npg_NPG.2023.8",
    "license": "CC0"
