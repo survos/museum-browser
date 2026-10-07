@@ -10,15 +10,21 @@ namespace MuseumBrowser.App
     /// Layout decisions are made in harvest; this only renders them.
     public sealed class ExhibitionBuilder : MonoBehaviour
     {
-        [Tooltip("Layout JSON: http(s) URL or a path under StreamingAssets. A harvest /rows URL "
-               + "(WallCard collection) is hung with the AutoLayout stand-in.")]
-        [SerializeField] string layoutSource = "https://127.0.0.1:8011/api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40";
+        [Header("Museado API (zm / recordia.org)")]
+        [Tooltip("Base for /api/... paths while running in the Editor (local zm).")]
+        [SerializeField] string editorApiBase = "https://127.0.0.1:8001";
+        [Tooltip("Base for /api/... paths in player builds (desktop and Web).")]
+        [SerializeField] string playerApiBase = "https://recordia.org";
+
+        [Tooltip("Layout JSON: /api/... path, http(s) URL, or a path under StreamingAssets. A /rows "
+               + "path (WallCard collection) is hung with the AutoLayout stand-in.")]
+        [SerializeField] string layoutSource = "/api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40";
 
         [System.Serializable]
         public sealed class RoomSource
         {
             public string title;
-            [Tooltip("harvest /rows URL: the filter that defines this room (a decade, a theme, a town...).")]
+            [Tooltip("/api/{folio}/rows path: the filter that defines this room (a decade, a theme, a town...).")]
             public string url;
         }
 
@@ -54,6 +60,11 @@ namespace MuseumBrowser.App
         readonly List<Transform> works = new();
         readonly List<WallCard> cards = new();
 
+        string ApiBase => Application.isEditor ? editorApiBase : playerApiBase;
+
+        /// "/api/..." paths are resolved against the Museado API base; anything else is used as is.
+        string Resolve(string source) => source.StartsWith("/") ? ApiBase.TrimEnd('/') + source : source;
+
         async void Start()
         {
             Exhibition exhibition;
@@ -62,17 +73,17 @@ namespace MuseumBrowser.App
                 var groups = new List<(string, List<WallCard>)>();
                 foreach (var source in roomSources)
                 {
-                    var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(source.url);
+                    var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(Resolve(source.url));
                     groups.Add((source.title, page.Members));
                 }
                 exhibition = AutoLayout.Rooms(name, groups);
             }
             else if (layoutSource.Contains("/rows"))
             {
-                var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(layoutSource);
+                var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(Resolve(layoutSource));
                 exhibition = AutoLayout.Suite(page.Folio?.Title ?? "Exhibition", page.Members);
             }
-            else exhibition = await JsonLoader.LoadAsync<Exhibition>(layoutSource);
+            else exhibition = await JsonLoader.LoadAsync<Exhibition>(Resolve(layoutSource));
             Debug.Log($"Exhibition {exhibition.Code}: {exhibition.Rooms.Count} room(s)");
             foreach (var room in exhibition.Rooms) BuildRoom(room);
             if (exhibition.Rooms.Count > 0)

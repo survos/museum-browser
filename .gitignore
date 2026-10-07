@@ -27,3 +27,8 @@
 /[Aa]ssets/Creepy_Cat/
 /[Aa]ssets/Creepy_Cat.meta
 /[Cc]aptures/
+
+# Web build outputs (build profiles may write next to Assets/)
+/Tour1Test/
+/[Dd]ata/
+/WebBuild*/

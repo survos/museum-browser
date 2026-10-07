@@ -300,9 +300,11 @@ MonoBehaviour:
   eye: {fileID: 963194227}
   walkSpeed: 2.2
   lookSensitivity: 0.12
+  turnSpeed: 90
   viewingDistance: 2.2
   minFov: 12
   maxFov: 60
+  viewingRange: 5
 --- !u!143 &826349800
 CharacterController:
   m_ObjectHideFlags: 0
@@ -510,7 +512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67dec74df62d4bd1bcd8e7842235316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.ExhibitionBuilder
-  layoutSource: https://127.0.0.1:8011/api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40
+  editorApiBase: https://127.0.0.1:8001
+  playerApiBase: https://recordia.org
+  layoutSource: /api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40
+  roomSources: []
   wallBlock: {fileID: 5929950731744032277, guid: dd7d3325c81b70c40900ddeefa88413f, type: 3}
   wallBlockLength: 6
   wallBlockHeight: 12
@@ -521,6 +526,7 @@ MonoBehaviour:
   tileSize: 12
   frameMaterial: {fileID: 2100000, guid: d7b1f9405462c42a5b53795d1d42fc9c, type: 2}
   spotIntensity: 12
+  wallPlaques: 0
 --- !u!4 &1098967368
 Transform:
   m_ObjectHideFlags: 0
