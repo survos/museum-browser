@@ -514,6 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: MuseumBrowser.App::MuseumBrowser.App.ExhibitionBuilder
   editorApiBase: https://127.0.0.1:8001
   playerApiBase: https://recordia.org
+  editorFolio: 
   layoutSource: /api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40
   roomSources: []
   wallBlock: {fileID: 5929950731744032277, guid: dd7d3325c81b70c40900ddeefa88413f, type: 3}

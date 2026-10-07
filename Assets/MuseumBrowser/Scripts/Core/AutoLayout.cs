@@ -66,10 +66,10 @@ namespace MuseumBrowser.Core
         {
             var taken = new List<WallCard>();
             int used = MarginMm * 2 - GapMm;
-            while (queue.Count > 0 && used + queue.Peek().Size.HangMm().w + GapMm <= wallMm)
+            while (queue.Count > 0 && used + queue.Peek().HangMm().w + GapMm <= wallMm)
             {
                 var card = queue.Dequeue();
-                used += card.Size.HangMm().w + GapMm;
+                used += card.HangMm().w + GapMm;
                 taken.Add(card);
             }
             return taken;
@@ -80,13 +80,13 @@ namespace MuseumBrowser.Core
         {
             var ps = wall.Placements;
             if (ps.Count == 0) return;
-            int widths = ps.Sum(p => p.Card.Size.HangMm().w);
+            int widths = ps.Sum(p => p.Card.HangMm().w);
             float gap = (wallMm - 2f * MarginMm - widths) / System.Math.Max(1, ps.Count - 1);
             if (ps.Count == 1) { ps[0].XMm = wallMm / 2; return; }
             float x = MarginMm;
             foreach (var p in ps)
             {
-                int w = p.Card.Size.HangMm().w;
+                int w = p.Card.HangMm().w;
                 p.XMm = (int)(x + w / 2f);
                 x += w + gap;
             }

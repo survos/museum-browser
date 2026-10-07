@@ -15,6 +15,8 @@ namespace MuseumBrowser.App
         [SerializeField] string editorApiBase = "https://127.0.0.1:8001";
         [Tooltip("Base for /api/... paths in player builds (desktop and Web).")]
         [SerializeField] string playerApiBase = "https://recordia.org";
+        [Tooltip("Folio to show in the Editor, as if the page URL had ?folio=...")]
+        [SerializeField] string editorFolio = "";
 
         [Tooltip("Layout JSON: /api/... path, http(s) URL, or a path under StreamingAssets. A /rows "
                + "path (WallCard collection) is hung with the AutoLayout stand-in.")]
@@ -60,7 +62,39 @@ namespace MuseumBrowser.App
         readonly List<Transform> works = new();
         readonly List<WallCard> cards = new();
 
-        string ApiBase => Application.isEditor ? editorApiBase : playerApiBase;
+        /// In the Editor: the local zm. On the Web: the site that serves the page (zm embeds the
+        /// build, so the API is same-origin). Desktop builds use playerApiBase.
+        string ApiBase
+        {
+            get
+            {
+                if (Application.isEditor) return editorApiBase;
+                if (Application.platform == RuntimePlatform.WebGLPlayer && Origin(Application.absoluteURL) is { } origin)
+                    return origin;
+                return playerApiBase;
+            }
+        }
+
+        static string Origin(string url)
+        {
+            if (string.IsNullOrEmpty(url) || !System.Uri.TryCreate(url, System.UriKind.Absolute, out var uri)) return null;
+            return uri.GetLeftPart(System.UriPartial.Authority);
+        }
+
+        /// ?folio=mus/fpus on the page URL (Web) or editorFolio (Editor).
+        string RequestedFolio()
+        {
+            if (Application.isEditor) return string.IsNullOrWhiteSpace(editorFolio) ? null : editorFolio.Trim();
+            var url = Application.absoluteURL;
+            int q = url?.IndexOf('?') ?? -1;
+            if (q < 0) return null;
+            foreach (var pair in url.Substring(q + 1).Split('&'))
+            {
+                var kv = pair.Split(new[] { '=' }, 2);
+                if (kv.Length == 2 && kv[0] == "folio") return System.Uri.UnescapeDataString(kv[1]);
+            }
+            return null;
+        }
 
         /// "/api/..." paths are resolved against the Museado API base; anything else is used as is.
         string Resolve(string source) => source.StartsWith("/") ? ApiBase.TrimEnd('/') + source : source;
@@ -68,7 +102,14 @@ namespace MuseumBrowser.App
         async void Start()
         {
             Exhibition exhibition;
-            if (roomSources.Count > 0)
+            if (RequestedFolio() is { } folio)
+            {
+                // A folio passed in by the embedding page: hang its first works with images.
+                var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(
+                    Resolve($"/api/{folio}/rows?hasImage=1&itemsPerPage=48"));
+                exhibition = AutoLayout.Suite(page.Folio?.Title ?? folio, page.Members);
+            }
+            else if (roomSources.Count > 0)
             {
                 var groups = new List<(string, List<WallCard>)>();
                 foreach (var source in roomSources)

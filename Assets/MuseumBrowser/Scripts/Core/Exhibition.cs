@@ -70,6 +70,9 @@ namespace MuseumBrowser.Core
         public List<AudioStop> Audio = new();
         public string SourceUrl;
         public string License;
+
+        /// Size to hang at; unknown sizes hang as a 60 x 80 cm default.
+        public (int w, int h) HangMm() => Size?.HangMm() ?? (600, 800);
     }
 
     /// The museum wall label (tombstone). Every field is optional.

@@ -15,7 +15,7 @@ namespace MuseumBrowser.App
         public static Transform Hang(Transform parent, WallCard card, Vector3 position, Quaternion rotation,
             Material frameMaterial, float spotIntensity, bool plaque)
         {
-            var (wMm, hMm) = card.Size?.HangMm() ?? (600, 800);
+            var (wMm, hMm) = card.HangMm();
             float w = wMm / 1000f, h = hMm / 1000f;
 
             var root = new GameObject(card.Title ?? card.Id).transform;
