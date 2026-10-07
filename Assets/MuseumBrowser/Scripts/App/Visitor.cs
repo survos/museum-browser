@@ -66,8 +66,9 @@ namespace MuseumBrowser.App
             nextRoom.AddBinding("<Keyboard>/pageDown");
             previousRoom = new InputAction("Previous room", InputActionType.Button, "<Keyboard>/leftBracket");
             previousRoom.AddBinding("<Keyboard>/pageUp");
-            nextRoom.performed += _ => GoToRoom(room + 1);
-            previousRoom.performed += _ => GoToRoom(room - 1);
+            // Step from wherever the visitor actually is, not the last room jumped to.
+            nextRoom.performed += _ => GoToRoom((CurrentRoom >= 0 ? CurrentRoom : room) + 1);
+            previousRoom.performed += _ => GoToRoom((CurrentRoom >= 0 ? CurrentRoom : room) - 1);
 
             drag.started += _ => dragged = false;
             click.canceled += _ => { if (!dragged) SelectUnderPointer(); };
@@ -161,12 +162,25 @@ namespace MuseumBrowser.App
         }
 
         /// Jump to a room's entrance (Rooms menu, or [ and ]).
+        /// Index of the room the visitor is in (by position along the suite), or -1.
+        public int CurrentRoom
+        {
+            get
+            {
+                var stops = exhibition.RoomStops;
+                float z = exhibition.transform.InverseTransformPoint(transform.position).z;
+                for (int i = 0; i < stops.Count; i++)
+                    if (z >= stops[i].Start - 0.3f && z <= stops[i].Start + stops[i].Length + 0.3f) return i;
+                return -1;
+            }
+        }
+
         public void GoToRoom(int i)
         {
             var stops = exhibition.RoomStops;
             if (stops.Count == 0) return;
             room = Mathf.Clamp(i, 0, stops.Count - 1);
-            StandAt(stops[room].position, stops[room].yaw);
+            StandAt(stops[room].Position, stops[room].Yaw);
         }
 
         void SelectUnderPointer()

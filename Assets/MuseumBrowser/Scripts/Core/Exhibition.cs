@@ -19,6 +19,8 @@ namespace MuseumBrowser.Core
         public string Title;
         /// Wall code that carries the room title (usually the wall facing the entrance).
         public string TitleWall;
+        /// Finish: "paintings" (dark red cloth) or "prints" (warm white, wood floor).
+        public string Style;
         public int WidthMm;
         public int DepthMm;
         public int HeightMm;
@@ -46,6 +48,8 @@ namespace MuseumBrowser.Core
         public int XMm;
         public int CenterMm;
         public string Text;
+        /// "group" (above a group of works) or "title" (the room's title, large).
+        public string Kind = "group";
     }
 
     /// A doorway in a wall, measured along the wall from its left end.

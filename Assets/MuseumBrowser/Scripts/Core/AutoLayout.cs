@@ -15,6 +15,8 @@ namespace MuseumBrowser.Core
         const int GapMm = 800, PrintGapMm = 350, MarginMm = 900;
         const int WallGapMm = 600;   // between neighbouring rooms (two thin walls)
         const int DoorMm = 2000;
+        const int DoorInsetMm = 700;      // doors sit to the right, leaving the far wall for a hero work
+        const int HeroMaxMm = 3000;
         const int MinDepthMm = 8000, MaxDepthMm = 18000;
 
         /// One list of works, split into rooms: by decade when most works have a year
@@ -91,7 +93,7 @@ namespace MuseumBrowser.Core
 
                 var room = new Room
                 {
-                    Code = $"R{rooms.Count + 1}", Title = roomTitle, TitleWall = "N",
+                    Code = $"R{rooms.Count + 1}", Title = roomTitle, TitleWall = "N", Style = prints ? "prints" : "paintings",
                     WidthMm = widthMm, DepthMm = depthMm, HeightMm = heightMm, OriginXMm = 0, OriginYMm = y,
                 };
 
@@ -99,11 +101,34 @@ namespace MuseumBrowser.Core
                 var north = new Wall { Code = "N", Side = "n", X0Mm = 0, Y0Mm = depthMm, X1Mm = widthMm, Y1Mm = depthMm, HeightMm = heightMm };
                 var east = new Wall { Code = "E", Side = "e", X0Mm = widthMm, Y0Mm = depthMm, X1Mm = widthMm, Y1Mm = 0, HeightMm = heightMm };
                 var south = new Wall { Code = "S", Side = "s", X0Mm = widthMm, Y0Mm = 0, X1Mm = 0, Y1Mm = 0, HeightMm = heightMm };
-                if (rooms.Count > 0) south.Openings.Add(Door(widthMm));
+                if (rooms.Count > 0) south.Openings.Add(SouthDoor(widthMm));
                 north.Openings.Add(Door(widthMm));
 
+                // The far wall, left of the doorway: the room's title, and for photographs a hero
+                // print -- the room's highest-scoring work, enlarged like an exhibition panel.
+                int farSpan = widthMm - DoorMm - DoorInsetMm - 600;
+                int farCenter = 300 + farSpan / 2;
+                int titleCenter = heightMm - 650;
+                var groupCards = cards;
+                if (prints && cards.Count >= 6)
+                {
+                    var hero = cards.OrderByDescending(Score).First();
+                    groupCards = cards.Where(c => c != hero).ToList();
+                    int maxH = titleCenter - 450 - 700;
+                    var (hw, hh) = hero.Size?.HangMm(HeroMaxMm) ?? (2400, 1800);
+                    float k = System.Math.Min(1f, System.Math.Min((float)(farSpan - 400) / hw, (float)maxH / hh));
+                    hw = (int)(hw * k); hh = (int)(hh * k);
+                    north.Placements.Add(new Placement
+                    {
+                        ItemId = hero.Id, Card = hero, Order = order++, XMm = farCenter,
+                        CenterMm = 700 + hh / 2, WidthMm = hw, HeightMm = hh,
+                    });
+                    titleCenter = System.Math.Min(titleCenter, 700 + hh + 450);
+                }
+                north.Texts.Add(new WallText { XMm = farCenter, CenterMm = titleCenter, Text = roomTitle, Kind = "title" });
+
                 if (prints)
-                    HangGroups(cards, new[] { west, east }, ref depthMm, ref order);
+                    HangGroups(groupCards, new[] { west, east }, ref depthMm, ref order);
                 else
                 {
                     // Works with physical sizes: one row at true size on the centre line.
@@ -269,7 +294,10 @@ namespace MuseumBrowser.Core
         static int Capacity(WallCard sample) =>
             (MaxDepthMm - 2 * MarginMm) * (sample.IsPrint ? 2 : 1);
 
-        static Opening Door(int widthMm) => new() { FromMm = (widthMm - DoorMm) / 2, ToMm = (widthMm + DoorMm) / 2 };
+        /// Doorways sit toward the right side (as seen walking in), so both rooms' far walls have
+        /// space on the left. The south wall runs right to left, so its offset mirrors.
+        static Opening Door(int widthMm) => new() { FromMm = widthMm - DoorInsetMm - DoorMm, ToMm = widthMm - DoorInsetMm };
+        static Opening SouthDoor(int widthMm) => new() { FromMm = DoorInsetMm, ToMm = DoorInsetMm + DoorMm };
 
         /// Spread one row evenly between the wall's end margins.
         static void Spread(Wall wall, List<WallCard> row, int wallMm, int centerMm, ref int order)

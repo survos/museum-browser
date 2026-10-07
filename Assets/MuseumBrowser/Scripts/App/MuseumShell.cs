@@ -23,7 +23,9 @@ namespace MuseumBrowser.App
             "Drag  look around\nScroll  zoom\nClick a work  walk to it\nSpace / Backspace  next / previous work\n" +
             "[ ]  previous / next gallery\nH or ?  this help\nEsc  close";
 
-        VisualElement start, help, about, hints, debug, rooms;
+        VisualElement start, help, about, hints, debug, rooms, plan, here;
+        readonly System.Collections.Generic.List<VisualElement> planBoxes = new();
+        float planTotal = 1, planStart;
         Label debugText;
         InputAction toggleDebug;
         float debugRefresh;
@@ -58,7 +60,7 @@ namespace MuseumBrowser.App
 
             // Toolbar.
             var tools = Box(root, "toolbar");
-            var roomsButton = IconButton("Rooms", "Go to a gallery ( [ and ] step through them )", () => Toggle(rooms));
+            var roomsButton = IconButton("Floor plan", "Floor plan: click a gallery to go there ( [ and ] step )", () => Toggle(rooms));
             roomsButton.AddToClassList("text-button");
             tools.Add(roomsButton);
             var slides = IconButton("Slides", "Slideshow, in time order", OpenSlideshow);
@@ -68,7 +70,7 @@ namespace MuseumBrowser.App
             tools.Add(IconButton("i", "About", () => Toggle(about)));
 
             help = Panel(root, "help", "How to walk around", Keys);
-            rooms = Panel(root, "rooms", "Galleries", "");
+            rooms = Panel(root, "rooms", "Floor plan", "");
             about = Panel(root, "about", "About", "");
             hints = Text(root, "hints",
                 "↑↓ walk · ←→ turn · Shift+←→ step sideways · drag to look · scroll to zoom · click a work · H for help");
@@ -118,9 +120,19 @@ namespace MuseumBrowser.App
             debugText.text = sb.ToString();
         }
 
+        void UpdatePlan()
+        {
+            if (plan == null || !IsOpen(rooms)) return;
+            int current = visitor.CurrentRoom;
+            for (int i = 0; i < planBoxes.Count; i++) planBoxes[i].EnableInClassList("current", i == current);
+            float z = exhibition.transform.InverseTransformPoint(visitor.transform.position).z;
+            here.style.left = Length.Percent(Mathf.Clamp01((z - planStart) / planTotal) * 100f);
+        }
+
         void Update()
         {
             UpdateDebug();
+            UpdatePlan();
             if (IsOpen(start) && !status.ClassListContains("error"))
             {
                 fill.style.width = Length.Percent(100f * exhibition.Progress);
@@ -139,17 +151,37 @@ namespace MuseumBrowser.App
             folioMeta.text = $"{b.Works.Count} works · {b.RoomCount} room{(b.RoomCount == 1 ? "" : "s")}";
             enter.SetEnabled(true);
             enter.Focus();
-            // Rooms panel: one button per gallery.
+            // Floor plan: the suite drawn to scale, one box per gallery; click to go there.
             var list = rooms.Q<Label>(className: "panel-body");
-            list.text = $"{b.RoomCount} galleries — click to go there";
-            int n = 0;
-            foreach (var stop in b.RoomStops)
+            list.text = $"{b.RoomCount} galleries · click one to go there · [ ] step";
+            plan = new VisualElement();
+            plan.AddToClassList("plan");
+            rooms.Insert(rooms.IndexOf(list) + 1, plan);
+            planBoxes.Clear();
+            var stops = b.RoomStops;
+            float total = stops.Count == 0 ? 1 : stops[^1].Start + stops[^1].Length - stops[0].Start;
+            for (int i = 0; i < stops.Count; i++)
             {
-                int i = n++;
-                var go = new Button(() => { visitor.GoToRoom(i); CloseAll(); }) { text = stop.title };
-                go.AddToClassList("room-link");
-                rooms.Insert(rooms.IndexOf(list) + 1 + i, go);
+                int index = i;
+                var stop = stops[i];
+                var box = new Button(() => { visitor.GoToRoom(index); CloseAll(); }) { tooltip = $"{stop.Title} · {stop.Works} works" };
+                box.AddToClassList("plan-room");
+                box.style.left = Length.Percent(100f * (stop.Start - stops[0].Start) / total);
+                box.style.width = Length.Percent(100f * stop.Length / total);
+                var name = new Label(stop.Title);
+                name.AddToClassList("plan-title");
+                box.Add(name);
+                var count = new Label($"{stop.Works}");
+                count.AddToClassList("plan-count");
+                box.Add(count);
+                plan.Add(box);
+                planBoxes.Add(box);
             }
+            here = new VisualElement();
+            here.AddToClassList("plan-here");
+            plan.Add(here);
+            planTotal = total;
+            planStart = stops.Count > 0 ? stops[0].Start : 0;
 
             var about = this.about.Q<Label>(className: "panel-body");
             var f = b.Folio;

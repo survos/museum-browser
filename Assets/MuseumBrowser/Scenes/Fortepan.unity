@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.001
   m_LinearFogStart: 50
   m_LinearFogEnd: 1000
-  m_AmbientSkyColor: {r: 0.32, g: 0.31, b: 0.3, a: 1}
+  m_AmbientSkyColor: {r: 0.22, g: 0.21, b: 0.2, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.3
@@ -149,7 +149,7 @@ Light:
   serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.15
+  m_Intensity: 0.08
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -541,9 +541,12 @@ MonoBehaviour:
   floorTile: {fileID: 7548311569666973253, guid: 25aad698de4add5499fc7b80bae5764c, type: 3}
   ceilingTile: {fileID: 9122559540374743235, guid: 8d8b41c1c3b7edb4293c55bae25c11d3, type: 3}
   tileSize: 12
+  paintingWalls: {fileID: 2100000, guid: 5a8c2134205ca4eeca38ead6b8751a9a, type: 2}
+  printWalls: {fileID: 2100000, guid: 46c82db9fe1b148e4864c544484b0eec, type: 2}
+  woodFloor: {fileID: 2100000, guid: ac7bbdc4307d84904b925198ab336015, type: 2}
   frameMaterial: {fileID: 2100000, guid: d7b1f9405462c42a5b53795d1d42fc9c, type: 2}
   imageMaterial: {fileID: 2100000, guid: 18e6b242872ac4c22a2fbea11fe6ca37, type: 2}
-  spotIntensity: 12
+  spotIntensity: 16
   wallPlaques: 0
 --- !u!4 &1098967368
 Transform:
@@ -852,7 +855,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 6b45a4f021050e64ca6a023ce680d9ab, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 35a5761749e6640f3b056a4843bf27c5, type: 2}
 --- !u!4 &2028866748
 Transform:
   m_ObjectHideFlags: 0

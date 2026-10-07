@@ -46,6 +46,14 @@ namespace MuseumBrowser.App
         [SerializeField] GameObject ceilingTile;
         [SerializeField] float tileSize = 12f;
 
+        [Header("Finish")]
+        [Tooltip("Walls of rooms of paintings (dark red cloth).")]
+        [SerializeField] Material paintingWalls;
+        [Tooltip("Walls of rooms of photographs (warm white).")]
+        [SerializeField] Material printWalls;
+        [Tooltip("Floor for rooms of photographs; the kit's concrete tiles are used when unset.")]
+        [SerializeField] Material woodFloor;
+
         [Header("Works")]
         [SerializeField] Material frameMaterial;
         [Tooltip("URP/Unlit material the photos are drawn with (copied per work).")]
@@ -69,9 +77,19 @@ namespace MuseumBrowser.App
         /// Raised with a human-readable message when loading fails (shown on screen).
         public event System.Action<string> Failed;
         public IReadOnlyList<WallCard> Cards => cards;
-        /// Each room's title and where a visitor stands on entering it.
-        public IReadOnlyList<(string title, Vector3 position, float yaw)> RoomStops => roomStops;
-        readonly List<(string, Vector3, float)> roomStops = new();
+        /// Each room: title, where a visitor stands on entering it, and its extent along the
+        /// suite (for the floor plan).
+        public sealed class RoomStop
+        {
+            public string Title;
+            public Vector3 Position;
+            public float Yaw;
+            public float Start, Length, Width;
+            public int Works;
+        }
+
+        public IReadOnlyList<RoomStop> RoomStops => roomStops;
+        readonly List<RoomStop> roomStops = new();
         /// Where a visit starts: just inside the first room, looking into it.
         public Vector3 Entrance { get; private set; }
         public float EntranceYaw { get; private set; }
@@ -175,8 +193,7 @@ namespace MuseumBrowser.App
             if (exhibition.Rooms.Count > 0)
             {
                 var first = exhibition.Rooms[0];
-                Entrance = transform.TransformPoint(new Vector3((first.OriginXMm + first.WidthMm / 2) / 1000f, 0.1f,
-                    first.OriginYMm / 1000f + 1.2f));
+                Entrance = roomStops[0].Position;
                 EntranceYaw = transform.eulerAngles.y;
             }
             Built?.Invoke(this);
@@ -194,12 +211,22 @@ namespace MuseumBrowser.App
             var root = new GameObject($"Room {room.Code}").transform;
             root.SetParent(transform, false);
             root.localPosition = new Vector3(room.OriginXMm / 1000f, 0, room.OriginYMm / 1000f);
-            roomStops.Add((room.Title ?? room.Code,
-                root.TransformPoint(new Vector3(room.WidthMm / 2000f, 0.1f, 1.2f)), root.eulerAngles.y));
+            roomStops.Add(new RoomStop
+            {
+                Title = room.Title ?? room.Code,
+                // Just inside the entrance doorway (doors sit toward the right-hand side).
+                Position = root.TransformPoint(new Vector3(room.WidthMm / 1000f - 1.7f, 0.1f, 1.2f)),
+                Yaw = root.eulerAngles.y,
+                Start = room.OriginYMm / 1000f, Length = room.DepthMm / 1000f, Width = room.WidthMm / 1000f,
+                Works = room.Walls.Sum(w => w.Placements.Count),
+            });
             float width = room.WidthMm / 1000f, depth = room.DepthMm / 1000f, height = room.HeightMm / 1000f;
 
             // The floor runs a little past both end walls so doorways have a threshold.
-            Tile(root, floorTile, width, depth + 2 * wallThickness, 0f, -wallThickness);
+            bool prints = room.Style == "prints";
+            if (prints && woodFloor) Slab(root, woodFloor, width, depth + 2 * wallThickness, -wallThickness);
+            else Tile(root, floorTile, width, depth + 2 * wallThickness, 0f, -wallThickness);
+            var wallMaterial = prints ? printWalls : paintingWalls;
             Tile(root, ceilingTile, width, depth, height, 0f);
 
             foreach (var wall in room.Walls)
@@ -209,14 +236,12 @@ namespace MuseumBrowser.App
                 var right = (b - a).normalized;
                 var facing = new Vector3(-right.z, 0, right.x); // looking into the wall
                 float wallHeight = (wall.HeightMm > 0 ? wall.HeightMm : room.HeightMm) / 1000f;
-                BuildWall(root, a, b, wallHeight, wall.Openings);
-                if (wall.Code == room.TitleWall && !string.IsNullOrEmpty(room.Title))
-                    AddRoomTitle(root, a, b, facing, room.Title);
+                BuildWall(root, a, b, wallHeight, wall.Openings, wallMaterial);
 
                 var rotation = root.rotation * Quaternion.LookRotation(facing);
                 foreach (var t in wall.Texts)
                     AddWallText(root, a + right * (t.XMm / 1000f) + Vector3.up * (t.CenterMm / 1000f) - facing * 0.01f,
-                        Quaternion.LookRotation(facing), t.Text);
+                        Quaternion.LookRotation(facing), t.Text, t.Kind == "title", prints);
                 foreach (var p in wall.Placements.OrderBy(p => p.Order))
                 {
                     if (p.Card == null) continue;
@@ -231,8 +256,9 @@ namespace MuseumBrowser.App
             }
         }
 
-        void BuildWall(Transform room, Vector3 a, Vector3 b, float height, List<Opening> openings)
+        void BuildWall(Transform room, Vector3 a, Vector3 b, float height, List<Opening> openings, Material finish)
         {
+            wallFinish = finish;
             if (!wallBlock) return;
             float length = Vector3.Distance(a, b);
             var dir = (b - a).normalized;
@@ -246,6 +272,23 @@ namespace MuseumBrowser.App
                 from = o1;
             }
             WallRun(room, a, dir, from, length, 0f, height);
+        }
+
+        Material wallFinish;
+
+        /// One slab floor with the material's texture tiled per metre.
+        static void Slab(Transform room, Material material, float width, float depth, float z0)
+        {
+            var slab = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            slab.name = "Floor";
+            slab.transform.SetParent(room, false);
+            slab.transform.localPosition = new Vector3(width / 2f, -0.05f, z0 + depth / 2f);
+            slab.transform.localScale = new Vector3(width, 0.1f, depth);
+            var r = slab.GetComponent<Renderer>();
+            r.sharedMaterial = material;
+            var block = new MaterialPropertyBlock();
+            block.SetVector("_BaseMap_ST", new Vector4(width / 2.5f, depth / 2.5f, 0, 0));
+            r.SetPropertyBlock(block);
         }
 
         void WallRun(Transform room, Vector3 a, Vector3 dir, float from, float to, float bottom, float height)
@@ -263,39 +306,29 @@ namespace MuseumBrowser.App
                 block.transform.localRotation = rotation;
                 block.transform.localScale = new Vector3(wallThickness / wallBlockThickness,
                     height / wallBlockHeight, segment / wallBlockLength);
+                if (wallFinish)
+                    foreach (var r in block.GetComponentsInChildren<Renderer>())
+                        r.sharedMaterials = System.Linq.Enumerable.Repeat(wallFinish, r.sharedMaterials.Length).ToArray();
             }
         }
 
         /// A group's title, painted on the wall above it.
-        static void AddWallText(Transform room, Vector3 localPosition, Quaternion localRotation, string text)
+        static void AddWallText(Transform room, Vector3 localPosition, Quaternion localRotation, string text,
+            bool title, bool lightWall)
         {
             var go = new GameObject("Wall text");
             go.transform.SetParent(room, false);
             go.transform.localPosition = localPosition;
             go.transform.localRotation = localRotation;
             var tmp = go.AddComponent<TMPro.TextMeshPro>();
-            tmp.rectTransform.sizeDelta = new Vector2(5f, 0.5f);
+            tmp.rectTransform.sizeDelta = new Vector2(title ? 6f : 5f, title ? 0.9f : 0.5f);
             tmp.alignment = TMPro.TextAlignmentOptions.Center;
-            tmp.fontSize = 2.4f;
-            tmp.characterSpacing = 4f;
-            tmp.color = new Color(0.07f, 0.06f, 0.05f);
+            tmp.fontSize = title ? 5.5f : 2.4f;
+            tmp.characterSpacing = title ? 10f : 4f;
+            // Dark lettering on warm white; pale gold on dark red cloth.
+            tmp.color = lightWall ? new Color(0.07f, 0.06f, 0.05f) : new Color(0.93f, 0.84f, 0.62f);
             tmp.fontStyle = TMPro.FontStyles.SmallCaps;
             tmp.text = text;
-        }
-
-        void AddRoomTitle(Transform room, Vector3 a, Vector3 b, Vector3 facing, string title)
-        {
-            var go = new GameObject("Room title");
-            go.transform.SetParent(room, false);
-            go.transform.localPosition = (a + b) / 2f + Vector3.up * 3.6f - facing * 0.02f;
-            go.transform.localRotation = Quaternion.LookRotation(facing);
-            var text = go.AddComponent<TMPro.TextMeshPro>();
-            text.rectTransform.sizeDelta = new Vector2(Vector3.Distance(a, b) * 0.8f, 0.8f);
-            text.alignment = TMPro.TextAlignmentOptions.Center;
-            text.fontSize = 3f;
-            text.characterSpacing = 8f;
-            text.color = new Color(0.15f, 0.14f, 0.13f);
-            text.text = title.ToUpperInvariant();
         }
 
         void Tile(Transform room, GameObject tile, float width, float depth, float y, float z0)
