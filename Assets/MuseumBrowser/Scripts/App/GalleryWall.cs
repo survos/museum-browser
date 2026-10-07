@@ -17,6 +17,9 @@ namespace MuseumBrowser.App
         [SerializeField] float frameBorder = 0.04f;
         [SerializeField] float frameDepth = 0.05f;
         [SerializeField] Material frameMaterial;
+        [Tooltip("Add a ceiling spotlight aimed at each work.")]
+        [SerializeField] bool spotlights = true;
+        [SerializeField] float spotIntensity = 12f;
 
         public IReadOnlyList<Transform> Works => works;
         public event System.Action<GalleryWall> Hung;
@@ -65,7 +68,25 @@ namespace MuseumBrowser.App
             LoadImage(item.Img, material);
 
             AddLabel(root, item.Label, w);
+            if (spotlights) AddSpot(root, h);
             return root;
+        }
+
+        void AddSpot(Transform work, float h)
+        {
+            var go = new GameObject("Spot");
+            go.transform.SetParent(work, false);
+            // Above and in front of the work, aimed at its center.
+            go.transform.localPosition = new Vector3(0f, 2.2f, -2.0f);
+            go.transform.LookAt(work.position);
+            var light = go.AddComponent<Light>();
+            light.type = LightType.Spot;
+            light.spotAngle = Mathf.Clamp(Mathf.Atan2(h, 2.0f) * Mathf.Rad2Deg * 1.6f + 20f, 30f, 80f);
+            light.innerSpotAngle = light.spotAngle * 0.6f;
+            light.range = 6f;
+            light.intensity = spotIntensity;
+            light.color = new Color(1f, 0.95f, 0.86f);
+            light.shadows = LightShadows.None;
         }
 
         static async void LoadImage(string url, Material material)

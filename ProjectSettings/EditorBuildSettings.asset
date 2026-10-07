@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MuseumBrowser/Scenes/Hall.unity
+    guid: e977aa88848d04306a24c42acc7a2d5a
+  - enabled: 1
     path: Assets/MuseumBrowser/Scenes/Gallery.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:

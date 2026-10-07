@@ -10,9 +10,14 @@ namespace MuseumBrowser.Core
     {
         static readonly Dictionary<string, Texture2D> Cache = new();
 
+        // Enter Play Mode without a domain reload keeps statics alive while the
+        // textures themselves are destroyed on exit, so start each session empty.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetCache() => Cache.Clear();
+
         public static async Awaitable<Texture2D> LoadAsync(string url)
         {
-            if (Cache.TryGetValue(url, out var cached)) return cached;
+            if (Cache.TryGetValue(url, out var cached) && cached) return cached;
 
             using var request = UnityWebRequestTexture.GetTexture(url, nonReadable: true);
             await request.SendWebRequest();
