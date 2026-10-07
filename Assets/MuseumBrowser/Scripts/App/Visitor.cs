@@ -28,6 +28,9 @@ namespace MuseumBrowser.App
         /// Index of the work centred in view and close enough to read, or -1.
         public event System.Action<int> Viewing;
         int viewing = -1;
+        /// Index of the room the visitor has walked (or jumped) into.
+        public event System.Action<int> RoomChanged;
+        int lastRoom = -1;
 
         InputAction move, turn, look, drag, zoom, click, next, previous, nextRoom, previousRoom;
         int room;
@@ -141,6 +144,15 @@ namespace MuseumBrowser.App
             transform.rotation = Quaternion.Euler(0, yaw, 0);
             eye.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
             UpdateViewing();
+            UpdateRoom();
+        }
+
+        void UpdateRoom()
+        {
+            int current = CurrentRoom;
+            if (current < 0 || current == lastRoom) return;
+            lastRoom = current;
+            RoomChanged?.Invoke(current);
         }
 
         void UpdateViewing()

@@ -12,9 +12,8 @@ namespace MuseumBrowser.App
         const float FrameBorder = 0.04f;
         const float FrameDepth = 0.05f;
 
-        public static Transform Hang(Transform parent, WallCard card, (int w, int h) sizeMm, Vector3 position,
-            Quaternion rotation, Material frameMaterial, Material imageMaterial, float spotIntensity, bool plaque,
-            System.Action imageDone = null)
+        public static HungWork Hang(Transform parent, WallCard card, (int w, int h) sizeMm, Vector3 position,
+            Quaternion rotation, Material frameMaterial, Material imageMaterial, float spotIntensity, bool plaque)
         {
             var (wMm, hMm) = sizeMm;
             float w = wMm / 1000f, h = hMm / 1000f;
@@ -41,36 +40,27 @@ namespace MuseumBrowser.App
             // material references, so a shader found by name at runtime is missing on the Web.
             var material = new Material(imageMaterial);
             canvas.GetComponent<Renderer>().material = material;
-            // No known shape (no physical or pixel size): learn it from the thumbnail, whose
-            // 'fit' preset keeps the aspect ratio, and shrink the frame to fit its allotted box.
+            // Paint the placeholder now; the image itself loads when the room is visited.
+            if (CardImages.Placeholder(card) is { } placeholder) material.SetTexture("_BaseMap", placeholder);
+
+            var work = root.gameObject.AddComponent<HungWork>();
+            work.Card = card;
+            work.Material = material;
+            work.Frame = frame.transform;
+            work.Canvas = canvas.transform;
+            work.Border = FrameBorder;
+            // No known shape (no physical or pixel size): the ThumbHash gives the proportions
+            // now, the loaded image exactly; the frame shrinks to fit its allotted box.
             bool unknownShape = card.Size == null || !(card.Size.WidthMm > 0 || card.Size.WPx > 0);
-            var fitTo = unknownShape ? new Vector2(w, h) : (Vector2?)null;
-            if (card.Image?.Best is { } url) LoadImage(url, material, imageDone, fitTo, frame.transform, canvas.transform);
-            else imageDone?.Invoke();
+            if (unknownShape)
+            {
+                work.FitTo = new Vector2(w, h);
+                if (CardImages.Aspect(card) is { } aspect) work.Fit(aspect);
+            }
 
             if (plaque) AddLabel(root, card.Label, w);
             if (spotIntensity > 0) AddSpot(root, h, spotIntensity);
-            return root;
-        }
-
-        static async void LoadImage(string url, Material material, System.Action done,
-            Vector2? fitTo = null, Transform frame = null, Transform canvas = null)
-        {
-            try
-            {
-                var texture = await ImageLoader.LoadAsync(url);
-                material.SetTexture("_BaseMap", texture);
-                if (fitTo is { } box && frame && texture.width > 0 && texture.height > 0)
-                {
-                    float aspect = (float)texture.width / texture.height;
-                    float w = box.x, h = box.x / aspect;
-                    if (h > box.y) { h = box.y; w = box.y * aspect; }
-                    frame.localScale = new Vector3(w, h, frame.localScale.z);
-                    canvas.localScale = new Vector3(w - 2 * FrameBorder, h - 2 * FrameBorder, 1f);
-                }
-            }
-            catch (System.Exception e) { Debug.LogWarning(e.Message); }
-            finally { done?.Invoke(); }
+            return work;
         }
 
         /// A white wall plaque beside the work, its centre at museum label height.

@@ -9,6 +9,21 @@ with museum wall labels (tombstones) and audio guides. Plan: `~/unity/folio-demo
 - `Assets/MuseumBrowser/Scripts/App` — `MuseumBrowser.App` assembly: scenes, UI, input.
 - `Assets/MuseumBrowser/Scenes/Gallery.unity` — the only build scene.
 
+## Data
+
+A folio is read from its published SQLite file on desktop: `com.survos.folio` finds it in the
+hub's `/folio/list.json`, downloads it once to `persistentDataPath/folios`, and the app hangs up
+to 240 works spread over its decades. Works show their ThumbHash placeholder at once; signed
+thumbnail URLs come from the site's `/api/{folio}/rows?ids=` and images load room by room as
+the visitor walks in (and around the current slide). The Web player still uses the WallCard
+API until the folio package has a sqlite-wasm backend.
+
+- Editor: `editorFolio` on the Exhibition object (empty: the NPG paintings `layoutSource`).
+- Desktop player: `playerFolio` (default `mus/fpus`), or `-folio fpeu/suisse -api https://m4-zm.survos.org`.
+- Packages (`Packages/manifest.json`): `file:../../folio` and `file:../../sqlite` while both are
+  developed side by side; switch to `https://github.com/survos/unity-folio.git` and
+  `https://github.com/survos/unity-sqlite.git` (pinned tags) to build anywhere else.
+
 ## Purchased assets (not in git)
 
 `Assets/Creepy_Cat/` is git-ignored. To restore it:

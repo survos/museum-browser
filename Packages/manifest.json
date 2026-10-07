@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.3.0",
+    "com.survos.folio": "file:../../folio",
+    "com.survos.sqlite": "file:../../sqlite",
     "com.unity.nuget.newtonsoft-json": "3.2.2",
     "com.netpyoung.webp": "https://github.com/netpyoung/unity.webp.git?path=unity_project/Assets/unity.webp#0.3.22",
     "com.unity.ai.navigation": "2.0.14",

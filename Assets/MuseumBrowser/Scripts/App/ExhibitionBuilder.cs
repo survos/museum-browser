@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MuseumBrowser.Core;
+using Survos.Folio;
 using UnityEngine;
 
 namespace MuseumBrowser.App
@@ -8,6 +9,11 @@ namespace MuseumBrowser.App
     /// Loads an exhibition layout (from harvest, or a bundled sample) and builds it:
     /// rooms from kit pieces, then every placement hung where the layout says.
     /// Layout decisions are made in harvest; this only renders them.
+    ///
+    /// A folio (?folio=, -folio, or the default) is read from its published SQLite file on
+    /// desktop (com.survos.folio: downloaded once, cached), or from the site's WallCard API
+    /// on the Web until that has a sqlite-wasm backend. Works show their ThumbHash placeholder
+    /// at once; images load room by room as the visitor walks in.
     public sealed class ExhibitionBuilder : MonoBehaviour
     {
         [Header("Museado API (zm / recordia.org)")]
@@ -17,6 +23,14 @@ namespace MuseumBrowser.App
         [SerializeField] string playerApiBase = "https://recordia.org";
         [Tooltip("Folio to show in the Editor, as if the page URL had ?folio=...")]
         [SerializeField] string editorFolio = "";
+        [Tooltip("Folio a desktop player opens (dataset key, e.g. mus/fpus); -folio on the command line overrides it.")]
+        [SerializeField] string playerFolio = "mus/fpus";
+        [Tooltip("Read a folio from its SQLite file where the platform can (desktop), instead of the WallCard API.")]
+        [SerializeField] bool readFolioFile = true;
+        [Tooltip("At most this many works are hung, spread over the folio's decades.")]
+        [SerializeField] int maxWorks = 240;
+        [Tooltip("Loads images room by room as it changes rooms (found in the scene when unset).")]
+        [SerializeField] Visitor visitor;
 
         [Tooltip("Layout JSON: /api/... path, http(s) URL, or a path under StreamingAssets. A /rows "
                + "path (WallCard collection) is hung with the AutoLayout stand-in.")]
@@ -69,10 +83,10 @@ namespace MuseumBrowser.App
         public FolioInfo Folio { get; private set; }
         public int TotalRecords { get; private set; }
         public string SiteUrl => ApiBase;
-        /// 0..1 while loading: the layout/records first, then the images.
+        /// 0..1 while loading: download, records, then hanging (images load per room afterwards).
         public float Progress { get; private set; }
         public string Stage { get; private set; } = "Opening the galleries…";
-        int imagesTotal, imagesDone;
+        readonly List<List<HungWork>> roomWorks = new();
         public int RoomCount { get; private set; }
         /// Raised with a human-readable message when loading fails (shown on screen).
         public event System.Action<string> Failed;
@@ -105,6 +119,7 @@ namespace MuseumBrowser.App
         {
             get
             {
+                if (CommandLine("-api") is { Length: > 0 } arg) return arg.TrimEnd('/');
                 if (Application.isEditor) return editorApiBase;
                 if (QueryParam("api") is { Length: > 0 } api) return api.TrimEnd('/');
                 if (Application.platform == RuntimePlatform.WebGLPlayer && Origin(Application.absoluteURL) is { } origin)
@@ -119,9 +134,22 @@ namespace MuseumBrowser.App
             return uri.GetLeftPart(System.UriPartial.Authority);
         }
 
-        /// ?folio=mus/fpus on the page URL (Web) or editorFolio (Editor).
-        string RequestedFolio() =>
-            Application.isEditor ? (string.IsNullOrWhiteSpace(editorFolio) ? null : editorFolio.Trim()) : QueryParam("folio");
+        /// ?folio=mus/fpus on the page URL (Web), editorFolio (Editor), or -folio / playerFolio (desktop).
+        string RequestedFolio()
+        {
+            if (CommandLine("-folio") is { Length: > 0 } arg) return arg;
+            if (Application.isEditor) return string.IsNullOrWhiteSpace(editorFolio) ? null : editorFolio.Trim();
+            if (Application.platform == RuntimePlatform.WebGLPlayer) return QueryParam("folio");
+            return string.IsNullOrWhiteSpace(playerFolio) ? null : playerFolio.Trim();
+        }
+
+        /// The value after a command-line flag ("-folio mus/fpus"), or null.
+        static string CommandLine(string flag)
+        {
+            var args = System.Environment.GetCommandLineArgs();
+            int i = System.Array.IndexOf(args, flag);
+            return i >= 0 && i + 1 < args.Length ? args[i + 1] : null;
+        }
 
         /// A query-string parameter of the page URL (Web builds), or null.
         public static string QueryParam(string name)
@@ -155,11 +183,13 @@ namespace MuseumBrowser.App
             Progress = 0.05f;
             Stage = "Fetching the collection…";
             Exhibition exhibition;
-            if (RequestedFolio() is { } folio)
+            if (RequestedFolio() is { } fileFolio && readFolioFile && FolioDatabase.IsSupported)
+                exhibition = await LoadFolioFile(fileFolio);
+            else if (RequestedFolio() is { } folio)
             {
-                // A folio passed in by the embedding page: hang its first works with images.
+                // The WallCard API (Web): its first works with images, in time order.
                 var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(
-                    Resolve($"/api/{folio}/rows?hasImage=1&itemsPerPage=96"));
+                    Resolve($"/api/{folio}/rows?hasImage=1&itemsPerPage={Mathf.Clamp(maxWorks, 1, 200)}"));
                 FolioCode = folio;
                 Folio = page.Folio;
                 TotalRecords = page.TotalItems;
@@ -185,7 +215,7 @@ namespace MuseumBrowser.App
             }
             else exhibition = await JsonLoader.LoadAsync<Exhibition>(Resolve(layoutSource));
             Debug.Log($"Exhibition {exhibition.Code}: {exhibition.Rooms.Count} room(s)");
-            Progress = 0.3f;
+            Progress = 0.8f;
             Stage = "Hanging the works…";
             Title = exhibition.Title;
             RoomCount = exhibition.Rooms.Count;
@@ -198,20 +228,94 @@ namespace MuseumBrowser.App
                 Entrance = roomStops[0].Position;
                 EntranceYaw = transform.eulerAngles.y;
             }
+            Progress = 1f;
+            Stage = "";
+            if (!visitor) visitor = FindAnyObjectByType<Visitor>();
+            if (visitor) visitor.RoomChanged += LoadRoomImages;
             Built?.Invoke(this);
+            // Every work already shows its placeholder; the first room's images come first.
+            LoadRoomImages(0);
         }
 
-        void ImageDone()
+        void OnDestroy()
         {
-            imagesDone++;
-            Progress = 0.3f + 0.7f * imagesDone / Mathf.Max(1, imagesTotal);
-            Stage = imagesDone < imagesTotal ? $"Loading images… {imagesDone} of {imagesTotal}" : "";
+            if (visitor) visitor.RoomChanged -= LoadRoomImages;
+        }
+
+        /// The folio's SQLite file, from the hub's catalog (downloaded once, then cached).
+        async Awaitable<Exhibition> LoadFolioFile(string key)
+        {
+            FolioCatalogEntry entry = null;
+            try
+            {
+                entry = FolioCatalog.Find(await FolioCatalog.LoadAsync(ApiBase), key)
+                        ?? throw new System.InvalidOperationException($"{ApiBase} publishes no folio \"{key}\".");
+            }
+            catch (System.IO.IOException e) when (System.IO.File.Exists(FolioArchive.PathFor(key)))
+            {
+                Debug.LogWarning($"Opening the cached copy of {key}: {e.Message}");
+            }
+
+            FolioReader folio;
+            if (entry != null)
+            {
+                var size = entry.SizeBytes is { } bytes ? $" ({bytes / 1048576f:0.#} MB, once)" : "";
+                Stage = $"Downloading {entry.Title ?? key}{size}…";
+                folio = await FolioReader.OpenAsync(entry, new ProgressTo(p => Progress = 0.05f + 0.6f * p));
+            }
+            else folio = await FolioReader.OpenFileAsync(FolioArchive.PathFor(key), prepare: true);
+
+            using (folio)
+            {
+                Progress = 0.7f;
+                Stage = "Reading the records…";
+                var index = await folio.IndexAsync("obj");
+                var items = await folio.ItemsAsync(FolioCards.Choose(index, maxWorks));
+                var chosen = items.Select(i => FolioCards.Map(i, folio.Code)).ToList();
+                Debug.Log($"Folio {folio.Code}: {index.Count} records with images; hanging {chosen.Count}, "
+                          + $"{chosen.Count(c => c.Image?.Thumbhash != null)} with ThumbHash");
+                FolioCode = folio.Code;
+                Folio = new FolioInfo { Code = folio.Code, Title = folio.Title };
+                TotalRecords = index.Count;
+                CardImages.ApiBase = ApiBase;
+                CardImages.FolioCode = folio.Code;
+                return AutoLayout.Suite(folio.Title, chosen);
+            }
+        }
+
+        sealed class ProgressTo : System.IProgress<float>
+        {
+            readonly System.Action<float> report;
+            public ProgressTo(System.Action<float> report) => this.report = report;
+            public void Report(float value) => report(value);
+        }
+
+        /// Images for this room, then its neighbours: signed URLs first (one request per room),
+        /// then the images, a few at a time.
+        public async void LoadRoomImages(int room)
+        {
+            try
+            {
+                foreach (int r in new[] { room, room + 1, room - 1 })
+                {
+                    if (r < 0 || r >= roomWorks.Count) continue;
+                    var pending = roomWorks[r].Where(w => !w.ImageRequested).ToList();
+                    if (pending.Count == 0) continue;
+                    await CardImages.EnsureUrlsAsync(pending.Select(w => w.Card));
+                    var loads = pending.Select(w => w.LoadImageAsync()).ToList();
+                    foreach (var load in loads) await load;
+                    if (r == room) Debug.Log($"Room {r + 1}: {loads.Count} images loaded");
+                }
+            }
+            catch (System.Exception e) { Debug.LogException(e); }
         }
 
         void BuildRoom(Room room)
         {
             var root = new GameObject($"Room {room.Code}").transform;
             root.SetParent(transform, false);
+            var hung = new List<HungWork>();
+            roomWorks.Add(hung);
             root.localPosition = new Vector3(room.OriginXMm / 1000f, 0, room.OriginYMm / 1000f);
             roomStops.Add(new RoomStop
             {
@@ -248,11 +352,12 @@ namespace MuseumBrowser.App
                 {
                     if (p.Card == null) continue;
                     var local = a + right * (p.XMm / 1000f) + Vector3.up * (p.CenterMm / 1000f);
-                    imagesTotal++;
                     var work = WorkHanger.Hang(root, p.Card, p.HangMm(), root.TransformPoint(local), rotation,
-                        frameMaterial, imageMaterial, spotIntensity, wallPlaques, ImageDone);
-                    work.gameObject.AddComponent<HungWork>().Index = works.Count;
-                    works.Add(work);
+                        frameMaterial, imageMaterial, spotIntensity, wallPlaques);
+                    work.Index = works.Count;
+                    work.Room = roomWorks.Count - 1;
+                    hung.Add(work);
+                    works.Add(work.transform);
                     cards.Add(p.Card);
                 }
             }

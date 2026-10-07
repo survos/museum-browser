@@ -146,6 +146,10 @@ namespace MuseumBrowser.Core
         public string Thumb;
         public string Medium;
         public string Full;
+        /// ThumbHash (base64): a blurred preview painted until the image arrives.
+        public string Thumbhash;
+        /// Average colour "#rrggbb": the placeholder when there is no ThumbHash.
+        public string Color;
 
         /// Low-res first: thumbnails are what this phase uses.
         public string Best => Thumb ?? Medium ?? Shrink(Full);

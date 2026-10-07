@@ -10,7 +10,8 @@ namespace MuseumBrowser.App
     /// Full-screen slideshow of the exhibition's works in time order, with a year
     /// timeline along the bottom (after fortepan.hu's home page). UI Toolkit only:
     /// the strip snaps to a slide after a drag or swipe; arrows, Home/End and the
-    /// timeline jump; Esc closes. Images load lazily around the current slide.
+    /// timeline jump; Esc closes. Images load lazily around the current slide, over their
+    /// ThumbHash placeholders.
     [RequireComponent(typeof(UIDocument))]
     public sealed class Slideshow : MonoBehaviour
     {
@@ -173,6 +174,8 @@ namespace MuseumBrowser.App
                 marker.style.left = Length.Percent(Pos(c.Year.Value) * 100f);
             }
             else marker.style.display = DisplayStyle.None;
+            // One request signs the URLs for the slides around this one (cards from a local folio).
+            _ = CardImages.EnsureUrlsAsync(cards.Skip(Mathf.Max(0, index - 10)).Take(30));
             for (int k = index - 2; k <= index + 2; k++) EnsureImage(k);
         }
 
@@ -191,13 +194,19 @@ namespace MuseumBrowser.App
             var photo = slides[i].Q(className: "photo");
             if (photo.userData != null) return;
             photo.userData = true;
-            var url = cards[i].Image?.Medium ?? cards[i].Image?.Best;
-            if (url != null) LoadInto(photo, url);
+            // The blurred ThumbHash (or colour) at once, the photograph when it arrives.
+            if (CardImages.Placeholder(cards[i]) is { } placeholder) photo.style.backgroundImage = new StyleBackground(placeholder);
+            LoadInto(photo, cards[i]);
         }
 
-        static async void LoadInto(VisualElement photo, string url)
+        static async void LoadInto(VisualElement photo, WallCard card)
         {
-            try { photo.style.backgroundImage = new StyleBackground(await ImageLoader.LoadAsync(url)); }
+            try
+            {
+                await CardImages.EnsureUrlsAsync(new[] { card });
+                if ((card.Image?.Medium ?? card.Image?.Best) is { } url)
+                    photo.style.backgroundImage = new StyleBackground(await ImageLoader.LoadAsync(url));
+            }
             catch (System.Exception e) { Debug.LogWarning(e.Message); }
         }
 

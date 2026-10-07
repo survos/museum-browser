@@ -12,20 +12,28 @@ namespace MuseumBrowser.Core
     public static class ImageLoader
     {
         static readonly Dictionary<string, Texture2D> Cache = new();
+        /// Requests at once: enough to keep the connection busy without queueing a whole room
+        /// behind the browser's or server's own limits.
+        const int MaxConcurrent = 6;
+        static int active;
 
         // Enter Play Mode without a domain reload keeps statics alive while the
         // textures themselves are destroyed on exit, so start each session empty.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void ResetCache() => Cache.Clear();
+        static void ResetCache() { Cache.Clear(); active = 0; }
 
         public static async Awaitable<Texture2D> LoadAsync(string url)
         {
             if (Cache.TryGetValue(url, out var cached) && cached) return cached;
+            while (active >= MaxConcurrent) await Awaitable.NextFrameAsync();
+            if (Cache.TryGetValue(url, out cached) && cached) return cached;
 
             using var request = UnityWebRequest.Get(url);
-            request.timeout = 10;
+            request.timeout = 20;
             Diag.Begin(url);
-            await request.SendWebRequest();
+            active++;
+            try { await request.SendWebRequest(); }
+            finally { active--; }
             Diag.End(url, request.result == UnityWebRequest.Result.Success ? "OK" : $"FAIL {request.responseCode} {request.error}",
                 (long)request.downloadedBytes);
             if (request.result != UnityWebRequest.Result.Success)

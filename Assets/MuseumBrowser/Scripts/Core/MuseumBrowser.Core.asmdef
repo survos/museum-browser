@@ -2,7 +2,8 @@
     "name": "MuseumBrowser.Core",
     "rootNamespace": "MuseumBrowser.Core",
     "references": [
-        "unity.webp"
+        "unity.webp",
+        "Survos.Folio"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

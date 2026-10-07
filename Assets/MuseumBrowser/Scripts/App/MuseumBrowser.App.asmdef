@@ -3,6 +3,7 @@
     "rootNamespace": "MuseumBrowser.App",
     "references": [
         "MuseumBrowser.Core",
+        "Survos.Folio",
         "Unity.InputSystem",
         "Unity.TextMeshPro"
     ],
