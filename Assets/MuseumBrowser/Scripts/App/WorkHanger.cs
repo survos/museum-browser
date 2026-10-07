@@ -41,7 +41,11 @@ namespace MuseumBrowser.App
             // material references, so a shader found by name at runtime is missing on the Web.
             var material = new Material(imageMaterial);
             canvas.GetComponent<Renderer>().material = material;
-            if (card.Image?.Best is { } url) LoadImage(url, material, imageDone);
+            // No known shape (no physical or pixel size): learn it from the thumbnail, whose
+            // 'fit' preset keeps the aspect ratio, and shrink the frame to fit its allotted box.
+            bool unknownShape = card.Size == null || !(card.Size.WidthMm > 0 || card.Size.WPx > 0);
+            var fitTo = unknownShape ? new Vector2(w, h) : (Vector2?)null;
+            if (card.Image?.Best is { } url) LoadImage(url, material, imageDone, fitTo, frame.transform, canvas.transform);
             else imageDone?.Invoke();
 
             if (plaque) AddLabel(root, card.Label, w);
@@ -49,9 +53,22 @@ namespace MuseumBrowser.App
             return root;
         }
 
-        static async void LoadImage(string url, Material material, System.Action done)
+        static async void LoadImage(string url, Material material, System.Action done,
+            Vector2? fitTo = null, Transform frame = null, Transform canvas = null)
         {
-            try { material.SetTexture("_BaseMap", await ImageLoader.LoadAsync(url)); }
+            try
+            {
+                var texture = await ImageLoader.LoadAsync(url);
+                material.SetTexture("_BaseMap", texture);
+                if (fitTo is { } box && frame && texture.width > 0 && texture.height > 0)
+                {
+                    float aspect = (float)texture.width / texture.height;
+                    float w = box.x, h = box.x / aspect;
+                    if (h > box.y) { h = box.y; w = box.y * aspect; }
+                    frame.localScale = new Vector3(w, h, frame.localScale.z);
+                    canvas.localScale = new Vector3(w - 2 * FrameBorder, h - 2 * FrameBorder, 1f);
+                }
+            }
             catch (System.Exception e) { Debug.LogWarning(e.Message); }
             finally { done?.Invoke(); }
         }

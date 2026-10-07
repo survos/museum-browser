@@ -29,7 +29,8 @@ namespace MuseumBrowser.App
         public event System.Action<int> Viewing;
         int viewing = -1;
 
-        InputAction move, turn, look, drag, zoom, click, next, previous;
+        InputAction move, turn, look, drag, zoom, click, next, previous, nextRoom, previousRoom;
+        int room;
         CharacterController body;
         float yaw, pitch;
         int index = -1;
@@ -61,6 +62,13 @@ namespace MuseumBrowser.App
             previous = new InputAction("Previous", InputActionType.Button, "<Keyboard>/backspace");
             previous.AddBinding("<Gamepad>/buttonEast");
 
+            nextRoom = new InputAction("Next room", InputActionType.Button, "<Keyboard>/rightBracket");
+            nextRoom.AddBinding("<Keyboard>/pageDown");
+            previousRoom = new InputAction("Previous room", InputActionType.Button, "<Keyboard>/leftBracket");
+            previousRoom.AddBinding("<Keyboard>/pageUp");
+            nextRoom.performed += _ => GoToRoom(room + 1);
+            previousRoom.performed += _ => GoToRoom(room - 1);
+
             drag.started += _ => dragged = false;
             click.canceled += _ => { if (!dragged) SelectUnderPointer(); };
             next.performed += _ => GoTo(index + 1);
@@ -73,7 +81,7 @@ namespace MuseumBrowser.App
         void OnEnable() { foreach (var a in Actions) a.Enable(); }
         void OnDisable() { foreach (var a in Actions) a.Disable(); }
         void OnDestroy() { foreach (var a in Actions) a.Dispose(); }
-        InputAction[] Actions => new[] { move, turn, look, drag, zoom, click, next, previous };
+        InputAction[] Actions => new[] { move, turn, look, drag, zoom, click, next, previous, nextRoom, previousRoom };
 
         void Update()
         {
@@ -140,14 +148,25 @@ namespace MuseumBrowser.App
             Viewing?.Invoke(seen);
         }
 
-        /// Place the visitor without walking (start of the visit).
-        void StandAt(Vector3 position, float facingYaw)
+        /// Place the visitor without walking (start of the visit, or jumping to a room).
+        public void StandAt(Vector3 position, float facingYaw)
         {
+            autoWalking = false;
+            SetFocus(-1);
             body.enabled = false;
             transform.position = position;
             body.enabled = true;
             yaw = facingYaw;
             pitch = 0f;
+        }
+
+        /// Jump to a room's entrance (Rooms menu, or [ and ]).
+        public void GoToRoom(int i)
+        {
+            var stops = exhibition.RoomStops;
+            if (stops.Count == 0) return;
+            room = Mathf.Clamp(i, 0, stops.Count - 1);
+            StandAt(stops[room].position, stops[room].yaw);
         }
 
         void SelectUnderPointer()

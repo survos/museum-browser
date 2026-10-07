@@ -21,9 +21,9 @@ namespace MuseumBrowser.App
         const string Keys =
             "↑ ↓  walk\n← →  turn\nShift + ← →  step sideways\nW A S D  walk and step\nQ E  turn\n" +
             "Drag  look around\nScroll  zoom\nClick a work  walk to it\nSpace / Backspace  next / previous work\n" +
-            "H or ?  this help\nEsc  close";
+            "[ ]  previous / next gallery\nH or ?  this help\nEsc  close";
 
-        VisualElement start, help, about, hints, debug;
+        VisualElement start, help, about, hints, debug, rooms;
         Label debugText;
         InputAction toggleDebug;
         float debugRefresh;
@@ -58,6 +58,9 @@ namespace MuseumBrowser.App
 
             // Toolbar.
             var tools = Box(root, "toolbar");
+            var roomsButton = IconButton("Rooms", "Go to a gallery ( [ and ] step through them )", () => Toggle(rooms));
+            roomsButton.AddToClassList("text-button");
+            tools.Add(roomsButton);
             var slides = IconButton("Slides", "Slideshow, in time order", OpenSlideshow);
             slides.AddToClassList("text-button");
             tools.Add(slides);
@@ -65,6 +68,7 @@ namespace MuseumBrowser.App
             tools.Add(IconButton("i", "About", () => Toggle(about)));
 
             help = Panel(root, "help", "How to walk around", Keys);
+            rooms = Panel(root, "rooms", "Galleries", "");
             about = Panel(root, "about", "About", "");
             hints = Text(root, "hints",
                 "↑↓ walk · ←→ turn · Shift+←→ step sideways · drag to look · scroll to zoom · click a work · H for help");
@@ -135,6 +139,18 @@ namespace MuseumBrowser.App
             folioMeta.text = $"{b.Works.Count} works · {b.RoomCount} room{(b.RoomCount == 1 ? "" : "s")}";
             enter.SetEnabled(true);
             enter.Focus();
+            // Rooms panel: one button per gallery.
+            var list = rooms.Q<Label>(className: "panel-body");
+            list.text = $"{b.RoomCount} galleries — click to go there";
+            int n = 0;
+            foreach (var stop in b.RoomStops)
+            {
+                int i = n++;
+                var go = new Button(() => { visitor.GoToRoom(i); CloseAll(); }) { text = stop.title };
+                go.AddToClassList("room-link");
+                rooms.Insert(rooms.IndexOf(list) + 1 + i, go);
+            }
+
             var about = this.about.Q<Label>(className: "panel-body");
             var f = b.Folio;
             var lines = new System.Collections.Generic.List<string> { $"<b>{b.Title}</b>" };
@@ -178,6 +194,7 @@ namespace MuseumBrowser.App
             bool open = !IsOpen(panel);
             help.AddToClassList("hidden");
             about.AddToClassList("hidden");
+            rooms.AddToClassList("hidden");
             if (open) panel.RemoveFromClassList("hidden");
             if (!IsOpen(start)) visitor.enabled = !open;
         }
@@ -187,6 +204,7 @@ namespace MuseumBrowser.App
             if (IsOpen(start)) return;
             help.AddToClassList("hidden");
             about.AddToClassList("hidden");
+            rooms.AddToClassList("hidden");
             visitor.enabled = true;
         }
 

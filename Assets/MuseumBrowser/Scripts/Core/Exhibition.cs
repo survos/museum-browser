@@ -91,6 +91,9 @@ namespace MuseumBrowser.Core
 
         /// Size to hang at; unknown sizes hang as a 60 x 80 cm default.
         public (int w, int h) HangMm() => Size?.HangMm() ?? (600, 800);
+
+        /// No physical size: a photograph or reproduction, hung as a print (grouped).
+        public bool IsPrint => Size == null || Size.IsPrint;
     }
 
     /// The museum wall label (tombstone). Every field is optional.
@@ -120,7 +123,7 @@ namespace MuseumBrowser.Core
         /// Physical size to hang at. Photographs known only in pixels are hung as
         /// exhibition prints with the given long side, keeping their proportions.
         /// True when only a pixel size is known (photographs), i.e. hung as prints.
-        public bool IsPrint => !(WidthMm is > 0 && HeightMm is > 0) && WPx is > 0 && HPx is > 0;
+        public bool IsPrint => !(WidthMm is > 0 && HeightMm is > 0);
 
         public (int w, int h) HangMm(int printLongSideMm = 1000)
         {

@@ -69,6 +69,9 @@ namespace MuseumBrowser.App
         /// Raised with a human-readable message when loading fails (shown on screen).
         public event System.Action<string> Failed;
         public IReadOnlyList<WallCard> Cards => cards;
+        /// Each room's title and where a visitor stands on entering it.
+        public IReadOnlyList<(string title, Vector3 position, float yaw)> RoomStops => roomStops;
+        readonly List<(string, Vector3, float)> roomStops = new();
         /// Where a visit starts: just inside the first room, looking into it.
         public Vector3 Entrance { get; private set; }
         public float EntranceYaw { get; private set; }
@@ -136,7 +139,7 @@ namespace MuseumBrowser.App
             {
                 // A folio passed in by the embedding page: hang its first works with images.
                 var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(
-                    Resolve($"/api/{folio}/rows?hasImage=1&itemsPerPage=48"));
+                    Resolve($"/api/{folio}/rows?hasImage=1&itemsPerPage=96"));
                 FolioCode = folio;
                 Folio = page.Folio;
                 TotalRecords = page.TotalItems;
@@ -191,6 +194,8 @@ namespace MuseumBrowser.App
             var root = new GameObject($"Room {room.Code}").transform;
             root.SetParent(transform, false);
             root.localPosition = new Vector3(room.OriginXMm / 1000f, 0, room.OriginYMm / 1000f);
+            roomStops.Add((room.Title ?? room.Code,
+                root.TransformPoint(new Vector3(room.WidthMm / 2000f, 0.1f, 1.2f)), root.eulerAngles.y));
             float width = room.WidthMm / 1000f, depth = room.DepthMm / 1000f, height = room.HeightMm / 1000f;
 
             // The floor runs a little past both end walls so doorways have a threshold.

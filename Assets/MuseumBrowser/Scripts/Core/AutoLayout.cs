@@ -17,8 +17,39 @@ namespace MuseumBrowser.Core
         const int DoorMm = 2000;
         const int MinDepthMm = 8000, MaxDepthMm = 18000;
 
-        /// One list of works, split across as many rooms as it fills.
+        /// One list of works, split into rooms: by decade when most works have a year
+        /// (thin decades merge with the next), else by count.
         public static Exhibition Suite(string title, IEnumerable<WallCard> cards)
+        {
+            var all = cards.ToList();
+            if (all.Count(c => c.Year.HasValue) * 3 >= all.Count * 2)
+            {
+                var rooms = new List<(string, List<WallCard>)>();
+                var pending = new List<WallCard>();
+                int? from = null;
+                foreach (var decade in all.Where(c => c.Year.HasValue).GroupBy(c => c.Year.Value / 10 * 10).OrderBy(g => g.Key))
+                {
+                    from ??= decade.Key;
+                    pending.AddRange(decade);
+                    if (pending.Count >= 8)
+                    {
+                        rooms.Add((from == decade.Key ? $"{decade.Key}s" : $"{from}s–{decade.Key}s", pending));
+                        pending = new List<WallCard>();
+                        from = null;
+                    }
+                }
+                pending.AddRange(all.Where(c => !c.Year.HasValue));
+                if (pending.Count > 0)
+                {
+                    if (rooms.Count > 0 && pending.Count < 8) rooms[^1].Item2.AddRange(pending);
+                    else rooms.Add((from.HasValue ? $"{from}s" : "Undated", pending));
+                }
+                return Rooms(title, rooms);
+            }
+            return SuiteByCount(title, all);
+        }
+
+        static Exhibition SuiteByCount(string title, IEnumerable<WallCard> cards)
         {
             var queue = new Queue<WallCard>(cards);
             var groups = new List<(string, List<WallCard>)>();
@@ -46,7 +77,7 @@ namespace MuseumBrowser.Core
             int order = 0, y = 0;
             foreach (var (roomTitle, cards) in groups)
             {
-                bool prints = cards.Count > 0 && cards.Count(c => c.Size?.IsPrint == true) * 2 > cards.Count;
+                bool prints = cards.Count > 0 && cards.Count(c => c.IsPrint) * 2 > cards.Count;
                 int rows = prints ? 2 : 1;
                 int gap = prints ? PrintGapMm : GapMm;
                 int tallest = cards.Count == 0 ? 1000 : cards.Max(c => c.HangMm().h);
@@ -232,11 +263,11 @@ namespace MuseumBrowser.Core
             return g;
         }
 
-        static int Width(WallCard c) => c.HangMm().w + (c.Size?.IsPrint == true ? PrintGapMm : GapMm);
+        static int Width(WallCard c) => c.HangMm().w + (c.IsPrint ? PrintGapMm : GapMm);
 
         /// Usable length of one long wall (all rows) at the maximum room depth.
         static int Capacity(WallCard sample) =>
-            (MaxDepthMm - 2 * MarginMm) * (sample.Size?.IsPrint == true ? 2 : 1);
+            (MaxDepthMm - 2 * MarginMm) * (sample.IsPrint ? 2 : 1);
 
         static Opening Door(int widthMm) => new() { FromMm = (widthMm - DoorMm) / 2, ToMm = (widthMm + DoorMm) / 2 };
 
