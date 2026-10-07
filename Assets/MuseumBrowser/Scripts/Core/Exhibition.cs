@@ -64,6 +64,7 @@ namespace MuseumBrowser.Core
         public string Id;
         public string Title;
         public WallLabel Label;
+        public int? Year;
         public CardSize Size;
         public CardImage Image;
         public List<AudioStop> Audio = new();
@@ -92,6 +93,21 @@ namespace MuseumBrowser.Core
         public int? HeightMm;
         public int? DepthMm;
         public string Kind;
+        public int? WPx;
+        public int? HPx;
+
+        /// Physical size to hang at. Photographs known only in pixels are hung as
+        /// exhibition prints with the given long side, keeping their proportions.
+        public (int w, int h) HangMm(int printLongSideMm = 600)
+        {
+            if (WidthMm is > 0 && HeightMm is > 0) return (WidthMm.Value, HeightMm.Value);
+            if (WPx is > 0 && HPx is > 0)
+            {
+                float scale = (float)printLongSideMm / System.Math.Max(WPx.Value, HPx.Value);
+                return ((int)(WPx.Value * scale), (int)(HPx.Value * scale));
+            }
+            return (600, 800);
+        }
     }
 
     public sealed class CardImage

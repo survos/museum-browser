@@ -14,6 +14,17 @@ namespace MuseumBrowser.App
                + "(WallCard collection) is hung with the AutoLayout stand-in.")]
         [SerializeField] string layoutSource = "https://127.0.0.1:8011/api/smith/npg/rows?type=painting&hasSize=1&itemsPerPage=40";
 
+        [System.Serializable]
+        public sealed class RoomSource
+        {
+            public string title;
+            [Tooltip("harvest /rows URL: the filter that defines this room (a decade, a theme, a town...).")]
+            public string url;
+        }
+
+        [Tooltip("If set, one room per source (stand-in for harvest's layout pass); overrides layoutSource.")]
+        [SerializeField] List<RoomSource> roomSources = new();
+
         [Header("Room pieces")]
         [Tooltip("Wall block: inner face on local x=0, thickness along +x, length along +z.")]
         [SerializeField] GameObject wallBlock;
@@ -46,7 +57,17 @@ namespace MuseumBrowser.App
         async void Start()
         {
             Exhibition exhibition;
-            if (layoutSource.Contains("/rows"))
+            if (roomSources.Count > 0)
+            {
+                var groups = new List<(string, List<WallCard>)>();
+                foreach (var source in roomSources)
+                {
+                    var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(source.url);
+                    groups.Add((source.title, page.Members));
+                }
+                exhibition = AutoLayout.Rooms(name, groups);
+            }
+            else if (layoutSource.Contains("/rows"))
             {
                 var page = await JsonLoader.LoadAsync<HydraCollection<WallCard>>(layoutSource);
                 exhibition = AutoLayout.Suite(page.Folio?.Title ?? "Exhibition", page.Members);

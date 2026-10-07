@@ -53,7 +53,7 @@ namespace MuseumBrowser.App
             creator.text = l.Creator ?? "";
             title.text = l.Title ?? c.Title ?? "";
             subject.text = l.Subject ?? "";
-            details.text = string.Join("\n", new[] { l.Date, l.Medium, l.Dimensions }.Where(s => !string.IsNullOrEmpty(s)));
+            details.text = string.Join("\n", new[] { l.Date, l.Place, l.Medium, l.Dimensions }.Where(s => !string.IsNullOrEmpty(s)));
             credit.text = string.Join("\n", new[] { l.Credit, l.Accession, c.License }.Where(s => !string.IsNullOrEmpty(s)));
             foreach (var e in new VisualElement[] { creator, title, subject, details, credit })
                 e.style.display = string.IsNullOrEmpty(((Label)e).text) ? DisplayStyle.None : DisplayStyle.Flex;
