@@ -36,8 +36,15 @@ previous/next stop). Photo URLs come straight from the folio (Curatescape's web-
 - Desktop player: `-tour "Sites & Sounds" -folioFile ~/data/folio/curatescape/baltimore.folio`
   (or `-folio curatescape/baltimore` to use the hub's published copy).
 - `-capture <dir>`: screenshot each room (entrance, then the far wall) and quit.
-- Command-line build: `Unity -batchmode -quit -projectPath . -executeMethod MuseumBrowser.EditorTools.CommandLineBuild.MacOS`
-  (output `Builds/macOS/MuseumBrowser.app`).
+- Web: `?folio=curatescape/baltimore&tour=Sites%20%26%20Sounds` (plus `&api=https://recordia.org` when the
+  player is not hosted on the site), or `?folioUrl=<.folio(.gz) URL>&tour=...`. The folio is read in the
+  browser with sqlite-wasm (com.survos.folio 0.2). Photos, films and audio go through the CORS proxy
+  `webMediaProxy` (https://media.recordia.org, folio-demo `tools/media-proxy`): Curatescape sends no CORS.
+- Command-line builds (Unity closed):
+  - macOS: `Unity -batchmode -quit -projectPath . -executeMethod MuseumBrowser.EditorTools.CommandLineBuild.MacOS`
+    (output `Builds/macOS/MuseumBrowser.app`).
+  - Web: `Unity -batchmode -quit -projectPath . -activeBuildProfile "Assets/Settings/Build Profiles/Web - Desktop - Development.asset" -build Builds/WebDev`.
+    Use this, not a script calling BuildPlayerWithProfileOptions: that build's lit materials did not draw.
 
 ## Purchased assets (not in git)
 

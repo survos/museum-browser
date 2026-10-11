@@ -35,6 +35,9 @@ namespace MuseumBrowser.App
         [SerializeField] string editorTour = "";
         [Tooltip("A local folio file to open in the Editor instead of the hub's copy; -folioFile on the command line.")]
         [SerializeField] string editorFolioFile = "";
+        [Tooltip("Web builds: photos, films and audio from hosts without CORS are fetched through this proxy "
+               + "(https://<proxy>/<host>/<path>; tools/media-proxy in folio-demo).")]
+        [SerializeField] string webMediaProxy = "https://media.recordia.org";
         [Tooltip("Loads images room by room as it changes rooms (found in the scene when unset).")]
         [SerializeField] Visitor visitor;
 
@@ -159,12 +162,15 @@ namespace MuseumBrowser.App
         {
             if (CommandLine("-tour") is { Length: > 0 } arg) return arg;
             if (Application.isEditor && !string.IsNullOrWhiteSpace(editorTour)) return editorTour.Trim();
+            if (Application.platform == RuntimePlatform.WebGLPlayer) return QueryParam("tour");
             return null;
         }
 
         string LocalFolioFile()
         {
-            var path = CommandLine("-folioFile") ?? (Application.isEditor ? editorFolioFile : null);
+            // Web: ?folioUrl= opens a folio (.folio or .folio.gz) by URL, bypassing the hub's catalog.
+            var path = CommandLine("-folioFile") ?? (Application.isEditor ? editorFolioFile
+                : Application.platform == RuntimePlatform.WebGLPlayer ? QueryParam("folioUrl") : null);
             if (string.IsNullOrWhiteSpace(path)) return null;
             path = path.Trim();
             if (path.StartsWith("~/"))
@@ -214,7 +220,8 @@ namespace MuseumBrowser.App
             Exhibition exhibition;
             if (RequestedTour() is { } tour && FolioDatabase.IsSupported)
                 exhibition = await LoadTour(tour);
-            else if (RequestedFolio() is { } fileFolio && readFolioFile && FolioDatabase.IsSupported)
+            else if (RequestedFolio() is { } fileFolio && readFolioFile && FolioDatabase.IsSupported
+                     && Application.platform != RuntimePlatform.WebGLPlayer)
                 exhibition = await LoadFolioFile(fileFolio);
             else if (RequestedFolio() is { } folio)
             {
@@ -301,7 +308,8 @@ namespace MuseumBrowser.App
             FolioReader folio;
             if (LocalFolioFile() is { } path)
             {
-                if (!System.IO.File.Exists(path)) throw new System.IO.FileNotFoundException($"No folio file at {path}.");
+                if (Application.platform != RuntimePlatform.WebGLPlayer && !System.IO.File.Exists(path))
+                    throw new System.IO.FileNotFoundException($"No folio file at {path}.");
                 folio = await FolioReader.OpenFileAsync(path);
             }
             else folio = await OpenFolio(RequestedFolio() ?? throw new System.InvalidOperationException("A tour needs a folio (-folio or -folioFile)."));
@@ -310,6 +318,7 @@ namespace MuseumBrowser.App
                 Progress = 0.7f;
                 Stage = "Reading the tour…";
                 Tour = await TourReader.LoadAsync(folio, tour);
+                if (Application.platform == RuntimePlatform.WebGLPlayer) ProxyMedia(Tour);
                 FolioCode = folio.Code;
                 Folio = new FolioInfo { Code = folio.Code, Title = folio.Title };
                 TotalRecords = Tour.Stops.Sum(s => s.Photos.Count);
@@ -322,6 +331,22 @@ namespace MuseumBrowser.App
                     return films.Count == 0 ? null : new WallScreen { Videos = films };
                 }, i => Tour.Stops[i].Subtitle);
                 return exhibition;
+            }
+        }
+
+        /// Web: route the tour's media through the CORS proxy (the source sites send no CORS headers).
+        void ProxyMedia(Tour tour)
+        {
+            if (string.IsNullOrWhiteSpace(webMediaProxy)) return;
+            var proxy = webMediaProxy.TrimEnd('/');
+            string Via(string url) =>
+                System.Uri.TryCreate(url, System.UriKind.Absolute, out var u) && !url.StartsWith(proxy)
+                    ? $"{proxy}/{u.Host}{u.PathAndQuery}" : url;
+            foreach (var stop in tour.Stops)
+            {
+                foreach (var photo in stop.Photos)
+                    if (photo.Image != null) photo.Image.Medium = Via(photo.Image.Medium);
+                foreach (var recording in stop.Recordings) recording.Url = Via(recording.Url);
             }
         }
 
