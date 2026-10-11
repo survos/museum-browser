@@ -167,6 +167,7 @@ namespace MuseumBrowser.App
             audioSource.clip = DownloadHandlerAudioClip.GetContent(request);
             audioSource.Play();
             audioStarted = true;
+            Debug.Log($"Audio playing {url} ({audioSource.clip.length:0}s)");
             Refresh();
         }
 
