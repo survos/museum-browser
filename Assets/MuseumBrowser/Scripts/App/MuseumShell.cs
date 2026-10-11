@@ -222,7 +222,7 @@ namespace MuseumBrowser.App
             status.AddToClassList("error");
         }
 
-        void Enter()
+        public void Enter()
         {
             start.AddToClassList("hidden");
             visitor.enabled = true;

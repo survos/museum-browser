@@ -24,6 +24,21 @@ API until the folio package has a sqlite-wasm backend.
   developed side by side; switch to `https://github.com/survos/unity-folio.git` and
   `https://github.com/survos/unity-sqlite.git` (pinned tags) to build anywhere else.
 
+## Tours (Curatescape): one room per stop
+
+A tour folio (story → stop → obj, e.g. `curatescape/baltimore`) hangs as a suite with one room
+per stop, in tour order. The stop's photos hang on the walls (label: caption and credit line),
+its films play on a screen on the far wall, and its audio plays when you walk in. A side panel
+shows the stop's story (T hides it, P plays/pauses, [ ] or the panel's buttons go to the
+previous/next stop). Photo URLs come straight from the folio (Curatescape's web-sized images).
+
+- Editor: `editorTour` (story id or part of the title) and optionally `editorFolioFile`.
+- Desktop player: `-tour "Sites & Sounds" -folioFile ~/data/folio/curatescape/baltimore.folio`
+  (or `-folio curatescape/baltimore` to use the hub's published copy).
+- `-capture <dir>`: screenshot each room (entrance, then the far wall) and quit.
+- Command-line build: `Unity -batchmode -quit -projectPath . -executeMethod MuseumBrowser.EditorTools.CommandLineBuild.MacOS`
+  (output `Builds/macOS/MuseumBrowser.app`).
+
 ## Purchased assets (not in git)
 
 `Assets/Creepy_Cat/` is git-ignored. To restore it:

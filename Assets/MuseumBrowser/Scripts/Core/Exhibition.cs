@@ -41,6 +41,19 @@ namespace MuseumBrowser.Core
         public List<Placement> Placements = new();
         /// Text on the wall: a group's title above its works ("Cedar Falls · 1951–58").
         public List<WallText> Texts = new();
+        /// Screens that play a room's films (a tour stop's recordings).
+        public List<WallScreen> Screens = new();
+    }
+
+    /// A screen on a wall, playing one or more videos in turn.
+    public sealed class WallScreen
+    {
+        /// Centre, measured along the wall from its left end, and height above the floor.
+        public int XMm;
+        public int CenterMm;
+        public int WidthMm = 2400;
+        public int HeightMm = 1350;
+        public List<Recording> Videos = new();
     }
 
     public sealed class WallText
@@ -48,7 +61,10 @@ namespace MuseumBrowser.Core
         public int XMm;
         public int CenterMm;
         public string Text;
-        /// "group" (above a group of works) or "title" (the room's title, large).
+        /// Width available for the text; 0: the renderer's default.
+        public int WidthMm;
+        /// "group" (above a group of works), "title" (the room's title, large) or "subtitle"
+        /// (under the title; long ones wrap downward).
         public string Kind = "group";
     }
 
