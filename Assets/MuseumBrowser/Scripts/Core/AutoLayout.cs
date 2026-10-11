@@ -73,7 +73,10 @@ namespace MuseumBrowser.Core
         }
 
         /// One room per group (a "hall" filter: a decade, a theme, a town...).
-        public static Exhibition Rooms(string title, IEnumerable<(string title, List<WallCard> cards)> groups)
+        /// screen: the room's screen, if it has films to show (by room index); it takes the far
+        /// wall below the title, in place of a hero print. subtitle: a line under the room's title.
+        public static Exhibition Rooms(string title, IEnumerable<(string title, List<WallCard> cards)> groups,
+            System.Func<int, WallScreen> screen = null, System.Func<int, string> subtitle = null)
         {
             var rooms = new List<Room>();
             int order = 0, y = 0;
@@ -110,11 +113,29 @@ namespace MuseumBrowser.Core
                 int farCenter = 300 + farSpan / 2;
                 int titleCenter = heightMm - 650;
                 var groupCards = cards;
-                if (prints && cards.Count >= 6)
+                var roomSubtitle = subtitle?.Invoke(rooms.Count);
+                // Room under the title for what hangs below it (and for the subtitle).
+                int titleGap = string.IsNullOrEmpty(roomSubtitle) ? 450 : 600;
+                var wallScreen = screen?.Invoke(rooms.Count);
+                if (wallScreen != null)
+                {
+                    // Bottom at 700 mm and at most 1 m tall, so the title stays below the ceiling beams
+                    // (they hang to about 2.6 m at the far wall).
+                    int maxH = System.Math.Min(1000, titleCenter - titleGap - 700);
+                    int sw = System.Math.Min(farSpan - 400, 3200), sh = sw * 9 / 16;
+                    if (sh > maxH) { sh = maxH; sw = sh * 16 / 9; }
+                    wallScreen.XMm = farCenter;
+                    wallScreen.WidthMm = sw;
+                    wallScreen.HeightMm = sh;
+                    wallScreen.CenterMm = 700 + sh / 2;
+                    north.Screens.Add(wallScreen);
+                    titleCenter = System.Math.Min(titleCenter, 700 + sh + titleGap);
+                }
+                else if (prints && cards.Count >= 6)
                 {
                     var hero = cards.OrderByDescending(Score).First();
                     groupCards = cards.Where(c => c != hero).ToList();
-                    int maxH = titleCenter - 450 - 700;
+                    int maxH = titleCenter - titleGap - 700;
                     var (hw, hh) = hero.Size?.HangMm(HeroMaxMm) ?? (2400, 1800);
                     float k = System.Math.Min(1f, System.Math.Min((float)(farSpan - 400) / hw, (float)maxH / hh));
                     hw = (int)(hw * k); hh = (int)(hh * k);
@@ -123,9 +144,11 @@ namespace MuseumBrowser.Core
                         ItemId = hero.Id, Card = hero, Order = order++, XMm = farCenter,
                         CenterMm = 700 + hh / 2, WidthMm = hw, HeightMm = hh,
                     });
-                    titleCenter = System.Math.Min(titleCenter, 700 + hh + 450);
+                    titleCenter = System.Math.Min(titleCenter, 700 + hh + titleGap);
                 }
-                north.Texts.Add(new WallText { XMm = farCenter, CenterMm = titleCenter, Text = roomTitle, Kind = "title" });
+                north.Texts.Add(new WallText { XMm = farCenter, CenterMm = titleCenter, Text = roomTitle, Kind = "title", WidthMm = farSpan });
+                if (!string.IsNullOrEmpty(roomSubtitle))
+                    north.Texts.Add(new WallText { XMm = farCenter, CenterMm = titleCenter - 350, Text = roomSubtitle, Kind = "subtitle", WidthMm = farSpan });
 
                 if (prints)
                     HangGroups(groupCards, new[] { west, east }, ref depthMm, ref order);

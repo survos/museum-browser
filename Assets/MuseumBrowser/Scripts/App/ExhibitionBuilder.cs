@@ -29,6 +29,12 @@ namespace MuseumBrowser.App
         [SerializeField] bool readFolioFile = true;
         [Tooltip("At most this many works are hung, spread over the folio's decades.")]
         [SerializeField] int maxWorks = 240;
+        [Header("Tour: one room per stop")]
+        [Tooltip("Tour to hang in the Editor: a story id (curatescape:baltimore:30) or part of its title. "
+               + "Desktop players: -tour. Read from editorFolioFile, or from the folio named above.")]
+        [SerializeField] string editorTour = "";
+        [Tooltip("A local folio file to open in the Editor instead of the hub's copy; -folioFile on the command line.")]
+        [SerializeField] string editorFolioFile = "";
         [Tooltip("Loads images room by room as it changes rooms (found in the scene when unset).")]
         [SerializeField] Visitor visitor;
 
@@ -108,6 +114,11 @@ namespace MuseumBrowser.App
         public Vector3 Entrance { get; private set; }
         public float EntranceYaw { get; private set; }
         public event System.Action<ExhibitionBuilder> Built;
+        /// The tour being shown (one room per stop, in the same order), or null.
+        public Tour Tour { get; private set; }
+        /// Each room's screens (films), by room index.
+        public IReadOnlyList<IReadOnlyList<ScreenPlayer>> RoomScreens => roomScreens;
+        readonly List<List<ScreenPlayer>> roomScreens = new();
 
         readonly List<Transform> works = new();
         readonly List<WallCard> cards = new();
@@ -143,8 +154,26 @@ namespace MuseumBrowser.App
             return string.IsNullOrWhiteSpace(playerFolio) ? null : playerFolio.Trim();
         }
 
+        /// -tour (desktop players) or editorTour (Editor), or null.
+        string RequestedTour()
+        {
+            if (CommandLine("-tour") is { Length: > 0 } arg) return arg;
+            if (Application.isEditor && !string.IsNullOrWhiteSpace(editorTour)) return editorTour.Trim();
+            return null;
+        }
+
+        string LocalFolioFile()
+        {
+            var path = CommandLine("-folioFile") ?? (Application.isEditor ? editorFolioFile : null);
+            if (string.IsNullOrWhiteSpace(path)) return null;
+            path = path.Trim();
+            if (path.StartsWith("~/"))
+                path = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), path.Substring(2));
+            return path;
+        }
+
         /// The value after a command-line flag ("-folio mus/fpus"), or null.
-        static string CommandLine(string flag)
+        internal static string CommandLine(string flag)
         {
             var args = System.Environment.GetCommandLineArgs();
             int i = System.Array.IndexOf(args, flag);
@@ -183,7 +212,9 @@ namespace MuseumBrowser.App
             Progress = 0.05f;
             Stage = "Fetching the collection…";
             Exhibition exhibition;
-            if (RequestedFolio() is { } fileFolio && readFolioFile && FolioDatabase.IsSupported)
+            if (RequestedTour() is { } tour && FolioDatabase.IsSupported)
+                exhibition = await LoadTour(tour);
+            else if (RequestedFolio() is { } fileFolio && readFolioFile && FolioDatabase.IsSupported)
                 exhibition = await LoadFolioFile(fileFolio);
             else if (RequestedFolio() is { } folio)
             {
@@ -232,7 +263,9 @@ namespace MuseumBrowser.App
             Stage = "";
             if (!visitor) visitor = FindAnyObjectByType<Visitor>();
             if (visitor) visitor.RoomChanged += LoadRoomImages;
+            if (Tour != null) TourGuide.Attach(this, visitor);
             Built?.Invoke(this);
+            if (CommandLine("-capture") is { Length: > 0 } captures) RoomCapture.Run(this, visitor, captures);
             // Every work already shows its placeholder; the first room's images come first.
             LoadRoomImages(0);
         }
@@ -245,6 +278,56 @@ namespace MuseumBrowser.App
         /// The folio's SQLite file, from the hub's catalog (downloaded once, then cached).
         async Awaitable<Exhibition> LoadFolioFile(string key)
         {
+            using var folio = await OpenFolio(key);
+            Progress = 0.7f;
+            Stage = "Reading the records…";
+            var index = await folio.IndexAsync("obj");
+            var items = await folio.ItemsAsync(FolioCards.Choose(index, maxWorks));
+            var chosen = items.Select(i => FolioCards.Map(i, folio.Code)).ToList();
+            Debug.Log($"Folio {folio.Code}: {index.Count} records with images; hanging {chosen.Count}, "
+                      + $"{chosen.Count(c => c.Image?.Thumbhash != null)} with ThumbHash");
+            FolioCode = folio.Code;
+            Folio = new FolioInfo { Code = folio.Code, Title = folio.Title };
+            TotalRecords = index.Count;
+            CardImages.ApiBase = ApiBase;
+            CardImages.FolioCode = folio.Code;
+            return AutoLayout.Suite(folio.Title, chosen);
+        }
+
+        /// A tour: one room per stop, its photos on the walls and its films on a screen.
+        /// Photo URLs come straight from the folio (the source's own web-sized images).
+        async Awaitable<Exhibition> LoadTour(string tour)
+        {
+            FolioReader folio;
+            if (LocalFolioFile() is { } path)
+            {
+                if (!System.IO.File.Exists(path)) throw new System.IO.FileNotFoundException($"No folio file at {path}.");
+                folio = await FolioReader.OpenFileAsync(path);
+            }
+            else folio = await OpenFolio(RequestedFolio() ?? throw new System.InvalidOperationException("A tour needs a folio (-folio or -folioFile)."));
+            using (folio)
+            {
+                Progress = 0.7f;
+                Stage = "Reading the tour…";
+                Tour = await TourReader.LoadAsync(folio, tour);
+                FolioCode = folio.Code;
+                Folio = new FolioInfo { Code = folio.Code, Title = folio.Title };
+                TotalRecords = Tour.Stops.Sum(s => s.Photos.Count);
+                Debug.Log($"Tour {Tour.Id} \"{Tour.Title}\": {Tour.Stops.Count} stops, {TotalRecords} photos, "
+                          + $"{Tour.Stops.Sum(s => s.Recordings.Count)} recordings");
+                var groups = Tour.Stops.Select((s, i) => ($"{i + 1} · {s.Title}", s.Photos)).ToList();
+                var exhibition = AutoLayout.Rooms(Tour.Title, groups, i =>
+                {
+                    var films = Tour.Stops[i].Recordings.Where(r => r.IsVideo).ToList();
+                    return films.Count == 0 ? null : new WallScreen { Videos = films };
+                }, i => Tour.Stops[i].Subtitle);
+                return exhibition;
+            }
+        }
+
+        /// Opens a published folio from the hub's catalog (downloaded once, then cached).
+        async Awaitable<FolioReader> OpenFolio(string key)
+        {
             FolioCatalogEntry entry = null;
             try
             {
@@ -256,31 +339,13 @@ namespace MuseumBrowser.App
                 Debug.LogWarning($"Opening the cached copy of {key}: {e.Message}");
             }
 
-            FolioReader folio;
             if (entry != null)
             {
                 var size = entry.SizeBytes is { } bytes ? $" ({bytes / 1048576f:0.#} MB, once)" : "";
                 Stage = $"Downloading {entry.Title ?? key}{size}…";
-                folio = await FolioReader.OpenAsync(entry, new ProgressTo(p => Progress = 0.05f + 0.6f * p));
+                return await FolioReader.OpenAsync(entry, new ProgressTo(p => Progress = 0.05f + 0.6f * p));
             }
-            else folio = await FolioReader.OpenFileAsync(FolioArchive.PathFor(key), prepare: true);
-
-            using (folio)
-            {
-                Progress = 0.7f;
-                Stage = "Reading the records…";
-                var index = await folio.IndexAsync("obj");
-                var items = await folio.ItemsAsync(FolioCards.Choose(index, maxWorks));
-                var chosen = items.Select(i => FolioCards.Map(i, folio.Code)).ToList();
-                Debug.Log($"Folio {folio.Code}: {index.Count} records with images; hanging {chosen.Count}, "
-                          + $"{chosen.Count(c => c.Image?.Thumbhash != null)} with ThumbHash");
-                FolioCode = folio.Code;
-                Folio = new FolioInfo { Code = folio.Code, Title = folio.Title };
-                TotalRecords = index.Count;
-                CardImages.ApiBase = ApiBase;
-                CardImages.FolioCode = folio.Code;
-                return AutoLayout.Suite(folio.Title, chosen);
-            }
+            return await FolioReader.OpenFileAsync(FolioArchive.PathFor(key), prepare: true);
         }
 
         sealed class ProgressTo : System.IProgress<float>
@@ -316,6 +381,8 @@ namespace MuseumBrowser.App
             root.SetParent(transform, false);
             var hung = new List<HungWork>();
             roomWorks.Add(hung);
+            var screens = new List<ScreenPlayer>();
+            roomScreens.Add(screens);
             root.localPosition = new Vector3(room.OriginXMm / 1000f, 0, room.OriginYMm / 1000f);
             roomStops.Add(new RoomStop
             {
@@ -347,7 +414,14 @@ namespace MuseumBrowser.App
                 var rotation = root.rotation * Quaternion.LookRotation(facing);
                 foreach (var t in wall.Texts)
                     AddWallText(root, a + right * (t.XMm / 1000f) + Vector3.up * (t.CenterMm / 1000f) - facing * 0.01f,
-                        Quaternion.LookRotation(facing), t.Text, t.Kind == "title", prints);
+                        Quaternion.LookRotation(facing), t.Text, t.Kind, prints, t.WidthMm / 1000f);
+                foreach (var s in wall.Screens)
+                {
+                    var local = a + right * (s.XMm / 1000f) + Vector3.up * (s.CenterMm / 1000f);
+                    var screen = ScreenPlayer.Build(root, s, root.TransformPoint(local), rotation, frameMaterial, imageMaterial, prints, spotIntensity);
+                    screen.Room = roomWorks.Count - 1;
+                    screens.Add(screen);
+                }
                 foreach (var p in wall.Placements.OrderBy(p => p.Order))
                 {
                     if (p.Card == null) continue;
@@ -421,8 +495,9 @@ namespace MuseumBrowser.App
 
         /// A group's title, painted on the wall above it.
         static void AddWallText(Transform room, Vector3 localPosition, Quaternion localRotation, string text,
-            bool title, bool lightWall)
+            string kind, bool lightWall, float width = 0f)
         {
+            bool title = kind == "title";
             var go = new GameObject("Wall text");
             go.transform.SetParent(room, false);
             go.transform.localPosition = localPosition;
@@ -435,6 +510,27 @@ namespace MuseumBrowser.App
             // Dark lettering on warm white; pale gold on dark red cloth.
             tmp.color = lightWall ? new Color(0.07f, 0.06f, 0.05f) : new Color(0.93f, 0.84f, 0.62f);
             tmp.fontStyle = TMPro.FontStyles.SmallCaps;
+            if (title)
+            {
+                // Long stop names shrink to one line rather than overflow into what hangs below.
+                tmp.enableAutoSizing = true;
+                tmp.fontSizeMin = 1.4f;
+                tmp.fontSizeMax = 5.5f;
+                tmp.textWrappingMode = TMPro.TextWrappingModes.NoWrap;
+                if (text != null && text.Length > 28) tmp.characterSpacing = 3f;
+            }
+            else if (kind == "subtitle")
+            {
+                // One line under the title; long subtitles shrink to fit.
+                tmp.rectTransform.sizeDelta = new Vector2(4.6f, 0.32f);
+                tmp.fontStyle = TMPro.FontStyles.Italic;
+                tmp.characterSpacing = 0f;
+                tmp.enableAutoSizing = true;
+                tmp.fontSizeMin = 0.5f;
+                tmp.fontSizeMax = 1.6f;
+                tmp.textWrappingMode = TMPro.TextWrappingModes.NoWrap;
+            }
+            if (width > 0) tmp.rectTransform.sizeDelta = new Vector2(width, tmp.rectTransform.sizeDelta.y);
             tmp.text = text;
         }
 
