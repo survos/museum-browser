@@ -25,7 +25,7 @@ namespace MuseumBrowser.App
 
         int room = -1;
         int audioIndex = -1;
-        bool audioStarted, audioPaused;
+        bool audioStarted, audioHeard, audioPaused;
         int loading;   // bumps on every room change, so a slow download cannot start in the wrong room
 
         Tour Tour => exhibition.Tour;
@@ -76,10 +76,12 @@ namespace MuseumBrowser.App
 
         void Update()
         {
-            // An audio recording finished: the next one, then the room's films.
-            if (audioStarted && !audioPaused && audioSource.clip && !audioSource.isPlaying)
+            // An audio recording finished: the next one, then the room's films. On the Web a clip
+            // decodes after Play(), so it only counts as finished once it has been heard playing.
+            if (audioStarted && audioSource.isPlaying) audioHeard = true;
+            if (audioStarted && audioHeard && !audioPaused && audioSource.clip && !audioSource.isPlaying)
             {
-                audioStarted = false;
+                audioStarted = audioHeard = false;
                 if (audioIndex + 1 < Audio.Count) PlayAudio(audioIndex + 1);
                 else { audioIndex = -1; RoomScreen?.Play(0); }
                 Refresh();
@@ -139,7 +141,7 @@ namespace MuseumBrowser.App
 
         void StopAudio()
         {
-            audioStarted = audioPaused = false;
+            audioStarted = audioHeard = audioPaused = false;
             audioIndex = -1;
             if (audioSource) audioSource.Stop();
         }
@@ -167,7 +169,7 @@ namespace MuseumBrowser.App
             audioSource.clip = DownloadHandlerAudioClip.GetContent(request);
             audioSource.Play();
             audioStarted = true;
-            Debug.Log($"Audio playing {url} ({audioSource.clip.length:0}s)");
+            Debug.Log($"Audio playing {url}");
             Refresh();
         }
 
@@ -210,9 +212,9 @@ namespace MuseumBrowser.App
 
             var controls = new VisualElement();
             controls.AddToClassList("tour-controls");
-            controls.Add(Button("‹ Previous", () => visitor.GoToRoom(room - 1)));
+            controls.Add(Button("Previous", () => visitor.GoToRoom(room - 1)));
             controls.Add(play = Button("Play", TogglePlay));
-            controls.Add(Button("Next ›", () => visitor.GoToRoom(room + 1)));
+            controls.Add(Button("Next", () => visitor.GoToRoom(room + 1)));
             panel.Add(controls);
             panel.Add(recordings = new VisualElement());
             recordings.AddToClassList("tour-recordings");
@@ -264,7 +266,7 @@ namespace MuseumBrowser.App
             for (int i = 0; i < audio.Count; i++)
             {
                 int k = i;
-                var row = Button((k == audioIndex ? "♪ " : "") + (audio[k].Caption ?? $"Audio {k + 1}"), () => PlayAudio(k));
+                var row = Button(audio[k].Caption ?? $"Audio {k + 1}", () => PlayAudio(k));
                 row.AddToClassList("tour-recording");
                 row.EnableInClassList("current", k == audioIndex);
                 recordings.Add(row);
@@ -274,7 +276,7 @@ namespace MuseumBrowser.App
                 {
                     int k = i;
                     bool current = audioIndex < 0 && screen.IsPlaying && screen.Current == k;
-                    var row = Button((current ? "▶ " : "") + (screen.Videos[k].Caption ?? $"Film {k + 1}") + " (film)", () => { StopAudio(); screen.Play(k); });
+                    var row = Button((screen.Videos[k].Caption ?? $"Film {k + 1}") + " (film)", () => { StopAudio(); screen.Play(k); });
                     row.AddToClassList("tour-recording");
                     row.EnableInClassList("current", current);
                     recordings.Add(row);

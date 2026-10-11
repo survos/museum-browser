@@ -87,7 +87,7 @@ namespace MuseumBrowser.Core
                 return new TourStop
                 {
                     Id = r.GetString("local_id"),
-                    ObjectId = Text(fields, "objectId"),
+                    ObjectId = Text(fields, "objectId") ?? ObjectFromStopId(r.GetString("local_id")),
                     Title = Text(fields, "title") ?? r.GetString("label"),
                     Subtitle = Text(fields, "subtitle"),
                     Latitude = (double?)fields["latitude"],
@@ -142,6 +142,13 @@ namespace MuseumBrowser.Core
                     stop.Photos.Add(Photo(stop, p.GetInt32("seq") ?? stop.Photos.Count + 1, p.GetString("url"), p.GetString("dense_summary"), null));
             }
         }
+
+        // Older builds have no objectId on stops; the stop id names the object's source id:
+        // "curatescape:baltimore:30:block-129" -> "curatescape_baltimore_129".
+        static readonly System.Text.RegularExpressions.Regex StopId = new(@"^([a-z0-9]+):([a-z0-9_-]+):[^:]+:block-(\d+)$");
+
+        static string ObjectFromStopId(string stopId) =>
+            stopId != null && StopId.Match(stopId) is { Success: true } m ? $"{m.Groups[1].Value}_{m.Groups[2].Value}_{m.Groups[3].Value}" : null;
 
         static WallCard Photo(TourStop stop, int seq, string url, string caption, string credit) => new()
         {
