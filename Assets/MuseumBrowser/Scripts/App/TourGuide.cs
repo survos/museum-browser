@@ -248,11 +248,12 @@ namespace MuseumBrowser.App
             if (panel == null || exhibition == null || Tour == null) return;
             var stop = Stop;
             counter.text = stop == null ? Tour.Title : $"Stop {room + 1} of {Tour.Stops.Count} · {Tour.Title}";
-            title.text = stop?.Title ?? "";
+            // Before the first room: the tour's own introduction.
+            title.text = stop?.Title ?? (string.IsNullOrEmpty(Tour.Description) ? "" : Tour.Title);
             subtitle.text = stop?.Subtitle ?? "";
             address.text = stop?.Address ?? "";
             lede.text = stop?.Lede ?? "";
-            story.text = stop?.Text ?? "";
+            story.text = stop == null ? Tour.Description ?? "" : stop.Text ?? "";
             credit.text = stop == null ? "" : string.Join("\n", new[] { stop.Sponsor, stop.License, stop.SourceUrl }.Where(s => !string.IsNullOrEmpty(s)));
             foreach (var l in new[] { subtitle, address, lede, credit })
                 l.style.display = string.IsNullOrEmpty(l.text) ? DisplayStyle.None : DisplayStyle.Flex;
