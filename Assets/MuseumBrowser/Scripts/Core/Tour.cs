@@ -12,6 +12,9 @@ namespace MuseumBrowser.Core
     {
         public string Id;
         public string Title;
+        /// The tour's own introduction, read before the first stop.
+        public string Description;
+        public string CoverUrl;
         public List<TourStop> Stops = new();
     }
 
@@ -56,13 +59,16 @@ namespace MuseumBrowser.Core
             public int Stops;
         }
 
-        /// The folio's tours (story rows), most stops first.
+        /// The folio's tours, most stops first. Two shapes are read: the agreed model, a `tour`
+        /// core linked `has_stop` straight to `obj` places (AIC; Curatescape once rebuilt), and
+        /// the older Curatescape one, `story` rows linked to `stop` rows that point at the place.
         public static async Task<List<Entry>> ListAsync(FolioReader folio)
         {
             var rows = await folio.Database.QueryAsync(
-                "SELECT i.local_id, i.label, (SELECT COUNT(*) FROM link l WHERE l.left_core = 'story' AND l.right_core = 'stop' "
-                + "AND l.left_id = i.local_id) AS stops FROM item i WHERE i.core_id = ? ORDER BY stops DESC",
-                folio.Code + ":story");
+                "SELECT i.local_id, i.label, (SELECT COUNT(*) FROM link l WHERE l.left_core IN ('tour', 'story') AND l.right_core IN ('obj', 'stop') "
+                + "AND l.link_type_id LIKE '%:has_stop:%' AND l.left_id = i.local_id) AS stops "
+                + "FROM item i WHERE i.core_id IN (?, ?) ORDER BY stops DESC",
+                folio.Code + ":tour", folio.Code + ":story");
             return rows.Select(r => new Entry { Id = r.GetString("local_id"), Title = r.GetString("label"), Stops = r.GetInt32("stops") ?? 0 }).ToList();
         }
 
@@ -75,24 +81,39 @@ namespace MuseumBrowser.Core
                         ?? throw new System.InvalidOperationException(
                             $"{folio.Code} has no tour \"{tour}\". Tours: {string.Join("; ", tours.Take(12).Select(t => $"{t.Id} {t.Title}"))}");
 
-            var stopRows = await folio.Database.QueryAsync(
-                "SELECT s.local_id, s.label, s.dto_data, s.extras, CAST(json_extract(l.extras, '$.ordinal') AS INTEGER) AS ordinal "
-                + "FROM link l JOIN item s ON s.core_id = ? AND s.local_id = l.right_id "
-                + "WHERE l.left_core = 'story' AND l.right_core = 'stop' AND l.left_id = ? ORDER BY ordinal, s.local_id",
-                folio.Code + ":stop", entry.Id);
+            var tourRows = await folio.Database.QueryAsync(
+                "SELECT core_id, dto_data, extras FROM item WHERE core_id IN (?, ?) AND local_id = ?",
+                folio.Code + ":tour", folio.Code + ":story", entry.Id);
+            var tourFields = tourRows.Count > 0 ? Fields(tourRows[0].GetString("dto_data"), tourRows[0].GetString("extras")) : new JObject();
+            var tourCore = tourRows.Count > 0 ? tourRows[0].GetString("core_id").Substring(folio.Code.Length + 1) : "story";
 
+            // has_stop points at the place itself (tour -> obj) or at a stop row (story -> stop),
+            // whose objectId (or, in older builds, its id) names the place.
+            var stopRows = await folio.Database.QueryAsync(
+                "SELECT l.right_core, l.extras AS link_extras, s.local_id, s.label, s.dto_data, s.extras, "
+                + "CAST(json_extract(l.extras, '$.ordinal') AS INTEGER) AS ordinal "
+                + "FROM link l JOIN item s ON s.core_id = ? || l.right_core AND s.local_id = l.right_id "
+                + "WHERE l.left_core = ? AND l.left_id = ? AND l.right_core IN ('obj', 'stop') AND l.link_type_id LIKE '%:has_stop:%' "
+                + "ORDER BY ordinal, s.local_id",
+                folio.Code + ":", tourCore, entry.Id);
+
+            var sounds = new Dictionary<TourStop, string>();
             var stops = stopRows.Select(r =>
             {
                 var fields = Fields(r.GetString("dto_data"), r.GetString("extras"));
-                return new TourStop
+                var id = r.GetString("local_id");
+                var stop = new TourStop
                 {
-                    Id = r.GetString("local_id"),
-                    ObjectId = Text(fields, "objectId") ?? ObjectFromStopId(r.GetString("local_id")),
+                    Id = id,
+                    ObjectId = r.GetString("right_core") == "obj" ? id : Text(fields, "objectId") ?? ObjectFromStopId(id),
                     Title = Text(fields, "title") ?? r.GetString("label"),
                     Subtitle = Text(fields, "subtitle"),
                     Latitude = (double?)fields["latitude"],
                     Longitude = (double?)fields["longitude"],
                 };
+                // AIC: the stop's audio-guide recording is a sound row named on the link.
+                if (Text(Parse(r.GetString("link_extras")), "soundId") is { } sound) sounds[stop] = sound;
+                return stop;
             }).ToList();
 
             var objects = (await folio.ItemsAsync(stops.Where(s => s.ObjectId != null).Select(s => s.ObjectId).Distinct().ToList()))
@@ -100,9 +121,31 @@ namespace MuseumBrowser.Core
             foreach (var stop in stops)
                 if (stop.ObjectId != null && objects.TryGetValue(stop.ObjectId, out var item))
                     await FillAsync(folio, stop, item);
+            foreach (var (stop, sound) in sounds)
+                await AddSoundAsync(folio, stop, sound);
 
-            return new Tour { Id = entry.Id, Title = entry.Title, Stops = stops };
+            return new Tour
+            {
+                Id = entry.Id,
+                Title = entry.Title,
+                // AIC keeps the long introduction in `intro`; its description is a one-line dek.
+                Description = Longest(Text(tourFields, "intro"), Text(tourFields, "description")),
+                CoverUrl = Text(tourFields, "thumbnailUrl") ?? Text(tourFields, "imageUrl"),
+                Stops = stops,
+            };
         }
+
+        static async Task AddSoundAsync(FolioReader folio, TourStop stop, string soundId)
+        {
+            var rows = await folio.Database.QueryAsync(
+                "SELECT label, dto_data, extras FROM item WHERE core_id = ? AND local_id = ?", folio.Code + ":sound", soundId);
+            if (rows.Count == 0) return;
+            var fields = Fields(rows[0].GetString("dto_data"), rows[0].GetString("extras"));
+            if (Text(fields, "url") is not { } url) return;
+            stop.Recordings.Add(new Recording { Kind = "audio", Url = url, Caption = "Audio guide", Credit = Text(fields, "rights") });
+        }
+
+        static string Longest(string a, string b) => (a?.Length ?? 0) >= (b?.Length ?? 0) ? a : b;
 
         static async Task FillAsync(FolioReader folio, TourStop stop, FolioItem item)
         {
