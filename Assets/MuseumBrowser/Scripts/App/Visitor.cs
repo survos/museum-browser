@@ -8,8 +8,10 @@ namespace MuseumBrowser.App
     /// sideways, Q/E turn; drag to look,
     /// scroll to zoom, click a work to walk to it, Space/Backspace for the
     /// next/previous work in tour order.
-    /// Discrete actions are InputAction callbacks; move/look/zoom values are read
-    /// each frame. Keeps the camera on a CharacterController so walls are solid.
+    /// Input is event-driven: every action's callbacks record its state (a held direction, a
+    /// modifier, a drag) or act at once (a look delta, a scroll, a click). Update never reads
+    /// a device; it only integrates the recorded state over the frame's time. Keeps the camera
+    /// on a CharacterController so walls are solid.
     [RequireComponent(typeof(CharacterController))]
     public sealed class Visitor : MonoBehaviour
     {
@@ -18,6 +20,7 @@ namespace MuseumBrowser.App
         [SerializeField] float walkSpeed = 2.2f;
         [SerializeField] float lookSensitivity = 0.12f;
         [SerializeField] float turnSpeed = 90f; // degrees per second for keys
+        [SerializeField] float stickLookSpeed = 60f; // degrees per second at full right-stick deflection
         [SerializeField] float viewingDistance = 2.2f;
         [SerializeField] float minFov = 12f, maxFov = 60f;
         [Tooltip("A work counts as 'being looked at' within this distance.")]
@@ -32,7 +35,8 @@ namespace MuseumBrowser.App
         public event System.Action<int> RoomChanged;
         int lastRoom = -1;
 
-        InputAction move, turn, look, drag, zoom, click, next, previous, nextRoom, previousRoom;
+        InputAction move, turn, lookDelta, lookStick, primary, zoom, sidestep, next, previous, nextRoom, previousRoom;
+        InputAction[] actions;
         int room;
         CharacterController body;
         float yaw, pitch;
@@ -40,6 +44,13 @@ namespace MuseumBrowser.App
         bool autoWalking;
         Vector3 autoTarget;
         float autoYaw;
+
+        // State recorded by the action callbacks.
+        Vector2 moveInput;
+        float turnInput;
+        Vector2 stickInput;
+        bool sidestepping;
+        bool dragging;
         bool dragged;
 
         void Awake()
@@ -57,71 +68,109 @@ namespace MuseumBrowser.App
             move.AddCompositeBinding("2DVector").With("Up", "<Gamepad>/dpad/up").With("Down", "<Gamepad>/dpad/down");
             // Shoulder buttons step sideways, like Shift + left/right.
             move.AddCompositeBinding("2DVector").With("Left", "<Gamepad>/leftShoulder").With("Right", "<Gamepad>/rightShoulder");
+            // Game Boy-style USB pads (045E:028E, "Controller"; the Xbox 360 IDs are spoofed) send their D-pad as
+            // plain HID buttons 12-15 (measured with tools/hid-probe.swift): 12 up, 13 down, 14 left,
+            // 15 right; A and B are buttons 1 and 2. Whether Unity exposes it as <HID> or as a Gamepad is
+            // to be confirmed from the "Input device" / "Input press" lines InputDiag logs.
+            move.AddCompositeBinding("2DVector").With("Up", "*/button12").With("Down", "*/button13");
             turn = new InputAction("Turn", InputActionType.Value);
             turn.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/leftArrow").With("Positive", "<Keyboard>/rightArrow");
             turn.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/q").With("Positive", "<Keyboard>/e");
             turn.AddCompositeBinding("1DAxis").With("Negative", "<Gamepad>/dpad/left").With("Positive", "<Gamepad>/dpad/right");
-            look = new InputAction("Look", InputActionType.Value, "<Pointer>/delta");
-            look.AddBinding("<Gamepad>/rightStick").WithProcessor("scaleVector2(x=8,y=8)");
-            drag = new InputAction("Drag", InputActionType.Button, "<Mouse>/leftButton");
+            turn.AddCompositeBinding("1DAxis").With("Negative", "*/button14").With("Positive", "*/button15");
+            sidestep = new InputAction("Sidestep", InputActionType.Button, "<Keyboard>/shift");
+            lookDelta = new InputAction("Look", InputActionType.Value, "<Pointer>/delta");
+            lookStick = new InputAction("Look (stick)", InputActionType.Value, "<Gamepad>/rightStick");
             zoom = new InputAction("Zoom", InputActionType.Value, "<Mouse>/scroll/y");
-            click = new InputAction("Select", InputActionType.Button, "<Mouse>/leftButton");
+            // Press to start a drag; release without having dragged is a click on a work.
+            primary = new InputAction("Primary", InputActionType.Button, "<Mouse>/leftButton");
             next = new InputAction("Next", InputActionType.Button, "<Keyboard>/space");
             next.AddBinding("<Gamepad>/buttonSouth");
+            next.AddBinding("*/trigger");
             previous = new InputAction("Previous", InputActionType.Button, "<Keyboard>/backspace");
             previous.AddBinding("<Gamepad>/buttonEast");
+            previous.AddBinding("*/button2");
 
             nextRoom = new InputAction("Next room", InputActionType.Button, "<Keyboard>/rightBracket");
             nextRoom.AddBinding("<Keyboard>/pageDown");
             previousRoom = new InputAction("Previous room", InputActionType.Button, "<Keyboard>/leftBracket");
             previousRoom.AddBinding("<Keyboard>/pageUp");
+
+            // Held state: set when the value changes, cleared when the control returns to rest.
+            move.performed += c => moveInput = c.ReadValue<Vector2>();
+            move.canceled += _ => moveInput = Vector2.zero;
+            turn.performed += c => turnInput = c.ReadValue<float>();
+            turn.canceled += _ => turnInput = 0f;
+            lookStick.performed += c => stickInput = c.ReadValue<Vector2>();
+            lookStick.canceled += _ => stickInput = Vector2.zero;
+            sidestep.started += _ => sidestepping = true;
+            sidestep.canceled += _ => sidestepping = false;
+
+            // Acted on at once.
+            lookDelta.performed += c => LookBy(c.ReadValue<Vector2>());
+            zoom.performed += c => ZoomBy(c.ReadValue<float>());
+            primary.started += _ => { dragging = true; dragged = false; };
+            primary.canceled += _ => { dragging = false; if (!dragged) SelectUnderPointer(); };
+            next.performed += _ => GoTo(index + 1);
+            previous.performed += _ => GoTo(index - 1);
             // Step from wherever the visitor actually is, not the last room jumped to.
             nextRoom.performed += _ => GoToRoom((CurrentRoom >= 0 ? CurrentRoom : room) + 1);
             previousRoom.performed += _ => GoToRoom((CurrentRoom >= 0 ? CurrentRoom : room) - 1);
-
-            drag.started += _ => dragged = false;
-            click.canceled += _ => { if (!dragged) SelectUnderPointer(); };
-            next.performed += _ => GoTo(index + 1);
-            previous.performed += _ => GoTo(index - 1);
             exhibition.Built += b => StandAt(b.Entrance, b.EntranceYaw);
 
+            actions = new[] { move, turn, lookDelta, lookStick, primary, zoom, sidestep, next, previous, nextRoom, previousRoom };
             yaw = transform.eulerAngles.y;
         }
 
-        void OnEnable() { foreach (var a in Actions) a.Enable(); }
-        void OnDisable() { foreach (var a in Actions) a.Disable(); }
-        void OnDestroy() { foreach (var a in Actions) a.Dispose(); }
-        InputAction[] Actions => new[] { move, turn, look, drag, zoom, click, next, previous, nextRoom, previousRoom };
+        void OnEnable() { foreach (var a in actions) a.Enable(); }
+
+        void OnDisable()
+        {
+            foreach (var a in actions) a.Disable();
+            // Disabling cancels held actions, but be certain nothing keeps walking.
+            moveInput = stickInput = Vector2.zero;
+            turnInput = 0f;
+            sidestepping = dragging = false;
+        }
+
+        void OnDestroy() { foreach (var a in actions) a.Dispose(); }
+
+        /// Mouse look: only while the button is held, and only for a real drag (not a click's jitter).
+        void LookBy(Vector2 delta)
+        {
+            if (!dragging || delta.sqrMagnitude <= 0.5f) return;
+            dragged = true;
+            yaw += delta.x * lookSensitivity;
+            pitch = Mathf.Clamp(pitch - delta.y * lookSensitivity, -60f, 60f);
+            autoWalking = false;
+        }
+
+        /// Zoom by narrowing the field of view.
+        void ZoomBy(float scroll)
+        {
+            if (Mathf.Abs(scroll) > 0.01f)
+                eye.fieldOfView = Mathf.Clamp(eye.fieldOfView - Mathf.Sign(scroll) * 3f, minFov, maxFov);
+        }
 
         void Update()
         {
-            // Look while dragging (mouse) or always (gamepad stick).
-            var delta = look.ReadValue<Vector2>();
-            bool mouseLook = drag.IsPressed() && delta.sqrMagnitude > 0.5f;
-            if (mouseLook) dragged = true;
-            if (mouseLook || look.activeControl?.device is Gamepad)
+            // Right stick looks around; a held deflection is turned into a rate here.
+            if (stickInput.sqrMagnitude > 0.0001f)
             {
-                yaw += delta.x * lookSensitivity;
-                pitch = Mathf.Clamp(pitch - delta.y * lookSensitivity, -60f, 60f);
+                yaw += stickInput.x * stickLookSpeed * Time.deltaTime;
+                pitch = Mathf.Clamp(pitch - stickInput.y * stickLookSpeed * Time.deltaTime, -60f, 60f);
                 autoWalking = false;
             }
 
             // Shift turns the left/right arrows into a sidestep, for scanning along a wall.
-            float turning = turn.ReadValue<float>();
-            bool sidestep = Keyboard.current != null && Keyboard.current.shiftKey.isPressed;
-            if (Mathf.Abs(turning) > 0.01f && !sidestep)
+            if (Mathf.Abs(turnInput) > 0.01f && !sidestepping)
             {
-                yaw += turning * turnSpeed * Time.deltaTime;
+                yaw += turnInput * turnSpeed * Time.deltaTime;
                 autoWalking = false;
             }
 
-            // Zoom by narrowing the field of view.
-            float scroll = zoom.ReadValue<float>();
-            if (Mathf.Abs(scroll) > 0.01f)
-                eye.fieldOfView = Mathf.Clamp(eye.fieldOfView - Mathf.Sign(scroll) * 3f, minFov, maxFov);
-
-            var input = move.ReadValue<Vector2>();
-            if (sidestep) input.x += turning;
+            var input = moveInput;
+            if (sidestepping) input.x += turnInput;
             Vector3 velocity;
             if (input.sqrMagnitude > 0.01f)
             {

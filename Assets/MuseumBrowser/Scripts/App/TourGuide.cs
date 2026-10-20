@@ -16,7 +16,7 @@ namespace MuseumBrowser.App
         ExhibitionBuilder exhibition;
         Visitor visitor;
         AudioSource audioSource;
-        InputAction playAction, panelAction;
+        InputAction playAction, panelAction, clickAction;
 
         VisualElement panel, recordings;
         Label counter, title, subtitle, address, lede, story, credit;
@@ -60,8 +60,17 @@ namespace MuseumBrowser.App
             playAction.performed += _ => TogglePlay();
             panelAction = new InputAction("Story", InputActionType.Button, "<Keyboard>/t");
             panelAction.performed += _ => panel.ToggleInClassList("hidden");
+            // A click, not the end of a drag to look around: press and release within a few pixels.
+            clickAction = new InputAction("Click screen", InputActionType.Button, "<Mouse>/leftButton");
+            clickAction.started += _ => pressedAt = Pointer.current.position.ReadValue();
+            clickAction.canceled += _ =>
+            {
+                var at = Pointer.current.position.ReadValue();
+                if ((at - pressedAt).sqrMagnitude < 36f) ClickScreen(at);
+            };
             playAction.Enable();
             panelAction.Enable();
+            clickAction.Enable();
             if (visitor) visitor.RoomChanged += EnterRoom;
             foreach (var screens in exhibition.RoomScreens)
                 foreach (var s in screens) s.Changed += _ => Refresh();
@@ -72,6 +81,7 @@ namespace MuseumBrowser.App
             if (visitor) visitor.RoomChanged -= EnterRoom;
             playAction?.Dispose();
             panelAction?.Dispose();
+            clickAction?.Dispose();
         }
 
         void Update()
@@ -85,13 +95,6 @@ namespace MuseumBrowser.App
                 if (audioIndex + 1 < Audio.Count) PlayAudio(audioIndex + 1);
                 else { audioIndex = -1; RoomScreen?.Play(0); }
                 Refresh();
-            }
-            if (Mouse.current is { } mouse)
-            {
-                if (mouse.leftButton.wasPressedThisFrame) pressedAt = mouse.position.ReadValue();
-                // A click, not the end of a drag to look around.
-                if (mouse.leftButton.wasReleasedThisFrame && (mouse.position.ReadValue() - pressedAt).sqrMagnitude < 36f)
-                    ClickScreen(mouse.position.ReadValue());
             }
         }
 
