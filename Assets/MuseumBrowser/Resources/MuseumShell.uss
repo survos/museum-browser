@@ -71,3 +71,15 @@
     position: absolute; top: 40px; width: 12px; height: 12px; margin-left: -6px;
     border-radius: 6px; background-color: rgb(170, 40, 30); border-width: 2px; border-color: white;
 }
+
+/* Shape your visit: how many, which years, what about. */
+.visit { width: 440px; margin-bottom: 20px; }
+.visit-heading { font-size: 18px; color: rgb(239, 233, 221); letter-spacing: 3px; -unity-text-align: middle-center; margin-bottom: 14px; }
+.visit-label { font-size: 14px; color: rgb(185, 174, 153); margin-top: 10px; }
+.visit-field { margin-top: 8px; }
+.visit .unity-base-field__label, .visit .unity-label { color: rgb(185, 174, 153); min-width: 120px; }
+.visit .unity-base-text-field__input {
+    color: rgb(239, 233, 221); background-color: rgb(44, 42, 38);
+    border-color: rgb(90, 84, 72); border-radius: 3px; padding: 4px 8px;
+}
+.visit-matches { font-size: 14px; color: rgb(200, 169, 106); margin-top: 14px; margin-bottom: 14px; -unity-text-align: middle-center; }

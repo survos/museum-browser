@@ -1,4 +1,5 @@
 using System.Linq;
+using MuseumBrowser.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -32,10 +33,25 @@ namespace MuseumBrowser.App
         InputAction toggleDebug;
         float debugRefresh;
         Label folioTitle, folioMeta, status;
-        VisualElement fill;
+        VisualElement fill, progressBar;
         Button enter;
         InputAction escape, toggleHelp, planButton, fullScreenKey;
         float hintsUntil;
+
+        // The visit form on the opening screen (how many, which years, what about).
+        VisualElement visit;
+        VisitChoice choice;
+        SliderInt countSlider;
+        MinMaxSlider yearSlider;
+        Label yearLabel, matchLabel;
+        TextField keywordField;
+        Button build;
+        IVisualElementScheduledItem recountJob;
+        int countTicket, matched;
+
+        /// A text field has the keyboard: single-key shortcuts (F, H, `) must not fire while typing.
+        bool Typing => start?.panel?.focusController?.focusedElement is VisualElement f
+                       && (f is TextField || f.GetFirstAncestorOfType<TextField>() != null);
 
         void OnEnable()
         {
@@ -52,8 +68,8 @@ namespace MuseumBrowser.App
             // The embedding page passes the folio's title, so it shows before anything loads.
             folioTitle = Text(start, "folio-title", ExhibitionBuilder.QueryParam("title") ?? "");
             folioMeta = Text(start, "folio-meta", "");
-            var bar = Box(start, "progress");
-            fill = Box(bar, "progress-fill");
+            progressBar = Box(start, "progress");
+            fill = Box(progressBar, "progress-fill");
             status = Text(start, "status", "Opening the galleries…");
             enter = new Button(Enter) { text = "Enter the museum" };
             enter.AddToClassList("enter");
@@ -85,16 +101,21 @@ namespace MuseumBrowser.App
             debugText = Text(debug, "debug-text", "");
             if (!WantsDebug()) debug.AddToClassList("hidden");
             toggleDebug = new InputAction("Debug", InputActionType.Button, "<Keyboard>/backquote");
-            toggleDebug.performed += _ => debug.EnableInClassList("hidden", !debug.ClassListContains("hidden"));
+            toggleDebug.performed += _ => { if (!Typing) debug.EnableInClassList("hidden", !debug.ClassListContains("hidden")); };
             toggleDebug.Enable();
 
             // Controller: Start opens the floor plan, Select toggles help, B closes.
             planButton = new InputAction("Floor plan", InputActionType.Button, "<Gamepad>/start");
-            planButton.performed += _ => { if (IsOpen(start)) Enter(); else Toggle(rooms); };
+            planButton.performed += _ =>
+            {
+                if (visit != null) BuildNow();
+                else if (IsOpen(start)) { if (enter.enabledSelf) Enter(); }
+                else Toggle(rooms);
+            };
             planButton.Enable();
 
             fullScreenKey = new InputAction("Full screen", InputActionType.Button, "<Keyboard>/f");
-            fullScreenKey.performed += _ => ToggleFullScreen();
+            fullScreenKey.performed += _ => { if (!Typing) ToggleFullScreen(); };
             fullScreenKey.Enable();
 
             escape = new InputAction("Close", InputActionType.Button, "<Keyboard>/escape");
@@ -106,6 +127,7 @@ namespace MuseumBrowser.App
             escape.Enable();
             toggleHelp.Enable();
 
+            exhibition.ChoosingVisit += OnChoosing;
             exhibition.Built += OnBuilt;
             exhibition.Failed += OnFailed;
             visitor.enabled = false;
@@ -113,6 +135,7 @@ namespace MuseumBrowser.App
 
         void OnDisable()
         {
+            exhibition.ChoosingVisit -= OnChoosing;
             exhibition.Built -= OnBuilt;
             exhibition.Failed -= OnFailed;
             escape?.Dispose();
@@ -160,6 +183,126 @@ namespace MuseumBrowser.App
                 hints.AddToClassList("hidden");
                 hintsUntil = 0;
             }
+        }
+
+        // ---- Shaping the visit ---------------------------------------------------------------------
+
+        /// The folio is open: offer how many works, which years and a keyword before hanging.
+        /// The defaults are the old behaviour, so Enter / Start accepts them.
+        void OnChoosing(VisitChoice c)
+        {
+            choice = c;
+            folioTitle.text = c.Title;
+            folioMeta.text = $"{c.Total:N0} works with images";
+            progressBar.AddToClassList("hidden");
+            status.AddToClassList("hidden");
+            enter.AddToClassList("hidden");
+
+            visit = new VisualElement();
+            visit.AddToClassList("visit");
+            start.Insert(start.IndexOf(progressBar), visit);
+            Text(visit, "visit-heading", "Shape your visit");
+
+            int low = Mathf.Min(12, c.MaxCount);
+            countSlider = new SliderInt("How many works", low, c.MaxCount) { value = Mathf.Clamp(c.DefaultCount, low, c.MaxCount), showInputField = true };
+            countSlider.AddToClassList("visit-field");
+            countSlider.RegisterValueChangedCallback(_ => ShowMatches());
+            visit.Add(countSlider);
+
+            if (c.HasYears && c.MaxYear > c.MinYear)
+            {
+                yearLabel = Text(visit, "visit-label", "");
+                yearSlider = new MinMaxSlider(c.MinYear, c.MaxYear, c.MinYear, c.MaxYear);
+                yearSlider.AddToClassList("visit-field");
+                yearSlider.RegisterValueChangedCallback(_ => VisitChanged());
+                visit.Add(yearSlider);
+            }
+
+            keywordField = new TextField("Keyword") { tooltip = "Words in a work's title, description or tags (all must match)" };
+            keywordField.AddToClassList("visit-field");
+            keywordField.textEdition.placeholder = "e.g. toys";
+            keywordField.RegisterValueChangedCallback(_ => VisitChanged());
+            keywordField.RegisterCallback<KeyDownEvent>(e =>
+            {
+                if (e.keyCode is KeyCode.Return or KeyCode.KeypadEnter) { e.StopPropagation(); BuildNow(); }
+            });
+            visit.Add(keywordField);
+
+            matchLabel = Text(visit, "visit-matches", "");
+            build = new Button(BuildNow) { text = "Hang my museum" };
+            build.AddToClassList("enter");
+            visit.Add(build);
+
+            matched = c.Total;
+            VisitChanged();
+        }
+
+        /// A choice changed: refresh the year label now, and count the matches once typing pauses.
+        void VisitChanged()
+        {
+            if (yearSlider != null)
+            {
+                var (from, to) = Years();
+                yearLabel.text = $"Years  {from} – {to}";
+            }
+            matchLabel.text = "Counting…";
+            recountJob?.Pause();
+            recountJob = visit.schedule.Execute(() => _ = RecountAsync());
+            recountJob.ExecuteLater(300);
+        }
+
+        (int from, int to) Years() =>
+            yearSlider == null ? (0, 0) : (Mathf.RoundToInt(yearSlider.value.x), Mathf.RoundToInt(yearSlider.value.y));
+
+        VisitOptions CurrentOptions()
+        {
+            var options = new VisitOptions { Count = countSlider.value, Keyword = keywordField.value };
+            if (yearSlider != null)
+            {
+                var (from, to) = Years();
+                // The full span means "any year", which also keeps the undated works in.
+                if (from > choice.MinYear || to < choice.MaxYear) { options.YearFrom = from; options.YearTo = to; }
+            }
+            return options;
+        }
+
+        async System.Threading.Tasks.Task<int> RecountAsync()
+        {
+            int ticket = ++countTicket;
+            int n;
+            try { n = await exhibition.CountMatchesAsync(CurrentOptions()); }
+            catch (System.Exception e) { Debug.LogException(e); return -1; }
+            if (ticket == countTicket && n >= 0 && visit != null)
+            {
+                matched = n;
+                ShowMatches();
+            }
+            return n;
+        }
+
+        void ShowMatches()
+        {
+            if (matchLabel == null) return;
+            matchLabel.text = matched == 0 ? "No works match." : $"{matched:N0} work{(matched == 1 ? "" : "s")} match · hanging {Mathf.Min(matched, countSlider.value):N0}";
+            build.SetEnabled(matched > 0);
+        }
+
+        /// Settle the count for exactly what is on screen, then hang (Enter in the keyword box, the
+        /// button, or the controller's Start).
+        async void BuildNow()
+        {
+            if (visit == null) return;
+            recountJob?.Pause();
+            var options = CurrentOptions();
+            int n = await RecountAsync();
+            if (visit == null || n <= 0) return;
+            visit.RemoveFromHierarchy();
+            visit = null;
+            progressBar.RemoveFromClassList("hidden");
+            status.RemoveFromClassList("hidden");
+            enter.RemoveFromClassList("hidden");
+            status.text = "Hanging the works…";
+            exhibition.BeginVisit(options);
         }
 
         void OnBuilt(ExhibitionBuilder b)

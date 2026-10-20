@@ -21,6 +21,9 @@ namespace MuseumBrowser.App
         [SerializeField] string editorApiBase = "https://m4-zm.survos.org";
         [Tooltip("Base for /api/... paths in player builds (desktop and Web).")]
         [SerializeField] string playerApiBase = "https://recordia.org";
+        [Tooltip("Harvest, which publishes the folios (GET /api/datasets/{key}; public folios need no token). "
+               + "-catalog on the command line overrides it.")]
+        [SerializeField] string harvestBase = "https://harvest.survos.com";
         [Tooltip("Folio to show in the Editor, as if the page URL had ?folio=...")]
         [SerializeField] string editorFolio = "";
         [Tooltip("Folio a desktop player opens (dataset key, e.g. mus/fpus); -folio on the command line overrides it.")]
@@ -29,6 +32,9 @@ namespace MuseumBrowser.App
         [SerializeField] bool readFolioFile = true;
         [Tooltip("At most this many works are hung, spread over the folio's decades.")]
         [SerializeField] int maxWorks = 240;
+        [Tooltip("Ask the visitor how many works, which years and what keyword before hanging a folio "
+               + "read from its file. -count, -years 1970-1990 or -keyword on the command line (and -capture) skip the question.")]
+        [SerializeField] bool chooseVisit = true;
         [Header("Tour: one room per stop")]
         [Tooltip("Tour to hang in the Editor: a story id (curatescape:baltimore:30) or part of its title. "
                + "Desktop players: -tour. Read from editorFolioFile, or from the folio named above.")]
@@ -141,6 +147,9 @@ namespace MuseumBrowser.App
                 return playerApiBase;
             }
         }
+
+        /// Where folio files come from: harvest. (Images and the WallCard API still come from ApiBase.)
+        string CatalogBase => CommandLine("-catalog") is { Length: > 0 } arg ? arg.TrimEnd('/') : harvestBase.TrimEnd('/');
 
         static string Origin(string url)
         {
@@ -289,9 +298,31 @@ namespace MuseumBrowser.App
             Progress = 0.7f;
             Stage = "Reading the records…";
             var index = await folio.IndexAsync("obj");
-            var items = await folio.ItemsAsync(FolioCards.Choose(index, maxWorks));
+
+            // The visitor shapes the visit (how many, which years, what about) unless the command
+            // line already did, or a capture run is driving.
+            var options = OptionsFromCommandLine();
+            if (options == null && chooseVisit && CommandLine("-capture") == null)
+            {
+                Stage = "Choose your visit";
+                choosingFolio = folio;
+                choosingIndex = index;
+                visitChosen = new AwaitableCompletionSource<VisitOptions>();
+                ChoosingVisit?.Invoke(FolioSearch.Describe(folio.Title, index, maxWorks));
+                options = await visitChosen.Awaitable;
+                choosingFolio = null;
+                choosingIndex = null;
+                Progress = 0.75f;
+                Stage = "Reading the records…";
+            }
+            options ??= new VisitOptions { Count = maxWorks };
+
+            var matching = await FolioSearch.FilterAsync(folio, index, options);
+            if (matching.Count == 0)
+                throw new System.InvalidOperationException($"No works match {options}.");
+            var items = await folio.ItemsAsync(FolioCards.Choose(matching, options.Count > 0 ? options.Count : maxWorks));
             var chosen = items.Select(i => FolioCards.Map(i, folio.Code)).ToList();
-            Debug.Log($"Folio {folio.Code}: {index.Count} records with images; hanging {chosen.Count}, "
+            Debug.Log($"Folio {folio.Code}: {index.Count} records with images; {matching.Count} match ({options}); hanging {chosen.Count}, "
                       + $"{chosen.Count(c => c.Image?.Thumbhash != null)} with ThumbHash");
             FolioCode = folio.Code;
             Folio = new FolioInfo { Code = folio.Code, Title = folio.Title };
@@ -299,6 +330,48 @@ namespace MuseumBrowser.App
             CardImages.ApiBase = ApiBase;
             CardImages.FolioCode = folio.Code;
             return AutoLayout.Suite(folio.Title, chosen);
+        }
+
+        // ---- Choosing the visit --------------------------------------------------------------------
+
+        /// Raised once the folio is open, when the visitor can say how many works, which years and
+        /// what keyword. The builder waits for BeginVisit.
+        public event System.Action<VisitChoice> ChoosingVisit;
+        FolioReader choosingFolio;
+        List<FolioIndexEntry> choosingIndex;
+        AwaitableCompletionSource<VisitOptions> visitChosen;
+
+        /// Hang the galleries with these choices (answers ChoosingVisit).
+        public void BeginVisit(VisitOptions options)
+        {
+            var pending = visitChosen;
+            visitChosen = null;
+            pending?.SetResult(options);
+        }
+
+        /// How many works match these choices (shown as the visitor adjusts them), or -1 when no choice is open.
+        public async System.Threading.Tasks.Task<int> CountMatchesAsync(VisitOptions options)
+        {
+            if (choosingFolio == null) return -1;
+            return (await FolioSearch.FilterAsync(choosingFolio, choosingIndex, options)).Count;
+        }
+
+        /// -count 80, -years 1970-1990, -keyword toys: a visit chosen up front. Null when none is given.
+        static VisitOptions OptionsFromCommandLine()
+        {
+            var count = CommandLine("-count");
+            var years = CommandLine("-years");
+            var keyword = CommandLine("-keyword");
+            if (count == null && years == null && keyword == null) return null;
+            var options = new VisitOptions { Keyword = keyword };
+            if (int.TryParse(count, out var n)) options.Count = n;
+            if (years != null)
+            {
+                var parts = years.Split('-');
+                if (parts.Length > 0 && int.TryParse(parts[0], out var from)) options.YearFrom = from;
+                if (parts.Length > 1 && int.TryParse(parts[1], out var to)) options.YearTo = to;
+            }
+            return options;
         }
 
         /// A tour: one room per stop, its photos on the walls and its films on a screen.
@@ -356,8 +429,8 @@ namespace MuseumBrowser.App
             FolioCatalogEntry entry = null;
             try
             {
-                entry = FolioCatalog.Find(await FolioCatalog.LoadAsync(ApiBase), key)
-                        ?? throw new System.InvalidOperationException($"{ApiBase} publishes no folio \"{key}\".");
+                entry = FolioCatalog.Find(await FolioCatalog.LoadDatasetAsync(CatalogBase, key), key)
+                        ?? throw new System.InvalidOperationException($"{CatalogBase} publishes no downloadable folio \"{key}\".");
             }
             catch (System.IO.IOException e) when (System.IO.File.Exists(FolioArchive.PathFor(key)))
             {
