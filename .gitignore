@@ -32,3 +32,10 @@
 /Tour1Test/
 /[Dd]ata/
 /WebBuild*/
+
+# Downloaded panorama fixtures (rebuild with tools/build-mapillary-fixture.php)
+/Assets/StreamingAssets/Mapillary/
+/Assets/StreamingAssets/Mapillary.meta
+
+# Python tooling cache
+__pycache__/

@@ -1,8 +1,12 @@
 {
     "name": "MuseumBrowser.Editor",
     "rootNamespace": "MuseumBrowser.EditorTools",
-    "references": [],
-    "includePlatforms": ["Editor"],
+    "references": [
+        "MuseumBrowser.App"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "autoReferenced": true,

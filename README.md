@@ -11,6 +11,11 @@ with museum wall labels (tombstones) and audio guides. Plan: `~/unity/folio-demo
 
 ## Data
 
+For the local Budapest 360° panorama, choose **Museum Browser → Open Budapest
+Panorama** and press Play. See [Budapest panorama](docs/BudapestPanorama.md) for
+the fixture builder, attribution and render verification. Folio application work
+belongs in this project; the SQLite package remains its generic dependency.
+
 A folio is read from its published SQLite file on desktop: `com.survos.folio` finds it in the
 hub's `/folio/list.json`, downloads it once to `persistentDataPath/folios`, and the app hangs up
 to 240 works spread over its decades. Works show their ThumbHash placeholder at once; signed
